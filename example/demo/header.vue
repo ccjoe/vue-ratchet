@@ -1,4 +1,5 @@
 <template>
+<div>
 	<hd title="one title"></hd>
 	<hd title="main/sub title" subtitle="main and sub title"></hd>
 	<hd title="header left slot" subtitle="change left with 'left' slot">
@@ -19,6 +20,7 @@
 		    <a class="control-item">Three</a>
 		</h1>
 	</hd>
+	</div>
 </template>
 
 <script>

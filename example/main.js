@@ -3,12 +3,14 @@ import app from './app.vue'
 import VueRouter from 'vue-router'
 
 import hdExample from './demo/header.vue'
+import ListDataExample from './demo/listdata.vue'
 import ListExample from './demo/list.vue'
 import badgeExample from './demo/badge.vue'
 import btnExample from './demo/btn.vue'
 import iconExample from './demo/icon.vue'
 import tabExample from './demo/tabs.vue'
 import formExample from './demo/forms.vue'
+import modalExample from './demo/modal.vue'
 
 // import './common/normalize.scss'
 // import './styles.scss'
@@ -21,6 +23,9 @@ const router = new VueRouter()
 router.map({
   '/header': {
     component: hdExample
+  },
+  '/listdata': {
+    component: ListDataExample
   },
   '/list': {
     component: ListExample
@@ -38,7 +43,10 @@ router.map({
   	component: tabExample
   },
   'form':{
-  	component: formExample
+    component: formExample
+  },
+  'modal':{
+  	component: modalExample
   }
 })
 

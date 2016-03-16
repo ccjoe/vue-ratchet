@@ -1,4 +1,5 @@
 <template>
+<div>
 	<btn>Button</btn>
 	<btn color="primary">Button</btn>
     <btn color="positive">Button</btn>
@@ -33,7 +34,7 @@
 	<btn outlined block icon="search" color="primary">Button</btn>
     <btn outlined block icon="search" color="positive">Button</btn>
     <btn outlined block icon="search" color="negative">Button</btn>
-
+</div>
 </template>
 
 <script>

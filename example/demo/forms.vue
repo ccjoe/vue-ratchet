@@ -1,4 +1,5 @@
 <template>
+<div>
   <toggle :model.sync="key"></toggle>
   <p class="content-padded">当前选择的值: <span class="text-warning">{{key}}</span> </p>
 
@@ -28,6 +29,7 @@
       <check key='3'>选项3</check>
   </radio>
   <p class="content-padded">当前选择的值:<span class="text-warning">{{radioValue2}}</span> </p>
+  </div>
 </template>
 
 <script>

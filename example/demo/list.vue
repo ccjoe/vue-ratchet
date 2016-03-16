@@ -1,85 +1,56 @@
 <template>
-	<h5>最简单的列表</h5>
-	<list :list="listdata"></list>
+<div>
+	<h5>Dead Simple List</h5>
+	<list>
+		<item>title</item>	
+		<item>title2</item>	
+	</list>
 
-	<h5>带图标的列表</h5>
-	<list media="icon" :list="listdata"></list>
+	<h5>Simple List With Icons</h5>
+	<list>
+		<item icon="trash">title</item>	
+		<item icon="gear">title2</item>	
+		<item icon="pages">title3</item>	
+	</list>
 
-	<h5>定义带标题与详情的列表</h5>
-	<list media="icon" :list="listdata1"></list>
+	<h5>Simple List With Icons And Descriptions</h5>
+	<list>
+		<item icon="trash">title <p>u can define List-Description with 'item element'  'content' prop or slot with 'p' element</p></item>	
+		<item icon="gear">title2  <p>title with descritipn</p></item>	
+		<item icon="pages">title3 <p>title with descritipn</p></item>	
+	</list>
 
-	<h5>定义有图片有bdage的列表</h5>
-	<list media="img" arrow="false" :list="listdata2"></list>
+	<h5>List with Images instead of Icons, and with badge, and remove the right arrow </h5>
+	<list arrow='false'>
+		<item img='http://placehold.it/42x42' badge='5'>title with Imgs <p>u can define List-Images with 'item element'  'img' prop</p></item>	
+		<item img='http://placehold.it/42x42' badge='15'>title2  <p>code like "img='http://placehold.it/42x42'"</p></item>	
+		<item icon="pages" badge='3'>title3 <p>and img and exist with icons, too</p></item>	
+	</list>
 
-	<h5>定义有button列表</h5>
-	<list media="btn" arrow="false" :list="listdata3"></list>
+	<h5>List with Button</h5>
+	<list arrow='false'>
+		<item img='http://placehold.it/42x42' btn='查看'>title with Imgs <p>u can define List-Images with 'item element'  'img' prop</p></item>	
+		<item img='http://placehold.it/42x42' btn='操作'>title2  <p>code like "img='http://placehold.it/42x42'"</p></item>	
+		<item img='http://placehold.it/42x42' btn='取消'>title3 <p>and img and exist with icons, too</p></item>	
+	</list>
 
-	<h5>定义列表分隔栏且配置是否可折叠</h5>
-	<list media="icon" :list="listdata4"></list>
-
-
+	<h5>List with Divider item and has link</h5>
+	<list>
+		<item icon="trash" link="header">link to header</item>	
+		<item icon="gear" link="btn">link to btn</item>	
+		<item icon="pages" link="icon">link to icons</item>	
+		<item divider="true">Divider Bar Item</item>
+		<item icon="trash" link="badge">link to badges</item>	
+		<item icon="gear" link="tab">link to tabs</item>	
+		<item icon="pages" link="form">link to forms</item>		
+	</list>
+	</div>
 </template>
 
 <script>
+    import item from '../../src/item.vue'
     import list from '../../src/list.vue'
 	export default {
-		components: {list},
-  		data() {
-	      return {
-	        text: '放一点小测试好么2？',
-	        listdata: [{
-	            icon: 'trash',
-	            title: '列表示例',
-	        },{
-	            icon: 'gear',
-	            title: '列表示例'
-	        },{
-	            icon: 'pages',
-	            title: '列表示例'
-	        }],
-	        listdata1: [{
-	            icon: 'search',
-	            title: '列表示例',
-	            content: '列表通过data传入属性实现不同的配置,  通过 data.media可以为img, icon; 这个列表data.media为img; data.card为true时显示为创建列表的显示的卡片式'
-	        },{
-	            icon: 'plus',
-	            title: '可收缩的item',
-	            content: 'data.list的item单项上通过collapse为true可点击收缩'
-	        }],
-	        listdata2: [{
-	            img: 'http://placehold.it/42x42',
-	            title: '列表示例',
-	            content: '列表通过data传入属性实现不同的配置,  通过 data.media可以为img, icon; 这个列表data.media为img; data.card为true时显示为创建列表的显示的卡片式',
-	            badge: '12'
-	        },{
-	            img: 'http://placehold.it/42x42',
-	            content: '列表通过data传入属性实现不同的配置,  通过 data.media可以为img, icon; 这个列表data.media为img; data.card为true时显示为创建列表的显示的卡片式',
-	            title: '列表示例',
-	        }],
-	        listdata3: [{
-	            btn: '按钮',
-	            title: '列表示例',
-	            badge: '12'
-	        },{
-	            btn: '按钮',
-	            title: '列表示例',
-	        }],
-	        listdata4: [{
-	            icon: 'search',
-	            title: '列表示例',
-	        },{
-	            title: '可点击收缩的标题',
-	            isDivider: true,
-	            collapse: true
-	        },{
-	            icon: 'plus',
-	            title: '可收缩的item'
-	        }]
-	      }
-	    }
+		components: {list, item},
 	}
 </script>
-
-<style lang="sass" scoped>
-
-</style>

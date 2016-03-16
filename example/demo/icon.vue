@@ -1,4 +1,5 @@
 <template>
+<div>
   <icon icon="back"></icon>
   <icon icon="bars"></icon>
   <icon icon="caret"></icon>
@@ -39,6 +40,7 @@
   <icon icon="down"></icon>
   <icon icon="left-nav"></icon>
   <icon icon="left"></icon>
+  </div>
 </template>
 
 <script>

@@ -1,4 +1,5 @@
 <template>
+<div>
   <tabs>
      <tab header="tab1">
        tab1
@@ -9,6 +10,7 @@
        tab3
      </tab>
   </tabs>
+  </div>
 </template>
 
 <script>

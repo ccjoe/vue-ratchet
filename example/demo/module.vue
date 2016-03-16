@@ -1,4 +1,5 @@
 <template>
+<div>
   <hd title="这是标题" subtitle="这是副标题" :onleft="onleft1"></hd>
     <div class="content">
       <list media="img" card="true" :list="listdata"></list>
@@ -15,58 +16,7 @@
     <btn color="negative" icon="search" badge="3">按钮</btn>
     <btn color="negative" icon="search" badge="3" outlined>按钮</btn>
     <btn color="negative" icon="search" badge="3" block outlined>按钮</btn>
-
-  <modal type="bottom" title="这是bottom标题" close="true">
-      <div slot='title'>
-            <span  v-on:click="onNo2" class='btn modal-btn btn-link modal-btn-no'>取消</span>
-            {{title}}
-            <span v-on:click="onYes2" class='btn modal-btn btn-link modal-btn-yes'>确定</span>
-      </div>
-      <div slot="content">
-        <p>这是内容</p>
-        <p>这是内容</p>
-      </div>
-  </modal>
-
-  <!-- <modal type="center" title="这是center标题" close="true">
-        <div slot="content">
-          <p>这是内容</p>
-          <p>这是内容</p>
-        </div>
-    </modal>   -->
-
-  <modal type="top" title="这是top标题" close="true">
-      <div slot="content">
-        <p>这是内容</p>
-        <p>这是内容</p>
-      </div>
-  </modal>
-
-  <modal type="popover" title="这是popover标题" close="true">
-      <div slot="content">
-        <p>这是popover内容</p>
-        <p>这是popover内容2</p>
-      </div>
-  </modal>
-
-  <modal type="tips" title="这是 tips 标题">
-      <div slot="content">
-        <p>这是 tips 内容</p>
-        <p>这是 tips 内容2</p>
-      </div>
-  </modal>
-
-<!--   <modal type="alert" title="这是 alert 标题">
-      <div slot="content">
-        <p>这是 alert 内容</p>
-        <p>这是 alert 内容2</p>
-      </div>
-  </modal>   -->
-
- <!--  <modal type="loading">
-   <p slot="content">loading ...</p>
- </modal> -->
-
+</div>
 </template>
 
 
@@ -76,7 +26,6 @@
   import modal from '../../src/modal.vue'
   import btn from '../../src/btn.vue'
 
-  console.log(list, 'list');
   export default {
     replace: false,
     components: {
