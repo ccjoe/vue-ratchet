@@ -39,7 +39,7 @@
 		<item icon="trash" link="header">link to header</item>	
 		<item icon="gear" link="btn">link to btn</item>	
 		<item icon="pages" link="icon">link to icons</item>	
-		<item divider="true">Divider Bar Item</item>
+		<item :divider="true">Divider Bar Item</item>
 		<item icon="trash" link="badge">link to badges</item>	
 		<item icon="gear" link="tab">link to tabs</item>	
 		<item icon="pages" link="form">link to forms</item>		

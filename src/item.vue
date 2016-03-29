@@ -65,9 +65,7 @@
 	  
 	    methods: {
 	      collapseListGroup: function (event){
-	      	console.log(this.divider, this.$parent.children, 'childrens');	
 	      	if(this.divider !== 'true') return;
-	      	
 	       /* let elem = event.currentTarget, classes = elem.className;
 	        if(!~classes.indexOf('table-view-divider') || !~classes.indexOf('table-view-collapse')){
 	            return;

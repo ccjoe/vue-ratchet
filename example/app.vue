@@ -60,6 +60,14 @@
               title: 'modal',
               link: '/modal'
           },{
+              icon: 'plus',
+              title: 'scroll',
+              link: '/scroll'
+          },{
+              icon: 'plus',
+              title: 'select',
+              link: '/select'
+          },{
               title: '可点击收缩的标题',
               isDivider: true,
               collapse: true

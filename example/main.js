@@ -11,6 +11,8 @@ import iconExample from './demo/icon.vue'
 import tabExample from './demo/tabs.vue'
 import formExample from './demo/forms.vue'
 import modalExample from './demo/modal.vue'
+import scrollExample from './demo/scroll.vue'
+import selectExample from './demo/select.vue' 
 
 // import './common/normalize.scss'
 // import './styles.scss'
@@ -46,7 +48,13 @@ router.map({
     component: formExample
   },
   'modal':{
-  	component: modalExample
+    component: modalExample
+  },
+  'scroll':{
+  	component: scrollExample
+  },
+  'select':{
+    component: selectExample
   }
 })
 

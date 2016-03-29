@@ -1,5 +1,5 @@
 <template>
-	<div class="modal modal-{{type}} {{class}}" v-show="modalshow" @click.self="onCancel">
+	<div class="modal modal-{{type}} {{classname}}" v-show="modalshow" @click.self="onCancel">
 		<div class="modal-layout {{(type==='popover' || type==='tips') && tripos ? tripos : ''}}" v-show="modalshow" :transition="type">
 		    <span v-if="close==='true'" @click="onCancel" class="icon icon-close"></span>
 		    <div class="modal-inner">
@@ -42,7 +42,7 @@
 	        title: '',
 	        content: '',   //content为str或html,如果为function则需要返回str或html
 	        role: String,
-	        class: {
+	        classname: {
 	        	default: ''
 	        },
 	        mask: true
