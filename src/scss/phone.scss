@@ -1,0 +1,59 @@
+$baseFontSize: 24px;
+$baseWidth: 640px;
+$currentWidth:640px!default;
+
+@function pxToEm($px) {
+  @return $px / $baseFontSize * 1em;
+}
+
+@function r($px) {
+  @return ($px/$baseFontSize)*1000/1000*1rem;
+}
+/*
+
+$font-family-sans-serif: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", sans-serif;
+$font-family-serif: Georgia, "Times New Roman", Times, SimSun, serif;
+$font-family-monospace: Monaco, Menlo, Consolas, "Courier New", "FontAwesome", monospace;
+$font-family-kai: Georgia, "Times New Roman", Times, Kai, "Kaiti SC", KaiTi, BiauKai, serif;
+
+ html, body{
+  min-width: 320px;
+  font-size: 12px;
+}
+html,
+button,
+input,
+select,
+textarea{
+  font-family: $font-family-sans-serif;
+}
+
+@mixin html {
+  font-size: $baseFontSize/($baseWidth/$currentminWidth);
+  // max-width: $currentWidth !important;
+}
+
+//attention comments can't be chinese charset? sass compile will be wrong
+//mobile width range 320px->100%
+$queryWidthList: (320px, 400px), (400px, 500px), (500px, 600px), (600px, 720px);
+@each $minWidth, $maxWidth in $queryWidthList {
+  @if $maxWidth == 720px {
+    @include min-screen($minWidth) {
+      $currentWidth: 100%!global;
+      $currentminWidth: 720px!global;
+      html {
+        @include html
+      }
+    }
+  }
+  @else {
+    @include screen($minWidth, $maxWidth) {
+      $currentWidth: $maxWidth!global;
+      $currentminWidth: $minWidth!global;
+      html {
+        @include html
+      }
+    }
+  }
+}
+ */

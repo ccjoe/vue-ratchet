@@ -1,0 +1,65 @@
+//
+// Variables
+// --------------------------------------------------
+
+@import './phone';
+
+// Type
+// --------------------------------------------------
+$font-family-default: "Helvetica Neue", Helvetica, sans-serif !default;
+$font-size-default: r(16px) !default;
+$font-weight: 500 !default;
+$font-weight-light: 400 !default;
+$line-height-default: r(21px) !default;
+
+
+// Colors
+// --------------------------------------------------
+
+// Main theme colors
+$primary-color: #428bca !default;
+$chrome-color:  #fff !default;
+
+// Action colors
+$default-color:  #fff !default;
+$positive-color: #5cb85c !default;
+$negative-color: #d9534f !default;
+
+
+// Bars
+// --------------------------------------------------
+
+$bar-base-height:  r(48px) !default;
+$bar-tab-height:   r(48px) !default;
+$bar-side-spacing: r(10px) !default;
+
+
+// Cards
+// --------------------------------------------------
+
+$card-bg: #fff !default;
+
+
+// Buttons
+// --------------------------------------------------
+
+$button-font-size: r(12px) !default;
+
+
+// Transitions
+// --------------------------------------------------
+
+$timing-fuction: cubic-bezier(.1,.5,.1,1) !default; // Inspired by @c2prods
+
+
+// Borders
+// --------------------------------------------------
+
+$border-default: 1px solid #ddd !default;
+$border-radius: r(6px) !default;
+
+
+$appColor:#099fde;
+
+$gapV: r(10px);
+$gapH: r(15px);

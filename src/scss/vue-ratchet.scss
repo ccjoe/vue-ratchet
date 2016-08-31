@@ -1,0 +1,17 @@
+@import './variables';
+@import './mixins';
+@import './normalize';
+@import './base';
+@import './forms';
+
+html, body{
+	font-size: 24px;
+}
+
+.card{
+  margin: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VueRatchet App</title>
+    <meta charset="utf-8">
+    <meta name="description" content="VueRatchet App">
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"> <!--, minimal-ui Sets initial viewport load and disables zooming  -->
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="VueRatchet App"> <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="format-detection" content="telphone=no, email=no">  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <meta name="renderer" content="webkit"> <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="HandheldFriendly" content="true"> <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="screen-orientation" content="portrait"> <!-- uc强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">  <!-- QQ强制竖屏 -->
+    <meta name="full-screen" content="yes"> <!-- UC强制全屏 -->
+    <meta name="x5-fullscreen" content="true"> <!-- QQ强制全屏 -->
+    <meta name="browsermode" content="application"> <!-- UC应用模式 -->
+    <meta name="x5-page-mode" content="app">  <!-- QQ应用模式 -->
+    <meta name="msapplication-tap-highlight" content="no"> <!-- windows phone 点击无高光 -->
+    <title>VueRatchet App</title>
+    <link href="./favicon.ico" type="image/x-icon" rel=icon> <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <app></app>
+<!--<script src="//cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
+<script src="./src/scene/bridge.js"></script>
+<script src="./src/scene/weixin.js"></script> -->
+    <script src="./build/bundle.js"></script>
+  </body>
+</html>
