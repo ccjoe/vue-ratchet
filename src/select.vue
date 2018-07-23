@@ -1,49 +1,52 @@
 <template>
-    <modal :show.sync="show" type="bottom" :title="title" class="ui-select" :onyes="onyes" :oncancel="oncancel">
-        <slot></slot>
-    </modal>
+<modal :show="show" type="bottom" :title="title" class="ui-select" :onyes="onyes" :oncancel="oncancel">
+    <slot></slot>
+</modal>
 </template>
 
 <script>
-    import modal from './modal.vue'
-    export default {
-        name: 'vselect',
-        components: {modal},
-        props:{
-            show:{
-              type: Boolean,
-              default: true,
-            },
-            title: {
-              type: String,
-              default: '',
-            },
-            onyes: {
-                default: function(){},
-                type: Function
-            },
-            oncancel: {
-                default: function(){},
-                type: Function
-            }
+import modal from './modal.vue'
+export default {
+    name: 'vselect',
+    components: {
+        modal
+    },
+    props: {
+        show: {
+            type: Boolean,
+            default: true,
+        },
+        title: {
+            type: String,
+            default: '',
+        },
+        onyes: {
+            default: function () {},
+            type: Function
+        },
+        oncancel: {
+            default: function () {},
+            type: Function
         }
     }
+}
 </script>
 
 <style lang="sass">
 @import './scss/phone';
-.ui-select{
-    .modal-title{
+.ui-select {
+    .modal-title {
         height: r(35px);
     }
-    .ui-scroll{
+    .ui-scroll {
         float: left;
     }
 }
-.ui-scroll-select{
+
+.ui-scroll-select {
     display: flex;
     height: 100%;
-    .ui-scroll-select-item{
+    .ui-scroll-select-item {
         flex: 1;
     }
 }
@@ -51,18 +54,18 @@
 .ui-select {
     .modal-title {
         height: r(55px);
-        line-height: r(55px)!important;
+        line-height: r(55px) !important;
         font-weight: 400;
         color: #fff;
         background-color: #435163;
     }
     .btn-link {
         font-size: r(17px);
-        padding: r(20px)!important;
+        padding: r(20px) !important;
         color: #fff;
     }
     .modal-btn-no {
-        position: relative; 
+        position: relative;
         &::after {
             position: absolute;
             top: 50%;

@@ -1,26 +1,26 @@
 <template>
-	<form>
-		
-	</form>
+<form>
+
+</form>
 </template>
 
 <script>
-	export default {
-	name: 'vform',
-	props:{
-      model:{
-        type: Boolean,
-        twoWay: true,
-        default: false
-      }
+export default {
+    name: 'vform',
+    props: {
+        model: {
+            type: Boolean,
+
+            default: false
+        }
     },
 
     methods: {
-    	 toggle: function(){
+        toggle: function () {
             this.model = !this.model;
-       }
+        }
     }
-	}
+}
 </script>
 
 <style lang="sass">

@@ -44,8 +44,9 @@
 </template>
 
 <script>
-    import icon from '../../src/icon.vue'
+  import icon from '../../src/icon.vue'
 	export default {
+    name: 'iconExample',
 		components: {icon}
 	}
 </script>

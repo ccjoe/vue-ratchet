@@ -32,5 +32,10 @@ module.exports = {
     presets: ['es2015'],
     plugins: ['transform-runtime']
   },
+  resolve: {
+    alias: {
+      vue: 'vue/dist/vue.js'
+    }
+  },
   devtool: '#source-map'
 }

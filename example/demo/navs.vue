@@ -1,19 +1,18 @@
 <template>
 	<div class="main container">
-		<listdata media="icon" :list="listdata"></listdata>
+		<listdata media="icon" :list="data"></listdata>
 	</div>
 </template>
 
 <script>
   import listdata from '../../src/listdata.vue'
   export default {
-    replace: false,
     components: {
        listdata
     },
   	data() {
       return {
-        listdata:[{
+        data:[{
               icon: 'search',
               title: 'header',
               link: '/header'
@@ -27,7 +26,7 @@
               link: '/listdata'
           },{
               icon: 'star-filled',
-              title: 'btn', 
+              title: 'btn',
               link: '/btn'
           },{
               icon: 'person',

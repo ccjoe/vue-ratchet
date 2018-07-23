@@ -4,15 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --quiet",
+    "start": "webpack-dev-server --inline --hot --quiet",
     "prod": "rm -rf build/* && webpack --progress --hide-modules --config webpack.production.js",
     "build": "webpack --progress --hide-modules --config  webpack.build.min.js && webpack --progress --hide-modules --config  webpack.build.js"
   },
+  "comments": {
+    "vue-strap": "^1.0.2"
+  },
   "dependencies": {
-    "vue-router": "^0.7.6",
-    "vue-strap": "^1.0.2",
-    "vue-touch": "^1.0.2",
-    "vue": "^1.0.8"
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1",
+    "vue-touch": "^2.0.0-beta.4"
   },
   "devDependencies": {
     "babel-core": "^6.1.21",
@@ -29,7 +31,7 @@
     "url-loader": "^0.5.7",
     "vue-hot-reload-api": "^1.2.0",
     "vue-html-loader": "^1.0.0",
-    "vue-loader": "^7.0.3",
+    "vue-loader": "^9.0.0",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1",
     "strip-loader": "^0.1.2"

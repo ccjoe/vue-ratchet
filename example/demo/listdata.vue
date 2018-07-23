@@ -22,7 +22,7 @@
 </template>
 
 <script>
-    import listdata from '../../src/listdata.vue'
+  import listdata from '../../src/listdata.vue'
 	export default {
 		components: {listdata},
   		data() {

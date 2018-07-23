@@ -27,7 +27,7 @@
   import btn from '../../src/btn.vue'
 
   export default {
-    replace: false,
+    =
     components: {
       'list': list,
       'hd': hd,
