@@ -12,17 +12,26 @@ import tabExample from './demo/tabs.vue'
 import formExample from './demo/forms.vue'
 import modalExample from './demo/modal.vue'
 import scrollExample from './demo/scroll.vue'
-import selectExample from './demo/select.vue' 
+import voptionExample from './demo/voption.vue' 
+// import weixinExample from './demo/weixin.vue' 
+import datepickerExample from './demo/datepicker.vue' 
+import navsExample from './demo/navs.vue'
 
 // import './common/normalize.scss'
-// import './styles.scss'
+import './styles.scss'
 
 Vue.config.debug = process.env.NODE_ENV !== 'production'
 
 Vue.use(VueRouter)
 
-const router = new VueRouter()
+const router = new VueRouter({
+   history: false, //html5模式 去掉锚点
+   saveScrollPosition: true //记住页面的滚动位置 html5模式适用
+})
 router.map({
+  '/':{
+    component: navsExample
+  },
   '/header': {
     component: hdExample
   },
@@ -53,9 +62,15 @@ router.map({
   'scroll':{
   	component: scrollExample
   },
-  'select':{
-    component: selectExample
-  }
+  'option':{
+    component: voptionExample
+  },
+  'datepicker':{
+    component: datepickerExample
+  },
+  /*'weixin':{
+    component: weixinExample
+  }*/
 })
 
 const App = Vue.extend(app)

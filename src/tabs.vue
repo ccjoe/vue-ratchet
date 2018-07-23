@@ -57,6 +57,7 @@
   border: 1px solid #ccc;
   border-radius: 3px;
   width:auto;
+  padding-left: 0;
   // Section within controller
   .control-item {
     display: table-cell;

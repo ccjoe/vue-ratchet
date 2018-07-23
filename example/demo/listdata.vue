@@ -1,6 +1,6 @@
 <template>
 <div>
-	<h4>Deprecated[Use list Instead], but is another method define list, pls see the page source code</h4>
+	<h5>建议使用list和item组件实现 Deprecated[Use list Instead], but is another method define list, pls see the page source code</h5>
 	<h5>最简单的列表</h5>
 	<listdata :list="listdata"></listdata>
 
@@ -11,10 +11,10 @@
 	<listdata media="icon" :list="listdata1"></listdata>
 
 	<h5>定义有图片有bdage的列表</h5>
-	<listdata media="img" arrow="false" :list="listdata2"></listdata>
+	<listdata media="img" :arrow="false" :list="listdata2"></listdata>
 
 	<h5>定义有button列表</h5>
-	<listdata media="btn" arrow="false" :list="listdata3"></listdata>
+	<listdata media="btn" :arrow="false" :list="listdata3"></listdata>
 
 	<h5>定义列表分隔栏且配置是否可折叠</h5>
 	<listdata media="icon" :list="listdata4"></listdata>

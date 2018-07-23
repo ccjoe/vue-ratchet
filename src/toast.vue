@@ -1,68 +1,45 @@
 <template>
-	<div class="modal-toast modal-toast-{{type}}" transition="fade" v-show="toastshow">
-	    <span class="icon icon-{{type==='info' ? 'info' : (type==='error'?'close': 'check') }}">
-	    	<slot>{{content}}</slot>
-	    </span>
-	</div>
+	<modal :show.sync="show" type="toast" :maskclose="maskclose" :mask="mask" :time="time" :hastitle="false">
+		<slot></slot>	
+	</modal>
 </template>
 
 <script>
+	import modal from './modal.vue'
 	export default {
 		props:{
-			type:'info',
-			time:{
-				type: Number,
-				default: 3000
-			},
-			toastshow: false,
-			content: String
+			show: {type: Boolean, default: false}, //是否存在mask
+	        mask: {type: Boolean, default: true}, //点击mask关闭
+	        maskclose: {type: Boolean, default: true},
+	        time:{type: Number, default: 3000}  
 		},
+		components: {modal},
 		watch: {
-			toastshow : function () {
-				var t, that = this;
-				console.log(this.toastshow, 'toastshow');
-				if(this.toastshow){
-					t = setTimeout(function(){ that.toastshow = false; }, Number(this.time));
+		    'show': function (val, oldVal) {
+				if(val){
+					this.t = setTimeout(function(){ this.show = false; }.bind(this), Number(this.time));
 				}else{
-					clearTimeout(t);
+					clearTimeout(this.t);
 				}
-			}
+		    }
 		}
 	}
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
+	@import './scss/phone';
 	.modal-toast{
-	    position: fixed;
-	    bottom:25%;
-	    width:100%;
-	    text-align: center;
-	    margin: 0 auto;
-	    color: #fff;
+	    z-index: 100000;
 	    // pointer-events: none;
-	    .icon{
-	        -webkit-font-smoothing: antialiased;
-	        font-size: 15px;
-	        padding: 5px 10px;
-	        max-width:80%;
-	        pointer-events: fill;
-	        &:before{
-	            font-size: 18px;
-	            position: relative;
-	            top:1px;
-	            margin-right: 5px;
-	            //background-color: #fff;
-	            //border-radius: 100%;
-	        }
-	    }
-	    &.modal-toast-info .icon{
-	        background-color: #333;
-	    }
-	    &.modal-toast-success .icon{
-	        background-color: forestgreen;
-	    }
-	    &.modal-toast-error .icon{
-	        background-color: orangered;
-	    }
+	  	.modal-inner{
+	  		background-color: transparent;
+	  	}
+
+	  	.modal-text{
+			background: rgba(0,0,0,.7);
+			padding: r(8px); border-radius: r(6px);
+			color: #fff;
+			text-align: center;
+	  	}
 	}
 </style>

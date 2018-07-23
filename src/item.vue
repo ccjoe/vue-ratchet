@@ -1,11 +1,11 @@
 <template>
   <li v-on:click="collapseListGroup"
-      v-bind:class="{'table-view-cell':!divider, 'table-view-divider':divider,  'table-view-collapse':collapse, 'table-view-full':(badge===void 0)}">
-    <span v-if="divider">{{title}}</span>
-    <a v-if="!divider" class="navigate-right" v-link="{path: link}">
+      v-bind:class="{'active':active, 'table-view-cell':!divider, 'table-view-divider':divider,  'table-view-collapse':collapse, 'table-view-full':(badge===void 0)}" :style="styleobject">
+    <span v-if="divider"><slot>{{title}}</slot></span>
+    <a v-if="!divider" class="navigate-right" href="{{href?href:'javascript:'}}">
         <badge v-if="badge">{{badge}}</badge>
         <img  v-if="img" class="media-object pull-left" :src="img" />
-        <icon v-if="icon" :icon="icon" classes="media-object  pull-left"></icon>
+        <icon v-if="icon" :icon="icon" class="media-object  pull-left"></icon>
         <btn  v-if="btn">{{btn}}</btn>
         <div class="media-body">
             <slot>{{title}}</slot>
@@ -44,7 +44,10 @@
 	      	type: String,
 	      	default: ''
 	      },
-	      link: {
+	      link: {		//vue path route link
+	      	type: String
+	      },	      	
+	      href: {		//a html link
 	      	type: String,
 	      	default: ''
 	      },
@@ -55,40 +58,29 @@
 	      collapse: {
 	      	type: Boolean,
 	      	default: false
+	      },	      
+	      active: {
+	      	type: Boolean,
+	      	default: false
 	      },
+	      height:{
+	      	type: Number,
+	      	default: 0
+	      }
 	    },
 	    data(){
 	      return{
-	        collapseState: false
+	        collapseState: false,
+	        styleobject: this.height ? {
+	        	height: this.height + 'px',
+	        	lineHeight: this.height + 'px'
+	        } : {}//列表单项行内样式
 	      }
 	    },
 	  
 	    methods: {
 	      collapseListGroup: function (event){
 	      	if(this.divider !== 'true') return;
-	       /* let elem = event.currentTarget, classes = elem.className;
-	        if(!~classes.indexOf('table-view-divider') || !~classes.indexOf('table-view-collapse')){
-	            return;
-	        }
-
-	        let compon = this;
-	        next(elem);
-
-	        function next(element){
-	          let nextElem = element.nextSibling;
-	          if(nextElem.tagName === 'LI' && !!~nextElem.className.indexOf('table-view-cell')){
-	            if(!compon.collapseState){
-	              nextElem.style.display = 'none';
-	              compon.collapseState = true;
-	            }else{
-	              nextElem.style.display = 'block';
-	              compon.collapseState = false;
-	            }
-	          }else{
-	            return;
-	          }
-	          next(nextElem);
-	        }*/
 	      }
 	    },
 	    beforeDestroy(){
@@ -96,3 +88,9 @@
 	    }
   	}
 </script>
+<style lang="sass">
+	a{
+		text-decoration: none;
+		color: #333;
+	}
+</style>

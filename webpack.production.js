@@ -1,5 +1,6 @@
 var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var WebpackStrip = require('strip-loader');
 
 module.exports = {
   entry: {
@@ -20,7 +21,8 @@ module.exports = {
       { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream' },
       { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file' },
       { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml' },
-      { test: /\.css$/, loader: 'style-loader!css-loader' }
+      { test: /\.css$/, loader: 'style-loader!css-loader' },
+      { test: /\.(js|vue)$/, exclude: /node_modules/, loader: WebpackStrip.loader('debug', 'console.log') }
     ]
   },
   plugins: [

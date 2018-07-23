@@ -1,6 +1,6 @@
 <template>
 	<div class="ui-scroll ui-scroll-{{isx?'x':'y'}}"  v-touch:pan="panArea"  v-touch:panend="panendArea" v-bind:style="uiScrollStyle">
-    	<div class="ui-scroll-content {{isEnd ? 'ui-scroll-trans' : ''}}"  v-bind:style="scrollContentStyle">
+    	<div class="ui-scroll-content {{isEnd || !enable ? 'ui-scroll-trans' : ''}}"  v-bind:style="scrollContentStyle">
     		<slot name="front" v-if="front">
 				<div class="ui-scroll-front ui-scroll-out" v-bind:class="{'pull-up': y > 0, 'refreshing': y > range/2}" v-if="front">
 					<div class="pull-to-refresh-layer">
@@ -10,9 +10,7 @@
 		    	</div>
 	    	</slot>
 	    	<div class="ui-scroll-core">
-    		<slot>
-    			
-    		</slot>
+    			<slot></slot>
     		</div>
     		<slot name="end" v-if="end">
 	    		<div class="ui-scroll-end gom-scroll-out pull-up">
@@ -89,11 +87,15 @@
 			toucharea: {
 				type: String,
 				default: ''
+			},
+			enable: {		//是否禁用事件
+				type: Boolean,
+				default: true
 			}
 		},
 		data(){
 			return {
-				currentTranslate: !this.isx&&this.front ? -this.outerheight : 0,
+				currentTranslate: !this.isx&&this.front ? this.outerheight : 0,
 				x: 0, 
 				y: !this.isx&&this.front ? -this.outerheight : 0,
 				uiScrollStyle: {
@@ -101,7 +103,8 @@
 					width: (typeof this.width==='number') ? this.width+'px': this.width,
 					height:(typeof this.height==='number') ? this.height+'px': this.height
 				},
-				isEnd: false
+				isEnd: false,
+				steps: 0	//当前共swipe鸟多少steps
 			}
 		},
 		created(){
@@ -121,6 +124,29 @@
 			}
 		},
 		methods: {
+		    /**
+		     * 滚动到...
+		     * @method Gom.UI.Scroll#scrollTo
+		     * @param {object} where 可以为具体的数字，元素, top, bottom字符串
+		     * @param {function} callback 滚动到后回调
+		     */
+		    scrollTo (where, callback){
+		        var toType = typeof  where, val;
+		        if(where === 'top'){
+		            val = 0;
+		        }else if(where === 'bottom'){
+		            // val = -this.getMaxTrans();
+		        }
+		        if(toType === 'number'){
+		            val = where;
+		        }
+		        this.currentTranslate = val;
+		        var isx =  this.isX;       //水平垂直
+				this.steps = Math.abs(Math.round(val/this.step));
+		        this.x = isx ? val : '0',
+		        this.y = isx ? '0' : val;
+		    },
+
 			setDirection: function($event){
 				$event.isX = null; 
 				$event.direction = null;
@@ -142,17 +168,18 @@
 			},
 			getDisByStep: function($event){
 				var steps = Math.round(this.getDistance($event)/this.step); 
-				console.log(this.getDistance($event), this.step, steps * this.step, 'get steps');
 				return steps * this.step;
 			},
 			
 			panArea: function($event){
+				if(!this.enable){ return };
 				this.isEnd = false;
 				this.setDirection($event);
 				this.scrollCount($event);
 				this.onpan($event);
 			},
 			panendArea: function($event){
+				if(!this.enable){ return }
 				this.isEnd = true;
 				this.setDirection($event);
 				this.scrollCount($event, true);
@@ -162,9 +189,9 @@
 				this.currentTranslate = (this.currentTranslate > range.min) ? range.min : this.currentTranslate;
 				this.currentTranslate = (this.currentTranslate < -range.max) ? -range.max : this.currentTranslate;
 
-				var steps = Math.abs(Math.round(this.currentTranslate/this.step));
+				this.steps = Math.abs(Math.round(this.currentTranslate/this.step));
 				// onpanend function provide  $event props, scrollVue instance, and scroll steps...
-				this.onpanend($event, this, steps);	
+				this.onpanend($event, this);	
 			},
 			//根据值计算滚动translate对象
 		    scrollCount: function  ($event){
@@ -181,20 +208,19 @@
 		     * isCountCurrent -是否为记录End后的刻度;
 		     */
 		   	getRange: function(isCountCurrent){
-		   		var initval = isCountCurrent ? 0 : -this.outerheight;
-		   		var range = this.isEnd ? initval : this.range;
-		   		var hw = !this.isx ? 'height' : 'width';
-		   		var corehw = parseInt(getComputedStyle(this.$el.querySelectorAll('.ui-scroll-core > *')[0])[hw],10);
-		   		var fullhw = typeof this[hw] === 'number' ? this[hw] : parseInt(getComputedStyle(this.$el)[hw],10);
-		   		console.log(corehw, fullhw, 'size');
+		   		var range = this.isEnd ? -this.outerheight : this.range;
+		   		var hw = !this.isx ? 'height' : 'width',  chw = !this.isx ? 'clientHeight' : 'clientWidth';
+		   		var corehw = this.$el.querySelectorAll('.ui-scroll-core > *')[0][chw];
+		   		var fullhw = typeof this[hw] === 'number' ? this[hw] : this.$el[chw];
+		   		var fronthw = this.$el.querySelectorAll('.ui-scroll-front').length && this.$el.querySelectorAll('.ui-scroll-front')[0][chw];
+		   		var endhw = this.$el.querySelectorAll('.ui-scroll-end').length && this.$el.querySelectorAll('.ui-scroll-end')[0][chw];
 		   		return {
 		   			'min': range,
-		   			'max': range + corehw - fullhw
+		   			'max': fronthw*2 + endhw + range + corehw - fullhw
 		   		}
 		   	},
 		    rangeCheck: function (dis){
 		    	var range = this.getRange();
-		    	console.log(range, 'range');
 		        dis = (dis < -range.max) ? -range.max : dis;
 		        dis = (dis > range.min) ? range.min : dis;
 		        return dis;

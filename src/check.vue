@@ -1,16 +1,22 @@
 <template>
-<li @click="v2m" class="table-view-cell item" :class="{active: active}">
-    <label><slot>{{title}}</slot></label>
+<li @click="v2m" class="table-view-cell item {{active?'active':''}}">
+    <label class="{{hasicon?'check-cion':''}}"><slot>{{title}}</slot></label>
 </li>
 </template>
 
 <script>
+    //这是个很神奇的组件，父组件可以是checkbox 或 radio 或是其它, 父组件有个属性model可以取得选中的值
+    //适用于一切选择项
     export default {
         name: 'check',
         props: {
+            //选中后写到model的值
             key: {
-                type: String,
                 required: true
+            },
+            hasicon:{
+                type: Boolean,
+                default: false
             }
         },
         data() {
@@ -28,14 +34,9 @@
             },
             v2m: function() {
                 this.active = this.ischeckbox ? !this.active : true;
-                this.val;
-            }
-        },
-        computed: {
-            ischeckbox: function() {
-                return this.$parent.constructor.name.toLowerCase() === 'checkbox';
+                this.getval();
             },
-            val: function() {
+            getval: function() {
                 var pmodel = this.$parent.model,
                     val = this.key || title;
                 if (this.ischeckbox) {
@@ -51,6 +52,12 @@
                     this.$parent.model = val;
                     this.m2v();
                 }
+            }
+        },
+        computed: {
+            ischeckbox: function() {
+                return this.$parent.type === 'checkbox';
+                // return this.$parent.constructor.name.toLowerCase() === 'checkbox';
             }
         }
     } 

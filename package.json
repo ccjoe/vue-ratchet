@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --quiet",
-    "build": "rm -rf build/* && webpack --progress --hide-modules --config webpack.production.js"
+    "prod": "rm -rf build/* && webpack --progress --hide-modules --config webpack.production.js",
+    "build": "webpack --progress --hide-modules --config  webpack.build.min.js && webpack --progress --hide-modules --config  webpack.build.js"
   },
   "dependencies": {
     "vue-router": "^0.7.6",
@@ -30,7 +31,8 @@
     "vue-html-loader": "^1.0.0",
     "vue-loader": "^7.0.3",
     "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.1"
+    "webpack-dev-server": "^1.12.1",
+    "strip-loader": "^0.1.2"
   },
   "peerDependencies": {
     "bootstrap": "^3.3.5"

@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="card">
   <tabs>
      <tab header="tab1">
        tab1

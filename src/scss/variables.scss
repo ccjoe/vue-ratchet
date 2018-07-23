@@ -2,14 +2,15 @@
 // Variables
 // --------------------------------------------------
 
+@import './phone';
 
 // Type
 // --------------------------------------------------
 $font-family-default: "Helvetica Neue", Helvetica, sans-serif !default;
-$font-size-default: 16px !default;
+$font-size-default: r(16px) !default;
 $font-weight: 500 !default;
 $font-weight-light: 400 !default;
-$line-height-default: 21px !default;
+$line-height-default: r(21px) !default;
 
 
 // Colors
@@ -28,9 +29,9 @@ $negative-color: #d9534f !default;
 // Bars
 // --------------------------------------------------
 
-$bar-base-height:  44px !default;
-$bar-tab-height:   50px !default;
-$bar-side-spacing: 10px !default;
+$bar-base-height:  r(48px) !default;
+$bar-tab-height:   r(48px) !default;
+$bar-side-spacing: r(10px) !default;
 
 
 // Cards
@@ -42,7 +43,7 @@ $card-bg: #fff !default;
 // Buttons
 // --------------------------------------------------
 
-$button-font-size: 12px !default;
+$button-font-size: r(12px) !default;
 
 
 // Transitions
@@ -55,10 +56,10 @@ $timing-fuction: cubic-bezier(.1,.5,.1,1) !default; // Inspired by @c2prods
 // --------------------------------------------------
 
 $border-default: 1px solid #ddd !default;
-$border-radius: 6px !default;
+$border-radius: r(6px) !default;
 
 
-$appColor:#129BD8;
+$appColor:#099fde;
 
-$gapV: 10px;
-$gapH: 15px;
+$gapV: r(10px);
+$gapH: r(15px);

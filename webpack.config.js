@@ -28,5 +28,9 @@ module.exports = {
           exclude: /node_modules/
       }
   },
+  babel: {
+    presets: ['es2015'],
+    plugins: ['transform-runtime']
+  },
   devtool: '#source-map'
 }

@@ -1,5 +1,5 @@
 <template>
-	<span class="icon" :class="setClass"></span>
+	<span class="icon {{classData}}"></span>
 </template>
 
 <script>
@@ -9,19 +9,18 @@
 	      icon: {
 	      	type: String,
 	      	required: true
-	      },
-	      classes: ''
+	      }
 	    },
 	    data(){
 	    	return {
-	    		classData: ['icon-'+this.icon]
+	    		classData: 'icon-'+this.icon
 	    	}
 	    },
-	    computed: {
+	    /*computed: {
 	    	setClass: function() {
 	    		return this.classData.concat(this.classes ? this.classes.split(' ') : []);
 	    	}
-	    }
+	    }*/
 	}
 </script>
 

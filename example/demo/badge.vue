@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="card">
 		<badge>1</badge>
 		<badge color="primary">2</badge>
 		<badge color="positive">3</badge>

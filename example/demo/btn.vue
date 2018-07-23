@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="card">
 	<btn>Button</btn>
 	<btn color="primary">Button</btn>
     <btn color="positive">Button</btn>
@@ -47,6 +47,9 @@
 <style lang="sass" scoped>
 .btn-primary .badge{
 	// color: #fff!important;
+}
+.card{
+    border: 0;
 }
 button:not(.btn-block){
 	margin: 5px;
