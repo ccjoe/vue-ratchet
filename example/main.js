@@ -18,7 +18,7 @@ import datepickerExample from './demo/datepicker.vue'
 import navsExample from './demo/navs.vue'
 
 // import './common/normalize.scss'
-// import './styles.scss'
+import './styles.scss'
 
 Vue.config.debug = process.env.NODE_ENV !== 'production'
 

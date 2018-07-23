@@ -24,7 +24,7 @@
       background-color: #fff;
       border-top: $border-default;
       border-bottom: $border-default;
-      font-size: 18px;
+      font-size: 16px;
     }
 
     .table-view-cell {
