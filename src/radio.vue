@@ -9,7 +9,6 @@ export default {
     name: 'radio',
     props: {
         model: {
-
             required: true
         },
         position: {

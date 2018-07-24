@@ -133,6 +133,8 @@ module.exports = {
             second: 0,
             sep: "-",
             days: [],
+            innerMin: this.min,
+            innerMax: this.max,
             selected: [],
             weeksHan: ['日', '一', '二', '三', '四', '五', '六'],
             weeksEng: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
@@ -342,16 +344,16 @@ module.exports = {
             var begin = this.begin || this.value; //没有begin时即为this.value一个值非范围
             var end = this.end || this.value;
             if (this.begin) {
-                this.min = this.begin;
+                this.innerMin = this.begin;
             }
             if (this.end) {
-                this.max = this.end;
+                this.innerMax = this.end;
             }
 
             //当前月
             for (var i = 1; i <= currMonthLastDate; i++) {
                 options = that.getDayInfo(y, m, i);
-                options.disabled = !this.isBetween(y, m, i, this.min, this.max);
+                options.disabled = !this.isBetween(y, m, i, this.innerMin, this.innerMax);
 
                 if (begin && end) {
                     options.selected = this.isBetween(y, m, i, begin, end);

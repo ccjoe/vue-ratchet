@@ -1,27 +1,29 @@
 <template>
-<div v-bind:class="`ui-scroll ui-scroll-${isx?'x':'y'}`" v-touch:pan="panArea" v-touch:panend="panendArea" v-bind:style="uiScrollStyle">
-    <div v-bind:class="`ui-scroll-content ${isEnd || !enable ? 'ui-scroll-trans' : ''}`" v-bind:style="scrollContentStyle">
-        <slot name="front" v-if="front">
-            <div class="ui-scroll-front ui-scroll-out" v-bind:class="{'pull-up': y > 0, 'refreshing': y > range/2}" v-if="front">
-                <div class="pull-to-refresh-layer">
-                    <div class="pull-show-item"><span class="preloader-text">{{movetext}}</span><span class="preloader"></span></div>
-                    <div class="pull-show-item"><span class="pull-to-refresh-text">{{freshtext}}</span><span class="pull-to-refresh-arrow"></span></div>
+<v-touch v-on:pan="panArea" v-on:panend="panendArea">
+    <div v-bind:class="`ui-scroll ui-scroll-${isx?'x':'y'}`" v-bind:style="uiScrollStyle">
+        <div v-bind:class="`ui-scroll-content ${isEnd || !enable ? 'ui-scroll-trans' : ''}`" v-bind:style="scrollContentStyle">
+            <slot name="front" v-if="front">
+                <div class="ui-scroll-front ui-scroll-out" v-bind:class="{'pull-up': y > 0, 'refreshing': y > range/2}" v-if="front">
+                    <div class="pull-to-refresh-layer">
+                        <div class="pull-show-item"><span class="preloader-text">{{movetext}}</span><span class="preloader"></span></div>
+                        <div class="pull-show-item"><span class="pull-to-refresh-text">{{freshtext}}</span><span class="pull-to-refresh-arrow"></span></div>
+                    </div>
                 </div>
+            </slot>
+            <div class="ui-scroll-core">
+                <slot></slot>
             </div>
-        </slot>
-        <div class="ui-scroll-core">
-            <slot></slot>
+            <slot name="end" v-if="end">
+                <div class="ui-scroll-end gom-scroll-out pull-up">
+                    <div class="pull-to-refresh-layer">
+                        <div class="pull-show-item"><span class="preloader-text">{{movetext}}</span><span class="preloader"></span></div>
+                        <div class="pull-show-item"><span class="pull-to-refresh-text">{{freshtext}}</span><span class="pull-to-refresh-arrow"></span></div>
+                    </div>
+                </div>
+            </slot>
         </div>
-        <slot name="end" v-if="end">
-            <div class="ui-scroll-end gom-scroll-out pull-up">
-                <div class="pull-to-refresh-layer">
-                    <div class="pull-show-item"><span class="preloader-text">{{movetext}}</span><span class="preloader"></span></div>
-                    <div class="pull-show-item"><span class="pull-to-refresh-text">{{freshtext}}</span><span class="pull-to-refresh-arrow"></span></div>
-                </div>
-            </div>
-        </slot>
     </div>
-</div>
+</v-touch>
 </template>
 
 <script>
@@ -72,10 +74,6 @@ export default {
             type: Number,
             default: 100
         },
-        outerheight: { // swipe out text height
-            type: Number,
-            default: 44
-        },
         freshtext: {
             type: String,
             default: 'up to fresh'
@@ -95,6 +93,7 @@ export default {
     },
     data() {
         return {
+            outerheight: 44, // swipe out text height
             currentTranslate: !this.isx && this.front ? this.outerheight : 0,
             x: 0,
             y: !this.isx && this.front ? -this.outerheight : 0,

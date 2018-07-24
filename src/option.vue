@@ -22,10 +22,7 @@ export default {
         height: {
             default: 165
         },
-        activeindex: {
-            type: Number,
-            default: 0
-        },
+
         data: { //展示的options列表数据
             default: []
         },
@@ -47,6 +44,7 @@ export default {
     },
     data() {
         return {
+          activeindex: 0,
             cellStyle: {
                 paddingTop: this.step * 2 + 'px',
                 paddingBottom: this.step * 2 + 'px'

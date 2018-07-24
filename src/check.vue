@@ -1,6 +1,6 @@
 <template>
-<li @click="v2m" v-bind:class="'table-view-cell item' + active?'active':''">
-    <label v-bind:class="hasicon?'check-cion':''"><slot>{{title}}</slot></label>
+<li @click="v2m" v-bind:class="'table-view-cell item' + (active?' active':'')">
+    <label v-bind:class="hasicon?'check-cion':''"><slot></slot></label>
 </li>
 </template>
 
@@ -11,7 +11,7 @@ export default {
     name: 'check',
     props: {
         //选中后写到model的值
-        key: {
+        vkey: {
             required: true
         },
         hasicon: {
@@ -29,8 +29,8 @@ export default {
     },
     methods: {
         m2v: function () {
-            var val = this.key || title;
-            this.active = this.ischeckbox ? (!!~this.$parent.model.indexOf(val)) : (this.$parent.model === val);
+            var val = this.vkey;
+            this.active = this.ischeckbox ? (!!~this.$parent.model.indexOf(val)) : (this.$parent.model[0] === val);
         },
         v2m: function () {
             this.active = this.ischeckbox ? !this.active : true;
@@ -38,7 +38,7 @@ export default {
         },
         getval: function () {
             var pmodel = this.$parent.model,
-                val = this.key || title;
+                val = this.vkey;
             if (this.ischeckbox) {
                 if (this.active) {
                     pmodel.push(val)
@@ -49,7 +49,8 @@ export default {
                 this.$parent.$children.forEach(function (item) {
                     item.active = false;
                 });
-                this.$parent.model = val;
+                pmodel.splice(pmodel.indexOf(val), 1);
+                pmodel.push(val)
                 this.m2v();
             }
         }

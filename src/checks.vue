@@ -12,14 +12,12 @@ export default {
             default: 'checkbox' //radio options
         },
         model: {
-
             required: true
         },
         position: {
             type: String,
             default: 'right'
-        },
-
+        }
     }
 }
 </script>

@@ -1,23 +1,37 @@
 <template>
-<div class="toggle" :class="{'active': model}">
-    <div class="toggle-handle" v-touch:panend="toggle" v-touch:tap="toggle"></div>
+<div class="toggle" :class="{'active': checked}">
+    <v-touch v-on:tap="toggle">
+        <div class="toggle-handle"></div>
+    </v-touch>
 </div>
 </template>
 
 <script>
 export default {
     name: 'toggle',
+    model: {
+      prop: 'checked', // Rename from default 'value' property.
+      event: 'change' // Rename from default 'input' event.
+    },
     props: {
-        model: {
+        checked: {
             type: Boolean,
-
             default: false
         }
     },
-
+    data () {
+      return {
+        innnerChecked: this.checked
+      }
+    },
+     watch: {
+      innnerChecked (value) {
+        this.$emit('change', Boolean(value))
+      }
+    },
     methods: {
         toggle: function () {
-            this.model = !this.model;
+            this.innnerChecked = !this.innnerChecked;
         }
     }
 }
