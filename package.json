@@ -8,9 +8,6 @@
     "prod": "rm -rf build/* && webpack --progress --hide-modules --config webpack.production.js",
     "build": "webpack --progress --hide-modules --config  webpack.build.min.js && webpack --progress --hide-modules --config  webpack.build.js"
   },
-  "comments": {
-    "vue-strap": "^1.0.2"
-  },
   "dependencies": {
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
@@ -25,16 +22,18 @@
     "css-loader": "^0.21.0",
     "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.5",
-    "sass-loader": "^3.1.2",
+    "less": "^3.8.0",
+    "less-loader": "^2.2.3",
     "node-sass": "^3.4.1",
+    "sass-loader": "^3.1.2",
+    "strip-loader": "^0.1.2",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "vue-hot-reload-api": "^1.2.0",
     "vue-html-loader": "^1.0.0",
     "vue-loader": "^9.0.0",
     "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.1",
-    "strip-loader": "^0.1.2"
+    "webpack-dev-server": "^1.12.1"
   },
   "peerDependencies": {
     "bootstrap": "^3.3.5"

@@ -1,13 +1,13 @@
 $baseFontSize: 24px;
 $baseWidth: 640px;
-$currentWidth:640px!default;
+$currentWidth: 640px !default;
 
 @function pxToEm($px) {
   @return $px / $baseFontSize * 1em;
 }
 
 @function r($px) {
-  @return ($px/$baseFontSize)*1000/1000*1rem;
+  @return ($px/$baseFontSize) * 1000/1000 * 1rem;
 }
 /*
 

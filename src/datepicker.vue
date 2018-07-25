@@ -1,64 +1,72 @@
 <template>
-<!-- <transition="calendar" transition-mode="out-in"> -->
-    <div v-bind:class="`calendar ${popup ? 'calendar-popup':'calendar-static'}`" v-show="show" :style="{'left':x+'px','top':y+'px'}">
-        <div class="calendar-tools">
-            <i class="icon icon-left-nav  float left glyphicon glyphicon-menu-left" @click="prev"></i>
-            <i class="icon icon-right-nav float right glyphicon glyphicon-menu-right" @click="next"></i>
+<div v-bind:class="`calendar ${popup ? 'calendar-popup':'calendar-static'}`" v-show="innerShow" :style="{'left':x+'px','top':y+'px'}">
+    <div class="calendar-tools">
+        <div class="calendar-header">
+            <i class="icon-left" @click="prev"></i>
+            <i class="icon-right" @click="next"></i>
             <div class="text center-inline">
                 <input type="number" v-model.number="year" @change="render(year, month)" min="1970" max="2100" maxlength="4">/ {{month}}
             </div>
-            <div class="calendar-panes" v-for="(amonth, index) in days">
-                <div class="text center-inline" v-if="pickerstyle>1">
-                    <span v-if="month+index <= 12">{{year}}/{{month+index}}</span>
-                    <span v-else>{{year+1}}/{{month+index-12}}</span>
-                </div>
-                <table cellpadding="5">
-                    <thead>
-                        <tr>
-                            <td v-for="week in weeksHan" class="week">{{week}}</td>
-                        </tr>
-                    </thead>
-                    <tr v-for="(day, k1) in amonth">
-                        <td v-for="(child, k2) in day"
-                            v-bind:class="{ 'selected': child.selected, 'disabled': child.disabled }"
-                            @click="select(index, k1,k2,$event)"
-                            @touchstart="select(index,k1,k2,$event)">
-                            {{child.day}}
+        </div>
+        <div class="calendar-panes" v-for="(amonth, index) in days" v-bind:key="index">
+            <div class="text center-inline" v-if="monthes>1">
+                <span v-if="month+index <= 12">{{year}}/{{month+index}}</span>
+                <span v-else>{{year+1}}/{{month+index-12}}</span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <td v-for="week in weeksHan" class="week" v-bind:key="week">{{week}}</td>
+                    </tr>
+                </thead>
+                <tr v-for="(day, k1) in amonth" v-bind:key="k1">
+                    <td v-for="(child, k2) in day" v-bind:key="k2" v-bind:class="{ 'selected': child.selected, 'disabled': child.disabled }" @click="select(index, k1, k2, $event)" @touchstart="select(index, k1, k2, $event)">
+                        <div class="day-area">
+                            <div>{{child.day}}</div>
+                            <div v-if="child.addon" class="day-addon">{{child.addon}}</div>
                             <div class="lunar" v-if="lunar">
                                 {{child.outadd}}
                             </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="calendar-time" v-show="type=='datetime'||type=='time'">
-                <div class="timer">
-                    <input type="number" v-model.number="hour"  min="0" max="23" maxlength="2">时
-                    <input type="number" v-model.number="minute" min="0" max="59" maxlength="2">分
-                    <input type="number" v-model.number="second" min="0" max="59" maxlength="2">秒
-                </div>
-            </div>
-            <div class="calendar-button" v-show="type=='datetime'||type=='time'||range">
-                <button @click="ok">确定</button>
-                <button @click="cancel" class="cancel">取消</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="calendar-time" v-show="type=='datetime'||type=='time'">
+            <div class="timer">
+                <input type="number" v-model.number="hour" min="0" max="23" maxlength="2">时
+                <input type="number" v-model.number="minute" min="0" max="59" maxlength="2">分
+                <input type="number" v-model.number="second" min="0" max="59" maxlength="2">秒
             </div>
         </div>
+        <div class="calendar-button" v-show="type=='datetime'||type=='time'">
+            <button @click="ok">确定</button>
+            <button @click="cancel" class="cancel">取消</button>
+        </div>
     </div>
-<!-- </transition> -->
+</div>
 </template>
 
 <script>
-module.exports = {
+export default {
+    model: {
+        prop: 'value', // Rename from default 'value' property.
+        event: 'change' // Rename from default 'input' event.
+    },
     props: {
         //显示未来几个月的日历 (0为一年)
         //普通日历(1)  是否选择双日历面板(2), 或展开型的日历面板(0)
-        pickerstyle: {
+        monthes: {
             type: Number,
             default: 1 // 1, 2, 0
         },
         popup: { //是否浮层显示
             type: Boolean,
-            default: true
+            default: false
+        },
+        dayAddon: {
+            type: Function,
+            default: function () {}
         },
         //type仅日期date //datatime 日期与时间
         type: {
@@ -66,15 +74,10 @@ module.exports = {
             default: "date"
         },
         //默认值
-        value: {
-            type: String,
-
-            default: ""
-        },
+        value: "",
         //日历是否显示与选择后自动隐藏
         show: {
             type: Boolean,
-
             default: false
         },
         autohide: {
@@ -133,6 +136,8 @@ module.exports = {
             second: 0,
             sep: "-",
             days: [],
+            innerShow: this.show,
+            innerValue: this.value,
             innerMin: this.min,
             innerMax: this.max,
             selected: [],
@@ -174,8 +179,8 @@ module.exports = {
     created: function () {
         var now = new Date();
         // 如果有默认值
-        if (this.value) {
-            var timeAtom = this.gettime(this.value);
+        if (this.innerValue) {
+            var timeAtom = this.gettime(this.innerValue);
             this.year = timeAtom[0];
             this.month = timeAtom[1];
             this.day = timeAtom[2];
@@ -191,15 +196,20 @@ module.exports = {
             this.hour = this.zero(now.getHours());
             this.minute = this.zero(now.getMinutes());
             this.second = this.zero(now.getSeconds());
-            // this.value = this.output([this.year,this.month,this.day]);
-            // this.value = this.year + '-' + this.month + '-' + this.day;
         }
 
         this.currentMonth = this.month;
         this.render(this.year, this.month);
     },
     watch: {
-        'show': function (val, old) {
+        innerShow(val) {
+            this.show = val
+        },
+        innerValue(value) {
+            this.$emit('change', value)
+        },
+        show(val) {
+            this.innerShow = val
             if (val) {
                 this.render(this.year, this.month);
             }
@@ -248,7 +258,9 @@ module.exports = {
             dayinfo.lunarfest = this.lunardays[this.zero(dayinfo.lunar.month) + this.zero(dayinfo.lunar.day)];
             dayinfo.tolunar = this.tolunar(dayinfo.lunar.day);
             dayinfo.outadd = this.outadd(dayinfo);
-            // console.log(y, m, d, dayinfo.lunar.month, dayinfo.lunar.day)
+            if (this.dayAddon) {
+                dayinfo.addon = this.dayAddon(dayinfo)
+            }
             return dayinfo;
         },
         //显示的附加日历信息， 优先级是: 节日>节气>今天>农历
@@ -325,7 +337,7 @@ module.exports = {
                 options, line = 0,
                 temp = [];
             m = m - 1;
-            var prevMonthLastDate = new Date(y, m - 1, 0).getDate(); //前一个月的最后一天
+            var prevMonthLastDate = new Date(y, m, 0).getDate(); //前一个月的最后一天
             var currMonth1DayWeek = new Date(y, m, 1).getDay(); //当月第一天星期
             var currMonthLastDate = new Date(y, m + 1, 0).getDate(); //当月最后一天
 
@@ -341,8 +353,8 @@ module.exports = {
                 }
             }
 
-            var begin = this.begin || this.value; //没有begin时即为this.value一个值非范围
-            var end = this.end || this.value;
+            var begin = this.begin || this.innerValue; //没有begin时即为this.innerValue一个值非范围
+            var end = this.end || this.innerValue;
             if (this.begin) {
                 this.innerMin = this.begin;
             }
@@ -380,15 +392,14 @@ module.exports = {
                 temp[line].push(options);
                 kk++;
             }
-            // console.log(this.selected,' this.selected');
             return temp;
         },
-        //渲染 pickerstyle 个月的日历数据
+        //渲染 monthes 个月的日历数据
         render: function (y, m) {
             this.days = [this.calcPane(y, m)];
-            if (this.pickerstyle !== 1) {
+            if (this.monthes !== 1) {
                 var daysarr = [];
-                for (var i = 0; i < this.pickerstyle; i++) {
+                for (var i = 0; i < this.monthes; i++) {
                     var month = m + i;
                     if (month > 12) {
                         month = month - 12;
@@ -439,10 +450,11 @@ module.exports = {
             }
             this.setRange(true);
             var d = this.addmonths(this.year, this.month, k0);
-            this.value = this.output([d.y, d.m, this.day]);
+            this.innerValue = this.output([d.y, d.m, this.day]);
             if (this.autohide && this.type == 'date') {
-                this.show = false;
+                this.innerShow = false;
             }
+            this.render(d.y, d.m);
         },
         // 根据日期或日期坐标获取坐标范围数组
         getRange: function (begin, end) {
@@ -466,11 +478,11 @@ module.exports = {
             }
         },
         ok: function () {
-            this.value = this.output([this.year, this.month, this.day, this.hour, this.minute, this.second]);
-            this.show = false;
+            this.innerValue = this.output([this.year, this.month, this.day, this.hour, this.minute, this.second]);
+            this.innerShow = false;
         },
         cancel: function () {
-            this.show = false;
+            this.innerShow = false;
         },
         // 格式化输出
         output: function (args) {
@@ -487,15 +499,26 @@ module.exports = {
 
         // 农历二十四节气，相关代码在网络上获取并修改
         solarTermInfo: (function () {
-            var cache = {};
-            var cachekeys = [];
-            var solarTerm = ['小寒', '大寒', '立春', '雨水', '惊蛰', '春分', '清明', '谷雨', '立夏', '小满', '芒种', '夏至', '小暑', '大暑', '立秋', '处暑', '白露', '秋分', '寒露', '霜降', '立冬', '小雪', '大雪', '冬至'];
-            var sTermInfo = [0, 21208, 42467, 63836, 85337, 107014, 128867, 150921, 173149, 195551, 218072, 240693, 263343, 285989, 308563, 331033, 353350, 375494, 397447, 419210, 440795, 462224, 483532, 504758];
-            // 返回某年的第n个节气为几日(从0小寒起算)
-            var getSolarTermIndex = function (year, index) {
-                var offDate = new Date((31556925974.7 * (year - 1900) + sTermInfo[index] * 60000) + Date.UTC(1900, 0, 6, 2, 5));
-                return offDate.getUTCDate();
-            };
+            //refs: https://www.cnblogs.com/bluedream2009/archive/2010/06/02/1750359.html
+            var sTermMap = '0|gd4|wrn|1d98|1tuh|2akm|2rfn|38g9|3plp|46vz|4o9k|55px|5n73|64o5|6m37|73fd|7kna|81qe|8io7|8zgq|9g4b|9wnk|ad3g|ath2|'.split('|');
+            var sTermNames = '小寒|大寒|立春|雨水|惊蛰|春分|清明|谷雨|立夏|小满|芒种|夏至|小暑|大暑|立秋|处暑|白露|秋分|寒露|霜降|立冬|小雪|大雪|冬至'.split('|');
+            for (var i = 24; i--;) sTermMap[i] = parseInt(sTermMap[i], 36);
+
+            function term(y, n) {
+                var d = new Date((31556925974.7 * (y - 1900) + sTermMap[n] * 60000) + Date.UTC(1900, 0, 6, 2, 5));
+                return {
+                    m: d.getUTCMonth(),
+                    d: d.getUTCDate()
+                }
+            }
+
+            function getTerm(y, m, d) {
+                for (var i = sTermNames.length, x; i--;) {
+                    x = term(y, i);
+                    if (x.m == m && x.d == d) return sTermNames[i];
+                };
+                return ''
+            }
 
             // 返回该月的节气信息
             var getMonthSolarTerms = function (year, month) {
@@ -503,23 +526,14 @@ module.exports = {
                     month = year.getMonth();
                     year = year.getFullYear();
                 }
-                var key = '' + year + month;
-                if (key in cache) {
-                    return cache[key];
-                }
-                var ret = cache[key] = {};
-                var index;
-                index = getSolarTermIndex(year - 1900, month * 2);
-                ret[index - 1] = solarTerm[month * 2];
-                index = getSolarTermIndex(year - 1900, month * 2 + 1);
-                ret[index - 1] = solarTerm[month * 2 + 1];
-                cachekeys.push(key);
-                if (cachekeys.length > 12) {
-                    delete cache[cachekeys.shift()];
-                }
-                return ret;
+                var ret = {},
+                    index;
+                index = term(year, month * 2).d;
+                ret[index] = getTerm(year, month, index);
+                index = term(year, month * 2 + 1).d;
+                ret[index] = getTerm(year, month, index);
+                return ret
             }
-
             return getMonthSolarTerms;
         })(),
 
@@ -643,178 +657,211 @@ module.exports = {
 }
 </script>
 
-<style lang="sass" scoped>
-.center-inline {
-    display: inline-block;
+<style lang="less">
+@dateColor: #ff6c1a;
+.triangle(@num, @size: 6px, @bold: 1px, @color: #000) {
+  border-right: @bold solid @color;
+  border-bottom: @bold solid @color;
+  height: @size;
+  width: @size;
+  transform: rotate(-@num);
 }
 
 .calendar {
-    width: 300px;
-    padding: 10px;
-    background: #fff;
-    border: 1px solid #DEDEDE;
-    border-radius: 2px;
-    opacity: .95;
-    transition: all .5s ease;
-    z-index: 100;
-    &.calendar-popup {
-        position: absolute;
-    }
-    &.calendar-static {
-        width: 100%;
-    }
+  width: 300px;
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  opacity: 0.95;
+  transition: all 0.5s ease;
+  z-index: 100;
+  &.calendar-popup {
+    position: absolute;
+  }
+  &.calendar-static {
+    width: 100%;
+  }
 }
 
 .calendar-enter,
 .calendar-leave-active {
-    opacity: 0;
-    transform: translate3d(0, -10px, 0);
+  opacity: 0;
+  transform: translate3d(0, -10px, 0);
 }
 
 .calendar:before {
-    position: absolute;
-    left: 30px;
-    top: -10px;
-    content: "";
-    border: 5px solid rgba(0, 0, 0, 0);
-    border-bottom-color: #DEDEDE;
+  position: absolute;
+  left: 30px;
+  top: -10px;
+  content: '';
+  border: 5px solid rgba(0, 0, 0, 0);
+  border-bottom-color: #dedede;
 }
 
 .calendar:after {
-    position: absolute;
-    left: 30px;
-    top: -9px;
-    content: "";
-    border: 5px solid rgba(0, 0, 0, 0);
-    border-bottom-color: #fff;
+  position: absolute;
+  left: 30px;
+  top: -9px;
+  content: '';
+  border: 5px solid rgba(0, 0, 0, 0);
+  border-bottom-color: #fff;
 }
 
 .calendar-panes {
-    background: #fff;
+  background: #fff;
 }
 
 .calendar-tools {
-    font-size: 20px;
-    line-height: 32px;
-    color: #5e7a88;
+  color: @dateColor;
+  text-align: center;
+  input {
+    color: @dateColor;
+    width: 60px;
     text-align: center;
-    .float.left {
-        float: left;
-    }
-    .float.right {
-        float: right;
-    }
-    input {
-        font-size: 20px;
-        line-height: 32px;
-        color: #5e7a88;
-        width: 80px;
-        text-align: center;
-        border: none;
-        background-color: transparent;
-    }
-    &>i {
-        margin: 0 16px;
-        line-height: 32px;
-        cursor: pointer;
-        color: #707070;
-    }
-    &>i:hover {
-        color: #5e7a88;
-    }
+    border: none;
+    background-color: transparent;
+  }
+  & > i {
+    margin: 0 16px;
+    cursor: pointer;
+    color: #707070;
+  }
+  & > i:hover {
+    color: @dateColor;
+  }
 }
 
 .calendar table {
-    clear: both;
-    width: 100%;
-    margin-bottom: 10px;
-    border-collapse: collapse;
-    color: #444444;
+  clear: both;
+  width: 100%;
+  border-collapse: collapse;
+  color: #444444;
 }
 
 .calendar td {
-    margin: 2px !important;
-    padding: 8px 0;
-    width: 14.28571429%;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 16px;
-    line-height: 125%;
-    cursor: pointer;
-    &:hover {
-        background: #f3f8fa;
+  text-align: center;
+  font-size: 13px;
+  color: #000;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+  width: 14.28%;
+  &:hover {
+    background: #f3f8fa;
+  }
+  &.week {
+    pointer-events: none !important;
+    cursor: default !important;
+  }
+  &.disabled {
+    color: #c0c0c0;
+    pointer-events: none !important;
+    cursor: default !important;
+  }
+  &.selected {
+    color: #fff;
+    .day-addon {
+      color: #fff;
     }
-    &.week {
-        pointer-events: none !important;
-        cursor: default !important;
+    .day-area {
+      background-color: @dateColor;
     }
-    &.disabled {
-        color: #c0c0c0;
-        pointer-events: none !important;
-        cursor: default !important;
-    }
-    &.selected {
-        background-color: #5e7a88;
-        color: #fff;
-        font-size: 16px;
-    }
+  }
 }
 
-.calendar thead td {
+.calendar thead {
+  td {
+    padding: 0;
+    height: 20px;
     text-transform: uppercase;
+    color: #a1a1a1;
+    font-size: 12px;
+    background-color: #f7f7f7;
+  }
 }
 
 .calendar .timer {
-    margin: 10px 0;
+  margin: 10px 0;
+  text-align: center;
+  input {
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 18px;
+    color: @dateColor;
+    width: 50px;
     text-align: center;
-    input {
-        border-radius: 2px;
-        padding: 5px;
-        font-size: 14px;
-        line-height: 18px;
-        color: #5e7a88;
-        width: 50px;
-        text-align: center;
-        border: 1px solid #efefef;
-    }
-    input:focus {
-        border: 1px solid #5e7a88;
-    }
+    border: 1px solid #efefef;
+  }
+  input:focus {
+    border: 1px solid @dateColor;
+  }
 }
 
 .calendar-button {
-    text-align: center;
+  text-align: center;
 }
 
 .calendar-button button {
-    border: none;
-    cursor: pointer;
-    display: inline-block;
-    min-height: 1em;
-    min-width: 8em;
-    vertical-align: baseline;
-    background: #5e7a88;
-    color: #fff;
-    margin: 0 .25em 0 0;
-    padding: .8em 2.5em;
-    font-size: 1em;
-    line-height: 1em;
-    text-align: center;
-    border-radius: .3em;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  min-width: 8em;
+  vertical-align: baseline;
+  background: @dateColor;
+  color: #fff;
+  margin: 0 0.25em 0 0;
+  padding: 0.8em 2.5em;
+  font-size: 1em;
+  line-height: 1em;
+  text-align: center;
+  border-radius: 0.3em;
 }
 
 .calendar-button button.cancel {
-    background: #efefef;
-    color: #666;
-}
-
-.calendar .lunar {
-    font-size: 11px;
-    line-height: 150%;
-    color: #aaa;
+  background: #efefef;
+  color: #666;
 }
 
 .calendar td.selected .lunar {
-    color: #fff;
+  color: #fff;
+}
+
+.calendar-header {
+  position: relative;
+  padding: 5px;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.icon-left,
+.icon-right {
+  position: absolute;
+  top: 15px;
+  text-indent: -2000px;
+}
+
+.icon-left {
+  .triangle(-135deg, 10px, 2px, #333);
+  left: 25px;
+}
+
+.icon-right {
+  .triangle(45deg, 10px, 2px, #333);
+  right: 25px;
+}
+
+.day-area {
+  padding: 8px 0;
+  border-radius: 4px;
+  margin: 5px;
+}
+
+.lunar,
+.day-addon {
+  font-size: 8px;
+  line-height: 10px;
+  color: #a1a1a1;
 }
 </style>

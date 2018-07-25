@@ -1,5 +1,5 @@
 <template>
-<modal :show="show" :type="type" :maskclose="maskclose" :mask="mask" :title="title" :hastitle="false">
+<modal :show.sync="innerShow" :type="type" :maskclose="maskclose" :mask="mask" :title="title" :hastitle="false">
     <slot>
         <div v-if="type==='loading' || type==='preload'" class="spinner">
             <div class="loading-layer">
@@ -17,6 +17,9 @@
 <script>
 import modal from './modal.vue'
 export default {
+  components: {
+        modal
+    },
     props: {
         show: {
             type: Boolean,
@@ -41,8 +44,19 @@ export default {
             default: "游游努力加载中"
         },
     },
-    components: {
-        modal
+    data(){
+      return {
+        innerShow: this.show
+      }
+    },
+    watch: {
+        innerShow(val) {
+            // this.show = val
+            this.$emit('update:show', val)
+        },
+        show(val) {
+            this.innerShow = val
+        }
     }
 }
 </script>

@@ -148,4 +148,4 @@ export {
     getHashSearch,
     getHashPath,
     getHTML5Hash,
-};
+}

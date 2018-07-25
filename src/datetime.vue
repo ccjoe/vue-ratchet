@@ -1,12 +1,12 @@
 <template>
 <div>
-    <vselect title="选择交车时间" :show="show" :onyes="onyes">
+    <vselect title="选择交车时间" :show.sync="innerShow" :onyes="onyes">
         <voption ref="date" class="v-options" :height="height" :step="step" :data="datestr" width="35%" :onpanend="checkRange"></voption>
         <voption ref="ampm" class="v-options" :height="height" :step="step" :data="ampm" width="20%" :onpanend="checkRange"></voption>
         <voption ref="hour" class="v-options" :height="height" :step="step" :data="hour" width="20%" :onpanend="checkRange"></voption>
         <voption ref="minute" class="v-options" :height="height" :step="step" :data="minute" width="25%" :onpanend="checkRange"></voption>
     </vselect>
-    <modal :show="toastShow" :hastitle="false" type="toast" :time="1500" :mask="false">{{toastContent}}</modal>
+    <modal :show.sync="toastShow" :hastitle="false" type="toast" :time="1500" :mask="false">{{toastContent}}</modal>
 </div>
 </template>
 
@@ -21,7 +21,6 @@ import modal from './modal.vue'
 import './filter/filter';
 var dpr = window.document.documentElement.getAttribute('data-dpr') || 1;
 export default {
-
     props: {
         show: {
             default: false,
@@ -55,14 +54,17 @@ export default {
             hour: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
             minute: ['00', 10, 20, 30, 40, 50],
             step: 33 * dpr,
-            toastShow: false
+            toastShow: false,
+            innerShow: this.show
         }
     },
-    mounted() {},
     watch: {
-        'show': function (nv, ov) {
+        innerShow(val) {
+            this.$emit('update:show', val)
+        },
+        show(nv, ov) {
+            this.innerShow = nv
             this.days = dateDiff(this.max);
-            // console.log(this.days, 'days');
             if (this.days > 100) {
                 console.warn('这种场景可能不适用这个组件了');
                 return;
@@ -115,7 +117,6 @@ export default {
         checkRange() {
             this.setVal();
             let maxDate = new Date(this.max);
-            console.log(+this.dateObj, this.dateObj, this.max, 'compare MAX');
             let pass = +this.dateObj > this.max;
             if (pass) {
                 this.dateSelected(maxDate);

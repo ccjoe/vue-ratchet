@@ -1,5 +1,5 @@
 <template>
-<modal :show="show" type="bottom" :title="title" class="ui-select" :onyes="onyes" :oncancel="oncancel">
+<modal :show.sync="innerShow" type="bottom" :title="title" class="ui-select" :onyes="onyes" :oncancel="oncancel">
     <slot></slot>
 </modal>
 </template>
@@ -27,6 +27,19 @@ export default {
         oncancel: {
             default: function () {},
             type: Function
+        }
+    },
+    data() {
+        return {
+            innerShow: this.show
+        }
+    },
+    watch: {
+        innerShow(val) {
+            this.$emit('update:show', val)
+        },
+        show(val) {
+            this.innerShow = val
         }
     }
 }

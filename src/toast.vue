@@ -1,5 +1,5 @@
 <template>
-<modal :show="show" type="toast" :maskclose="maskclose" :mask="mask" :time="time" :hastitle="false">
+<modal :show.sync="innerShow" type="toast" :maskclose="maskclose" :mask="mask" :time="time" :hastitle="false">
     <slot></slot>
 </modal>
 </template>
@@ -28,8 +28,17 @@ export default {
     components: {
         modal
     },
+    data() {
+        return {
+            innerShow: this.show
+        }
+    },
     watch: {
-        'show': function (val, oldVal) {
+        innerShow(val) {
+            this.$emit('update:show', val)
+        },
+        show(val, oldVal) {
+            this.innerShow = val
             if (val) {
                 this.t = setTimeout(function () {
                     this.show = false;

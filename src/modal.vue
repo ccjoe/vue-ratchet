@@ -1,26 +1,33 @@
 <template>
-<div v-bind:class="`modal modal-${type} ${mask?'':'modal-nomask'}`" v-show="show" :transition="type" @click.self="maskclose ? onCancel() : void 0;">
-    <div v-bind:class="`modal-layout ${(type==='popover' || type==='tips') && tripos ? tripos : ''}`">
-        <span v-if="close===true" @click="onCancel" class="icon icon-close"></span>
-        <div class="modal-inner">
-            <slot name="loading"></slot>
-            <div v-if="hastitle" class="modal-title">
-                <slot name="title">
-                    <span v-if="type==='bottom' || type==='popup'" @click="onCancel" class='btn modal-btn btn-link modal-btn-no'>取消</span> {{title}}
-                    <span v-if="type==='bottom' || type==='popup'" @click="onYes" class='btn modal-btn btn-link modal-btn-yes'>确定</span>
-                </slot>
-            </div>
-            <div class="modal-text">
-                <slot>{{content}}</slot>
+<div class="modal">
+    <transition name="fade" mode="out-in">
+        <div v-show="innerShow" v-bind:class="mask ? 'modal-mask':'modal-nomask'"></div>
+    </transition>
+    <transition :name="type" mode="out-in">
+        <div :class="`modal-wrapper modal-${type}`" v-show="innerShow" @click.self="maskclose ? onCancel() : void 0;">
+            <div v-bind:class="`modal-layout  ${(type==='popover' || type==='tips') && tripos ? tripos : ''}`">
+                <span v-if="close===true" @click="onCancel" class="icon icon-close"></span>
+                <div class="modal-inner">
+                    <slot name="loading"></slot>
+                    <div v-if="hastitle" class="modal-title">
+                        <slot name="title">
+                            <span v-if="type==='bottom' || type==='popup'" @click="onCancel" class='btn modal-btn btn-link modal-btn-no'>取消</span> {{title}}
+                            <span v-if="type==='bottom' || type==='popup'" @click="onYes" class='btn modal-btn btn-link modal-btn-yes'>确定</span>
+                        </slot>
+                    </div>
+                    <div class="modal-text">
+                        <slot>{{content}}</slot>
+                    </div>
+                </div>
+                <div class="modal-buttons" v-if="type==='alert'  || type==='confirm'">
+                    <slot name="btns">
+                        <span v-if="type!=='confirm'" @click="onCancel" class="modal-button modal-btn modal-btn-def modal-button-bold">取消</span>
+                        <span @click="onYes" v-bind:class="`modal-button modal-btn modal-btn-yes modal-button-bold ${disabled ? 'modal-button-disabled' : ''}`">确定</span>
+                    </slot>
+                </div>
             </div>
         </div>
-        <div class="modal-buttons" v-if="type==='alert'  || type==='confirm'">
-            <slot name="btns">
-                <span v-if="type!=='confirm'" @click="onCancel" class="modal-button modal-btn modal-btn-def modal-button-bold">取消</span>
-                <span @click="onYes" v-bind:class="`modal-button modal-btn modal-btn-yes modal-button-bold ${disabled ? 'modal-button-disabled' : ''}`">确定</span>
-            </slot>
-        </div>
-    </div>
+    </transition>
 </div>
 </template>
 
@@ -32,6 +39,7 @@ export default {
             type: Boolean,
             default: false
         },
+        showChange: function () {},
         show: {
             type: Boolean,
             default: false,
@@ -70,7 +78,17 @@ export default {
     },
     data() {
         return {
+            innerShow: this.show,
             tripos: 'tri-bottom'
+        }
+    },
+    watch: {
+        innerShow(val) {
+            // this.show = val
+            this.$emit('update:show', val)
+        },
+        show(val) {
+            this.innerShow = val
         }
     },
     methods: {
@@ -84,11 +102,8 @@ export default {
             this.hide();
         },
         hide: function () {
-            this.show = false
+            this.innerShow = false
         }
-    },
-    transition: {
-
     }
 }
 </script>
@@ -114,27 +129,35 @@ $actionsModalHairlineColor: rgba(0, 0, 0, 0.2);
 $actionsModalDuration: 300ms;
 $popupDuration: 400ms;
 $actionsPopoverHairline: rgba(0, 0, 0, 0.2);
-.modal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.modal-mask,
+.modal-wrapper {
     position: fixed;
     top: 0;
-    right: 0;
     bottom: 0;
     left: 0;
-    outline: 0;
-    background-color: rgba(0, 0, 0, .5);
-    -webkit-overflow-scrolling: touch;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-perspective: 1000px;
-    perspective: 1000px;
-    z-index: 13500;
-    &.modal-nomask {
-        background-color: rgba(0, 0, 0, 0);
-    }
+    right: 0;
+    height: 100%;
+    z-index: 1000;
+}
+
+.modal-mask {
+    background-color: rgba(55, 55, 55, .6);
+}
+
+.modal-wrapper {
+    transition: all .3s ease;
+    z-index: 1001;
+}
+
+.modal-nomask {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.modal-layout {
+    margin: 35% auto 0;
+    border-radius: r(6px);
+    width: $modalWidth;
+    z-index: 1001;
 }
 
 .modal-inner {
@@ -147,10 +170,8 @@ $actionsPopoverHairline: rgba(0, 0, 0, 0.2);
     line-height: 1.8rem;
     text-align: center;
     background-color: #08A9E5;
-    font: {
-        size: 0.7rem;
-        weight: 300;
-    }
+    font-size: 0.7rem;
+    font-weight: 300;
     color: #fff;
     html.ios-gt-8 & {
         font-weight: 600;
@@ -239,6 +260,13 @@ $actionsPopoverHairline: rgba(0, 0, 0, 0.2);
     }
     .modal-buttons {
         display: none;
+    }
+}
+
+.modal-preload,
+.modal-top {
+    .modal-layout {
+        margin-top: 0;
     }
 }
 
@@ -352,8 +380,14 @@ $actionsPopoverHairline: rgba(0, 0, 0, 0.2);
 
 /* Animate For Vue Modal */
 
-.modal {
-    transition: all .3s ease;
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
 }
 
 .preload-enter-active,
@@ -371,15 +405,9 @@ $actionsPopoverHairline: rgba(0, 0, 0, 0.2);
 .center-leave-active,
 .toast-enter-active,
 .toast-leave-active {
-    .modal-layout {
-        position: relative;
-        border-radius: r(6px);
-        width: $modalWidth;
-        margin: 0 auto;
-        transform: scale(1);
-        opacity: 1;
-        overflow: hidden;
-    }
+    transform: scale(1);
+    opacity: 1;
+    overflow: hidden;
 }
 
 .top-enter-active,
@@ -392,8 +420,8 @@ $actionsPopoverHairline: rgba(0, 0, 0, 0.2);
 .popover-leave-active,
 .toast-enter-active,
 .toast-leave-active {
-    transform: translate3d(0, 0, 0);
     opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
 
 .tips-enter-active,

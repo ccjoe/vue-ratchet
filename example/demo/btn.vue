@@ -4,7 +4,6 @@
     <btn color="primary">Button</btn>
     <btn color="positive">Button</btn>
     <btn color="negative">Button</btn>
-
     <btn outlined>Button</btn>
     <btn outlined color="primary">Button</btn>
     <btn outlined color="positive">Button</btn>
@@ -42,6 +41,9 @@ import btn from '../../src/btn.vue'
 export default {
     components: {
         btn
+    },
+    data(){
+      return {testData: 123}
     }
 }
 </script>

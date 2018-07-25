@@ -1,5 +1,5 @@
 <template>
-<modal :show="show" :type="type" :maskclose="maskclose" :mask="mask" :hastitle="hastitle" :role="role" :title="title">
+<modal :show.sync="innerShow" :type="type" :maskclose="maskclose" :mask="mask" :hastitle="hastitle" :role="role" :title="title">
     <slot></slot>
 </modal>
 </template>
@@ -39,10 +39,18 @@ export default {
     components: {
         modal
     },
+    data() {
+        return {
+            innerShow: this.show
+        }
+    },
     watch: {
-        'show': function (val, oldVal) {
+        innerShow(val) {
+            this.$emit('update:show', val)
+        },
+        show(val, oldVal) {
+            this.innerShow = val
             if (val && (this.type === 'popover' || this.type === 'tips')) {
-                console.log(this, 'this');
                 var $pos = document.querySelectorAll(this.role)[0],
                     $modal = this.$el.querySelectorAll('.modal-layout')[0];
 

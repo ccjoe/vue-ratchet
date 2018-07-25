@@ -1214,7 +1214,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	__vue_options__.__file = "E:\\git\\vue-ratchet\\src\\datepicker.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-2b164a1e"
 	
 	/* hot reload */
 	if (false) {(function () {
@@ -1249,8 +1248,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js?sourceMap!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-2b164a1e&scoped=true!./../node_modules/sass-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./datepicker.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js?sourceMap!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-2b164a1e&scoped=true!./../node_modules/sass-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./datepicker.vue");
+			module.hot.accept("!!./../node_modules/css-loader/index.js?sourceMap!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-2b164a1e!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./datepicker.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js?sourceMap!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-2b164a1e!./../node_modules/less-loader/index.js!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./datepicker.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -1268,7 +1267,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\n.center-inline[data-v-2b164a1e] {\n  display: inline-block;\n}\n.calendar[data-v-2b164a1e] {\n  width: 300px;\n  padding: 10px;\n  background: #fff;\n  border: 1px solid #DEDEDE;\n  border-radius: 2px;\n  opacity: .95;\n  transition: all .5s ease;\n  z-index: 100;\n}\n.calendar.calendar-popup[data-v-2b164a1e] {\n    position: absolute;\n}\n.calendar.calendar-static[data-v-2b164a1e] {\n    width: 100%;\n}\n.calendar-enter[data-v-2b164a1e],\n.calendar-leave-active[data-v-2b164a1e] {\n  opacity: 0;\n  transform: translate3d(0, -10px, 0);\n}\n.calendar[data-v-2b164a1e]:before {\n  position: absolute;\n  left: 30px;\n  top: -10px;\n  content: \"\";\n  border: 5px solid transparent;\n  border-bottom-color: #DEDEDE;\n}\n.calendar[data-v-2b164a1e]:after {\n  position: absolute;\n  left: 30px;\n  top: -9px;\n  content: \"\";\n  border: 5px solid transparent;\n  border-bottom-color: #fff;\n}\n.calendar-panes[data-v-2b164a1e] {\n  background: #fff;\n}\n.calendar-tools[data-v-2b164a1e] {\n  font-size: 20px;\n  line-height: 32px;\n  color: #5e7a88;\n  text-align: center;\n}\n.calendar-tools .float.left[data-v-2b164a1e] {\n    float: left;\n}\n.calendar-tools .float.right[data-v-2b164a1e] {\n    float: right;\n}\n.calendar-tools input[data-v-2b164a1e] {\n    font-size: 20px;\n    line-height: 32px;\n    color: #5e7a88;\n    width: 80px;\n    text-align: center;\n    border: none;\n    background-color: transparent;\n}\n.calendar-tools > i[data-v-2b164a1e] {\n    margin: 0 16px;\n    line-height: 32px;\n    cursor: pointer;\n    color: #707070;\n}\n.calendar-tools > i[data-v-2b164a1e]:hover {\n    color: #5e7a88;\n}\n.calendar table[data-v-2b164a1e] {\n  clear: both;\n  width: 100%;\n  margin-bottom: 10px;\n  border-collapse: collapse;\n  color: #444444;\n}\n.calendar td[data-v-2b164a1e] {\n  margin: 2px !important;\n  padding: 8px 0;\n  width: 14.28571429%;\n  text-align: center;\n  vertical-align: middle;\n  font-size: 16px;\n  line-height: 125%;\n  cursor: pointer;\n}\n.calendar td[data-v-2b164a1e]:hover {\n    background: #f3f8fa;\n}\n.calendar td.week[data-v-2b164a1e] {\n    pointer-events: none !important;\n    cursor: default !important;\n}\n.calendar td.disabled[data-v-2b164a1e] {\n    color: #c0c0c0;\n    pointer-events: none !important;\n    cursor: default !important;\n}\n.calendar td.selected[data-v-2b164a1e] {\n    background-color: #5e7a88;\n    color: #fff;\n    font-size: 16px;\n}\n.calendar thead td[data-v-2b164a1e] {\n  text-transform: uppercase;\n}\n.calendar .timer[data-v-2b164a1e] {\n  margin: 10px 0;\n  text-align: center;\n}\n.calendar .timer input[data-v-2b164a1e] {\n    border-radius: 2px;\n    padding: 5px;\n    font-size: 14px;\n    line-height: 18px;\n    color: #5e7a88;\n    width: 50px;\n    text-align: center;\n    border: 1px solid #efefef;\n}\n.calendar .timer input[data-v-2b164a1e]:focus {\n    border: 1px solid #5e7a88;\n}\n.calendar-button[data-v-2b164a1e] {\n  text-align: center;\n}\n.calendar-button button[data-v-2b164a1e] {\n  border: none;\n  cursor: pointer;\n  display: inline-block;\n  min-height: 1em;\n  min-width: 8em;\n  vertical-align: baseline;\n  background: #5e7a88;\n  color: #fff;\n  margin: 0 .25em 0 0;\n  padding: .8em 2.5em;\n  font-size: 1em;\n  line-height: 1em;\n  text-align: center;\n  border-radius: .3em;\n}\n.calendar-button button.cancel[data-v-2b164a1e] {\n  background: #efefef;\n  color: #666;\n}\n.calendar .lunar[data-v-2b164a1e] {\n  font-size: 11px;\n  line-height: 150%;\n  color: #aaa;\n}\n.calendar td.selected .lunar[data-v-2b164a1e] {\n  color: #fff;\n}\n", "", {"version":3,"sources":["/./src/datepicker.vue"],"names":[],"mappings":";AAAA;EACE,sBAAsB;CAAE;AAE1B;EACE,aAAa;EACb,cAAc;EACd,iBAAiB;EACjB,0BAA0B;EAC1B,mBAAmB;EACnB,aAAa;EACb,yBAAyB;EACzB,aAAa;CAAE;AACf;IACE,mBAAmB;CAAE;AACvB;IACE,YAAY;CAAE;AAElB;;EAEE,WAAW;EACX,oCAAoC;CAAE;AAExC;EACE,mBAAmB;EACnB,WAAW;EACX,WAAW;EACX,YAAY;EACZ,8BAA8B;EAC9B,6BAA6B;CAAE;AAEjC;EACE,mBAAmB;EACnB,WAAW;EACX,UAAU;EACV,YAAY;EACZ,8BAA8B;EAC9B,0BAA0B;CAAE;AAE9B;EACE,iBAAiB;CAAE;AAErB;EACE,gBAAgB;EAChB,kBAAkB;EAClB,eAAe;EACf,mBAAmB;CAAE;AACrB;IACE,YAAY;CAAE;AAChB;IACE,aAAa;CAAE;AACjB;IACE,gBAAgB;IAChB,kBAAkB;IAClB,eAAe;IACf,YAAY;IACZ,mBAAmB;IACnB,aAAa;IACb,8BAA8B;CAAE;AAClC;IACE,eAAe;IACf,kBAAkB;IAClB,gBAAgB;IAChB,eAAe;CAAE;AACnB;IACE,eAAe;CAAE;AAErB;EACE,YAAY;EACZ,YAAY;EACZ,oBAAoB;EACpB,0BAA0B;EAC1B,eAAe;CAAE;AAEnB;EACE,uBAAuB;EACvB,eAAe;EACf,oBAAoB;EACpB,mBAAmB;EACnB,uBAAuB;EACvB,gBAAgB;EAChB,kBAAkB;EAClB,gBAAgB;CAAE;AAClB;IACE,oBAAoB;CAAE;AACxB;IACE,gCAAgC;IAChC,2BAA2B;CAAE;AAC/B;IACE,eAAe;IACf,gCAAgC;IAChC,2BAA2B;CAAE;AAC/B;IACE,0BAA0B;IAC1B,YAAY;IACZ,gBAAgB;CAAE;AAEtB;EACE,0BAA0B;CAAE;AAE9B;EACE,eAAe;EACf,mBAAmB;CAAE;AACrB;IACE,mBAAmB;IACnB,aAAa;IACb,gBAAgB;IAChB,kBAAkB;IAClB,eAAe;IACf,YAAY;IACZ,mBAAmB;IACnB,0BAA0B;CAAE;AAC9B;IACE,0BAA0B;CAAE;AAEhC;EACE,mBAAmB;CAAE;AAEvB;EACE,aAAa;EACb,gBAAgB;EAChB,sBAAsB;EACtB,gBAAgB;EAChB,eAAe;EACf,yBAAyB;EACzB,oBAAoB;EACpB,YAAY;EACZ,oBAAoB;EACpB,oBAAoB;EACpB,eAAe;EACf,iBAAiB;EACjB,mBAAmB;EACnB,oBAAoB;CAAE;AAExB;EACE,oBAAoB;EACpB,YAAY;CAAE;AAEhB;EACE,gBAAgB;EAChB,kBAAkB;EAClB,YAAY;CAAE;AAEhB;EACE,YAAY;CAAE","file":"datepicker.vue","sourcesContent":[".center-inline {\n  display: inline-block; }\n\n.calendar {\n  width: 300px;\n  padding: 10px;\n  background: #fff;\n  border: 1px solid #DEDEDE;\n  border-radius: 2px;\n  opacity: .95;\n  transition: all .5s ease;\n  z-index: 100; }\n  .calendar.calendar-popup {\n    position: absolute; }\n  .calendar.calendar-static {\n    width: 100%; }\n\n.calendar-enter,\n.calendar-leave-active {\n  opacity: 0;\n  transform: translate3d(0, -10px, 0); }\n\n.calendar:before {\n  position: absolute;\n  left: 30px;\n  top: -10px;\n  content: \"\";\n  border: 5px solid transparent;\n  border-bottom-color: #DEDEDE; }\n\n.calendar:after {\n  position: absolute;\n  left: 30px;\n  top: -9px;\n  content: \"\";\n  border: 5px solid transparent;\n  border-bottom-color: #fff; }\n\n.calendar-panes {\n  background: #fff; }\n\n.calendar-tools {\n  font-size: 20px;\n  line-height: 32px;\n  color: #5e7a88;\n  text-align: center; }\n  .calendar-tools .float.left {\n    float: left; }\n  .calendar-tools .float.right {\n    float: right; }\n  .calendar-tools input {\n    font-size: 20px;\n    line-height: 32px;\n    color: #5e7a88;\n    width: 80px;\n    text-align: center;\n    border: none;\n    background-color: transparent; }\n  .calendar-tools > i {\n    margin: 0 16px;\n    line-height: 32px;\n    cursor: pointer;\n    color: #707070; }\n  .calendar-tools > i:hover {\n    color: #5e7a88; }\n\n.calendar table {\n  clear: both;\n  width: 100%;\n  margin-bottom: 10px;\n  border-collapse: collapse;\n  color: #444444; }\n\n.calendar td {\n  margin: 2px !important;\n  padding: 8px 0;\n  width: 14.28571429%;\n  text-align: center;\n  vertical-align: middle;\n  font-size: 16px;\n  line-height: 125%;\n  cursor: pointer; }\n  .calendar td:hover {\n    background: #f3f8fa; }\n  .calendar td.week {\n    pointer-events: none !important;\n    cursor: default !important; }\n  .calendar td.disabled {\n    color: #c0c0c0;\n    pointer-events: none !important;\n    cursor: default !important; }\n  .calendar td.selected {\n    background-color: #5e7a88;\n    color: #fff;\n    font-size: 16px; }\n\n.calendar thead td {\n  text-transform: uppercase; }\n\n.calendar .timer {\n  margin: 10px 0;\n  text-align: center; }\n  .calendar .timer input {\n    border-radius: 2px;\n    padding: 5px;\n    font-size: 14px;\n    line-height: 18px;\n    color: #5e7a88;\n    width: 50px;\n    text-align: center;\n    border: 1px solid #efefef; }\n  .calendar .timer input:focus {\n    border: 1px solid #5e7a88; }\n\n.calendar-button {\n  text-align: center; }\n\n.calendar-button button {\n  border: none;\n  cursor: pointer;\n  display: inline-block;\n  min-height: 1em;\n  min-width: 8em;\n  vertical-align: baseline;\n  background: #5e7a88;\n  color: #fff;\n  margin: 0 .25em 0 0;\n  padding: .8em 2.5em;\n  font-size: 1em;\n  line-height: 1em;\n  text-align: center;\n  border-radius: .3em; }\n\n.calendar-button button.cancel {\n  background: #efefef;\n  color: #666; }\n\n.calendar .lunar {\n  font-size: 11px;\n  line-height: 150%;\n  color: #aaa; }\n\n.calendar td.selected .lunar {\n  color: #fff; }\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\n.calendar {\n  width: 300px;\n  background: #fff;\n  border: 1px solid #dedede;\n  border-radius: 2px;\n  opacity: 0.95;\n  transition: all 0.5s ease;\n  z-index: 100;\n}\n.calendar.calendar-popup {\n  position: absolute;\n}\n.calendar.calendar-static {\n  width: 100%;\n}\n.calendar-enter,\n.calendar-leave-active {\n  opacity: 0;\n  transform: translate3d(0, -10px, 0);\n}\n.calendar:before {\n  position: absolute;\n  left: 30px;\n  top: -10px;\n  content: '';\n  border: 5px solid rgba(0, 0, 0, 0);\n  border-bottom-color: #dedede;\n}\n.calendar:after {\n  position: absolute;\n  left: 30px;\n  top: -9px;\n  content: '';\n  border: 5px solid rgba(0, 0, 0, 0);\n  border-bottom-color: #fff;\n}\n.calendar-panes {\n  background: #fff;\n}\n.calendar-tools {\n  color: #ff6c1a;\n  text-align: center;\n}\n.calendar-tools input {\n  color: #ff6c1a;\n  width: 60px;\n  text-align: center;\n  border: none;\n  background-color: transparent;\n}\n.calendar-tools > i {\n  margin: 0 16px;\n  cursor: pointer;\n  color: #707070;\n}\n.calendar-tools > i:hover {\n  color: #ff6c1a;\n}\n.calendar table {\n  clear: both;\n  width: 100%;\n  border-collapse: collapse;\n  color: #444444;\n}\n.calendar td {\n  text-align: center;\n  font-size: 13px;\n  color: #000;\n  font-weight: 500;\n  position: relative;\n  cursor: pointer;\n  width: 14.28%;\n}\n.calendar td:hover {\n  background: #f3f8fa;\n}\n.calendar td.week {\n  pointer-events: none !important;\n  cursor: default !important;\n}\n.calendar td.disabled {\n  color: #c0c0c0;\n  pointer-events: none !important;\n  cursor: default !important;\n}\n.calendar td.selected {\n  color: #fff;\n}\n.calendar td.selected .day-addon {\n  color: #fff;\n}\n.calendar td.selected .day-area {\n  background-color: #ff6c1a;\n}\n.calendar thead td {\n  padding: 0;\n  height: 20px;\n  text-transform: uppercase;\n  color: #a1a1a1;\n  font-size: 12px;\n  background-color: #f7f7f7;\n}\n.calendar .timer {\n  margin: 10px 0;\n  text-align: center;\n}\n.calendar .timer input {\n  border-radius: 2px;\n  padding: 5px;\n  font-size: 14px;\n  line-height: 18px;\n  color: #ff6c1a;\n  width: 50px;\n  text-align: center;\n  border: 1px solid #efefef;\n}\n.calendar .timer input:focus {\n  border: 1px solid #ff6c1a;\n}\n.calendar-button {\n  text-align: center;\n}\n.calendar-button button {\n  border: none;\n  cursor: pointer;\n  display: inline-block;\n  min-height: 1em;\n  min-width: 8em;\n  vertical-align: baseline;\n  background: #ff6c1a;\n  color: #fff;\n  margin: 0 0.25em 0 0;\n  padding: 0.8em 2.5em;\n  font-size: 1em;\n  line-height: 1em;\n  text-align: center;\n  border-radius: 0.3em;\n}\n.calendar-button button.cancel {\n  background: #efefef;\n  color: #666;\n}\n.calendar td.selected .lunar {\n  color: #fff;\n}\n.calendar-header {\n  position: relative;\n  padding: 5px;\n  font-size: 20px;\n  line-height: 32px;\n}\n.icon-left,\n.icon-right {\n  position: absolute;\n  top: 15px;\n  text-indent: -2000px;\n}\n.icon-left {\n  border-right: 2px solid #333;\n  border-bottom: 2px solid #333;\n  height: 10px;\n  width: 10px;\n  transform: rotate(135deg);\n  left: 25px;\n}\n.icon-right {\n  border-right: 2px solid #333;\n  border-bottom: 2px solid #333;\n  height: 10px;\n  width: 10px;\n  transform: rotate(-45deg);\n  right: 25px;\n}\n.day-area {\n  padding: 8px 0;\n  border-radius: 4px;\n  margin: 5px;\n}\n.lunar,\n.day-addon {\n  font-size: 8px;\n  line-height: 10px;\n  color: #a1a1a1;\n}\n", "", {"version":3,"sources":["/./src/datepicker.vue"],"names":[],"mappings":";AAAA;EACE,aAAa;EACb,iBAAiB;EACjB,0BAA0B;EAC1B,mBAAmB;EACnB,cAAc;EACd,0BAA0B;EAC1B,aAAa;CACd;AACD;EACE,mBAAmB;CACpB;AACD;EACE,YAAY;CACb;AACD;;EAEE,WAAW;EACX,oCAAoC;CACrC;AACD;EACE,mBAAmB;EACnB,WAAW;EACX,WAAW;EACX,YAAY;EACZ,mCAAmC;EACnC,6BAA6B;CAC9B;AACD;EACE,mBAAmB;EACnB,WAAW;EACX,UAAU;EACV,YAAY;EACZ,mCAAmC;EACnC,0BAA0B;CAC3B;AACD;EACE,iBAAiB;CAClB;AACD;EACE,eAAe;EACf,mBAAmB;CACpB;AACD;EACE,eAAe;EACf,YAAY;EACZ,mBAAmB;EACnB,aAAa;EACb,8BAA8B;CAC/B;AACD;EACE,eAAe;EACf,gBAAgB;EAChB,eAAe;CAChB;AACD;EACE,eAAe;CAChB;AACD;EACE,YAAY;EACZ,YAAY;EACZ,0BAA0B;EAC1B,eAAe;CAChB;AACD;EACE,mBAAmB;EACnB,gBAAgB;EAChB,YAAY;EACZ,iBAAiB;EACjB,mBAAmB;EACnB,gBAAgB;EAChB,cAAc;CACf;AACD;EACE,oBAAoB;CACrB;AACD;EACE,gCAAgC;EAChC,2BAA2B;CAC5B;AACD;EACE,eAAe;EACf,gCAAgC;EAChC,2BAA2B;CAC5B;AACD;EACE,YAAY;CACb;AACD;EACE,YAAY;CACb;AACD;EACE,0BAA0B;CAC3B;AACD;EACE,WAAW;EACX,aAAa;EACb,0BAA0B;EAC1B,eAAe;EACf,gBAAgB;EAChB,0BAA0B;CAC3B;AACD;EACE,eAAe;EACf,mBAAmB;CACpB;AACD;EACE,mBAAmB;EACnB,aAAa;EACb,gBAAgB;EAChB,kBAAkB;EAClB,eAAe;EACf,YAAY;EACZ,mBAAmB;EACnB,0BAA0B;CAC3B;AACD;EACE,0BAA0B;CAC3B;AACD;EACE,mBAAmB;CACpB;AACD;EACE,aAAa;EACb,gBAAgB;EAChB,sBAAsB;EACtB,gBAAgB;EAChB,eAAe;EACf,yBAAyB;EACzB,oBAAoB;EACpB,YAAY;EACZ,qBAAqB;EACrB,qBAAqB;EACrB,eAAe;EACf,iBAAiB;EACjB,mBAAmB;EACnB,qBAAqB;CACtB;AACD;EACE,oBAAoB;EACpB,YAAY;CACb;AACD;EACE,YAAY;CACb;AACD;EACE,mBAAmB;EACnB,aAAa;EACb,gBAAgB;EAChB,kBAAkB;CACnB;AACD;;EAEE,mBAAmB;EACnB,UAAU;EACV,qBAAqB;CACtB;AACD;EACE,6BAA6B;EAC7B,8BAA8B;EAC9B,aAAa;EACb,YAAY;EACZ,0BAA0B;EAC1B,WAAW;CACZ;AACD;EACE,6BAA6B;EAC7B,8BAA8B;EAC9B,aAAa;EACb,YAAY;EACZ,0BAA0B;EAC1B,YAAY;CACb;AACD;EACE,eAAe;EACf,mBAAmB;EACnB,YAAY;CACb;AACD;;EAEE,eAAe;EACf,kBAAkB;EAClB,eAAe;CAChB","file":"datepicker.vue","sourcesContent":[".calendar {\n  width: 300px;\n  background: #fff;\n  border: 1px solid #dedede;\n  border-radius: 2px;\n  opacity: 0.95;\n  transition: all 0.5s ease;\n  z-index: 100;\n}\n.calendar.calendar-popup {\n  position: absolute;\n}\n.calendar.calendar-static {\n  width: 100%;\n}\n.calendar-enter,\n.calendar-leave-active {\n  opacity: 0;\n  transform: translate3d(0, -10px, 0);\n}\n.calendar:before {\n  position: absolute;\n  left: 30px;\n  top: -10px;\n  content: '';\n  border: 5px solid rgba(0, 0, 0, 0);\n  border-bottom-color: #dedede;\n}\n.calendar:after {\n  position: absolute;\n  left: 30px;\n  top: -9px;\n  content: '';\n  border: 5px solid rgba(0, 0, 0, 0);\n  border-bottom-color: #fff;\n}\n.calendar-panes {\n  background: #fff;\n}\n.calendar-tools {\n  color: #ff6c1a;\n  text-align: center;\n}\n.calendar-tools input {\n  color: #ff6c1a;\n  width: 60px;\n  text-align: center;\n  border: none;\n  background-color: transparent;\n}\n.calendar-tools > i {\n  margin: 0 16px;\n  cursor: pointer;\n  color: #707070;\n}\n.calendar-tools > i:hover {\n  color: #ff6c1a;\n}\n.calendar table {\n  clear: both;\n  width: 100%;\n  border-collapse: collapse;\n  color: #444444;\n}\n.calendar td {\n  text-align: center;\n  font-size: 13px;\n  color: #000;\n  font-weight: 500;\n  position: relative;\n  cursor: pointer;\n  width: 14.28%;\n}\n.calendar td:hover {\n  background: #f3f8fa;\n}\n.calendar td.week {\n  pointer-events: none !important;\n  cursor: default !important;\n}\n.calendar td.disabled {\n  color: #c0c0c0;\n  pointer-events: none !important;\n  cursor: default !important;\n}\n.calendar td.selected {\n  color: #fff;\n}\n.calendar td.selected .day-addon {\n  color: #fff;\n}\n.calendar td.selected .day-area {\n  background-color: #ff6c1a;\n}\n.calendar thead td {\n  padding: 0;\n  height: 20px;\n  text-transform: uppercase;\n  color: #a1a1a1;\n  font-size: 12px;\n  background-color: #f7f7f7;\n}\n.calendar .timer {\n  margin: 10px 0;\n  text-align: center;\n}\n.calendar .timer input {\n  border-radius: 2px;\n  padding: 5px;\n  font-size: 14px;\n  line-height: 18px;\n  color: #ff6c1a;\n  width: 50px;\n  text-align: center;\n  border: 1px solid #efefef;\n}\n.calendar .timer input:focus {\n  border: 1px solid #ff6c1a;\n}\n.calendar-button {\n  text-align: center;\n}\n.calendar-button button {\n  border: none;\n  cursor: pointer;\n  display: inline-block;\n  min-height: 1em;\n  min-width: 8em;\n  vertical-align: baseline;\n  background: #ff6c1a;\n  color: #fff;\n  margin: 0 0.25em 0 0;\n  padding: 0.8em 2.5em;\n  font-size: 1em;\n  line-height: 1em;\n  text-align: center;\n  border-radius: 0.3em;\n}\n.calendar-button button.cancel {\n  background: #efefef;\n  color: #666;\n}\n.calendar td.selected .lunar {\n  color: #fff;\n}\n.calendar-header {\n  position: relative;\n  padding: 5px;\n  font-size: 20px;\n  line-height: 32px;\n}\n.icon-left,\n.icon-right {\n  position: absolute;\n  top: 15px;\n  text-indent: -2000px;\n}\n.icon-left {\n  border-right: 2px solid #333;\n  border-bottom: 2px solid #333;\n  height: 10px;\n  width: 10px;\n  transform: rotate(135deg);\n  left: 25px;\n}\n.icon-right {\n  border-right: 2px solid #333;\n  border-bottom: 2px solid #333;\n  height: 10px;\n  width: 10px;\n  transform: rotate(-45deg);\n  right: 25px;\n}\n.day-area {\n  padding: 8px 0;\n  border-radius: 4px;\n  margin: 5px;\n}\n.lunar,\n.day-addon {\n  font-size: 8px;\n  line-height: 10px;\n  color: #a1a1a1;\n}\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -1277,8 +1276,11 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 33 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 	//
 	//
 	//
@@ -1329,17 +1331,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	//
 	//
 	
-	module.exports = {
+	exports.default = {
+	    model: {
+	        prop: 'value', // Rename from default 'value' property.
+	        event: 'change' // Rename from default 'input' event.
+	    },
 	    props: {
 	        //显示未来几个月的日历 (0为一年)
 	        //普通日历(1)  是否选择双日历面板(2), 或展开型的日历面板(0)
-	        pickerstyle: {
+	        monthes: {
 	            type: Number,
 	            default: 1 // 1, 2, 0
 	        },
 	        popup: { //是否浮层显示
 	            type: Boolean,
-	            default: true
+	            default: false
+	        },
+	        dayAddon: {
+	            type: Function,
+	            default: function _default() {}
 	        },
 	        //type仅日期date //datatime 日期与时间
 	        type: {
@@ -1347,15 +1357,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	            default: "date"
 	        },
 	        //默认值
-	        value: {
-	            type: String,
-	
-	            default: ""
-	        },
+	        value: "",
 	        //日历是否显示与选择后自动隐藏
 	        show: {
 	            type: Boolean,
-	
 	            default: false
 	        },
 	        autohide: {
@@ -1414,6 +1419,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            second: 0,
 	            sep: "-",
 	            days: [],
+	            innerShow: this.show,
+	            innerValue: this.value,
 	            innerMin: this.min,
 	            innerMax: this.max,
 	            selected: [],
@@ -1455,8 +1462,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    created: function created() {
 	        var now = new Date();
 	        // 如果有默认值
-	        if (this.value) {
-	            var timeAtom = this.gettime(this.value);
+	        if (this.innerValue) {
+	            var timeAtom = this.gettime(this.innerValue);
 	            this.year = timeAtom[0];
 	            this.month = timeAtom[1];
 	            this.day = timeAtom[2];
@@ -1473,15 +1480,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	            this.hour = this.zero(now.getHours());
 	            this.minute = this.zero(now.getMinutes());
 	            this.second = this.zero(now.getSeconds());
-	            // this.value = this.output([this.year,this.month,this.day]);
-	            // this.value = this.year + '-' + this.month + '-' + this.day;
 	        }
 	
 	        this.currentMonth = this.month;
 	        this.render(this.year, this.month);
 	    },
 	    watch: {
-	        'show': function show(val, old) {
+	        innerShow: function innerShow(val) {
+	            this.show = val;
+	        },
+	        innerValue: function innerValue(value) {
+	            this.$emit('change', value);
+	        },
+	        show: function show(val) {
+	            this.innerShow = val;
 	            if (val) {
 	                this.render(this.year, this.month);
 	            }
@@ -1530,7 +1542,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	            dayinfo.lunarfest = this.lunardays[this.zero(dayinfo.lunar.month) + this.zero(dayinfo.lunar.day)];
 	            dayinfo.tolunar = this.tolunar(dayinfo.lunar.day);
 	            dayinfo.outadd = this.outadd(dayinfo);
-	            // console.log(y, m, d, dayinfo.lunar.month, dayinfo.lunar.day)
+	            if (this.dayAddon) {
+	                dayinfo.addon = this.dayAddon(dayinfo);
+	            }
 	            return dayinfo;
 	        },
 	        //显示的附加日历信息， 优先级是: 节日>节气>今天>农历
@@ -1607,7 +1621,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                line = 0,
 	                temp = [];
 	            m = m - 1;
-	            var prevMonthLastDate = new Date(y, m - 1, 0).getDate(); //前一个月的最后一天
+	            var prevMonthLastDate = new Date(y, m, 0).getDate(); //前一个月的最后一天
 	            var currMonth1DayWeek = new Date(y, m, 1).getDay(); //当月第一天星期
 	            var currMonthLastDate = new Date(y, m + 1, 0).getDate(); //当月最后一天
 	
@@ -1623,8 +1637,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                }
 	            }
 	
-	            var begin = this.begin || this.value; //没有begin时即为this.value一个值非范围
-	            var end = this.end || this.value;
+	            var begin = this.begin || this.innerValue; //没有begin时即为this.innerValue一个值非范围
+	            var end = this.end || this.innerValue;
 	            if (this.begin) {
 	                this.innerMin = this.begin;
 	            }
@@ -1662,15 +1676,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	                temp[line].push(options);
 	                kk++;
 	            }
-	            // console.log(this.selected,' this.selected');
 	            return temp;
 	        },
-	        //渲染 pickerstyle 个月的日历数据
+	        //渲染 monthes 个月的日历数据
 	        render: function render(y, m) {
 	            this.days = [this.calcPane(y, m)];
-	            if (this.pickerstyle !== 1) {
+	            if (this.monthes !== 1) {
 	                var daysarr = [];
-	                for (var i = 0; i < this.pickerstyle; i++) {
+	                for (var i = 0; i < this.monthes; i++) {
 	                    var month = m + i;
 	                    if (month > 12) {
 	                        month = month - 12;
@@ -1719,10 +1732,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	            }
 	            this.setRange(true);
 	            var d = this.addmonths(this.year, this.month, k0);
-	            this.value = this.output([d.y, d.m, this.day]);
+	            this.innerValue = this.output([d.y, d.m, this.day]);
 	            if (this.autohide && this.type == 'date') {
-	                this.show = false;
+	                this.innerShow = false;
 	            }
+	            this.render(d.y, d.m);
 	        },
 	        // 根据日期或日期坐标获取坐标范围数组
 	        getRange: function getRange(begin, end) {
@@ -1746,11 +1760,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	            }
 	        },
 	        ok: function ok() {
-	            this.value = this.output([this.year, this.month, this.day, this.hour, this.minute, this.second]);
-	            this.show = false;
+	            this.innerValue = this.output([this.year, this.month, this.day, this.hour, this.minute, this.second]);
+	            this.innerShow = false;
 	        },
 	        cancel: function cancel() {
-	            this.show = false;
+	            this.innerShow = false;
 	        },
 	        // 格式化输出
 	        output: function output(args) {
@@ -1767,15 +1781,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	        // 农历二十四节气，相关代码在网络上获取并修改
 	        solarTermInfo: function () {
-	            var cache = {};
-	            var cachekeys = [];
-	            var solarTerm = ['小寒', '大寒', '立春', '雨水', '惊蛰', '春分', '清明', '谷雨', '立夏', '小满', '芒种', '夏至', '小暑', '大暑', '立秋', '处暑', '白露', '秋分', '寒露', '霜降', '立冬', '小雪', '大雪', '冬至'];
-	            var sTermInfo = [0, 21208, 42467, 63836, 85337, 107014, 128867, 150921, 173149, 195551, 218072, 240693, 263343, 285989, 308563, 331033, 353350, 375494, 397447, 419210, 440795, 462224, 483532, 504758];
-	            // 返回某年的第n个节气为几日(从0小寒起算)
-	            var getSolarTermIndex = function getSolarTermIndex(year, index) {
-	                var offDate = new Date(31556925974.7 * (year - 1900) + sTermInfo[index] * 60000 + Date.UTC(1900, 0, 6, 2, 5));
-	                return offDate.getUTCDate();
-	            };
+	            //refs: https://www.cnblogs.com/bluedream2009/archive/2010/06/02/1750359.html
+	            var sTermMap = '0|gd4|wrn|1d98|1tuh|2akm|2rfn|38g9|3plp|46vz|4o9k|55px|5n73|64o5|6m37|73fd|7kna|81qe|8io7|8zgq|9g4b|9wnk|ad3g|ath2|'.split('|');
+	            var sTermNames = '小寒|大寒|立春|雨水|惊蛰|春分|清明|谷雨|立夏|小满|芒种|夏至|小暑|大暑|立秋|处暑|白露|秋分|寒露|霜降|立冬|小雪|大雪|冬至'.split('|');
+	            for (var i = 24; i--;) {
+	                sTermMap[i] = parseInt(sTermMap[i], 36);
+	            }function term(y, n) {
+	                var d = new Date(31556925974.7 * (y - 1900) + sTermMap[n] * 60000 + Date.UTC(1900, 0, 6, 2, 5));
+	                return {
+	                    m: d.getUTCMonth(),
+	                    d: d.getUTCDate()
+	                };
+	            }
+	
+	            function getTerm(y, m, d) {
+	                for (var i = sTermNames.length, x; i--;) {
+	                    x = term(y, i);
+	                    if (x.m == m && x.d == d) return sTermNames[i];
+	                };
+	                return '';
+	            }
 	
 	            // 返回该月的节气信息
 	            var getMonthSolarTerms = function getMonthSolarTerms(year, month) {
@@ -1783,23 +1808,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    month = year.getMonth();
 	                    year = year.getFullYear();
 	                }
-	                var key = '' + year + month;
-	                if (key in cache) {
-	                    return cache[key];
-	                }
-	                var ret = cache[key] = {};
-	                var index;
-	                index = getSolarTermIndex(year - 1900, month * 2);
-	                ret[index - 1] = solarTerm[month * 2];
-	                index = getSolarTermIndex(year - 1900, month * 2 + 1);
-	                ret[index - 1] = solarTerm[month * 2 + 1];
-	                cachekeys.push(key);
-	                if (cachekeys.length > 12) {
-	                    delete cache[cachekeys.shift()];
-	                }
+	                var ret = {},
+	                    index;
+	                index = term(year, month * 2).d;
+	                ret[index] = getTerm(year, month, index);
+	                index = term(year, month * 2 + 1).d;
+	                ret[index] = getTerm(year, month, index);
 	                return ret;
 	            };
-	
 	            return getMonthSolarTerms;
 	        }(),
 	
@@ -1916,8 +1932,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    directives: [{
 	      name: "show",
 	      rawName: "v-show",
-	      value: (_vm.show),
-	      expression: "show"
+	      value: (_vm.innerShow),
+	      expression: "innerShow"
 	    }],
 	    class: ("calendar " + (_vm.popup ? 'calendar-popup':'calendar-static')),
 	    style: ({
@@ -1926,13 +1942,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    })
 	  }, [_c('div', {
 	    staticClass: "calendar-tools"
+	  }, [_c('div', {
+	    staticClass: "calendar-header"
 	  }, [_c('i', {
-	    staticClass: "icon icon-left-nav  float left glyphicon glyphicon-menu-left",
+	    staticClass: "icon-left",
 	    on: {
 	      "click": _vm.prev
 	    }
 	  }), _vm._v(" "), _c('i', {
-	    staticClass: "icon icon-right-nav float right glyphicon glyphicon-menu-right",
+	    staticClass: "icon-right",
 	    on: {
 	      "click": _vm.next
 	    }
@@ -1969,22 +1987,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.$forceUpdate()
 	      }
 	    }
-	  }), _vm._v("/ " + _vm._s(_vm.month) + "\r\n            ")]), _vm._v(" "), _vm._l((_vm.days), function(amonth, index) {
+	  }), _vm._v("/ " + _vm._s(_vm.month) + "\r\n            ")])]), _vm._v(" "), _vm._l((_vm.days), function(amonth, index) {
 	    return _c('div', {
+	      key: index,
 	      staticClass: "calendar-panes"
-	    }, [(_vm.pickerstyle > 1) ? _c('div', {
+	    }, [(_vm.monthes > 1) ? _c('div', {
 	      staticClass: "text center-inline"
-	    }, [(_vm.month + index <= 12) ? _c('span', [_vm._v(_vm._s(_vm.year) + "/" + _vm._s(_vm.month + index))]) : _c('span', [_vm._v(_vm._s(_vm.year + 1) + "/" + _vm._s(_vm.month + index - 12))])]) : _vm._e(), _vm._v(" "), _c('table', {
-	      attrs: {
-	        "cellpadding": "5"
-	      }
-	    }, [_c('thead', [_c('tr', _vm._l((_vm.weeksHan), function(week) {
+	    }, [(_vm.month + index <= 12) ? _c('span', [_vm._v(_vm._s(_vm.year) + "/" + _vm._s(_vm.month + index))]) : _c('span', [_vm._v(_vm._s(_vm.year + 1) + "/" + _vm._s(_vm.month + index - 12))])]) : _vm._e(), _vm._v(" "), _c('table', [_c('thead', [_c('tr', _vm._l((_vm.weeksHan), function(week) {
 	      return _c('td', {
+	        key: week,
 	        staticClass: "week"
 	      }, [_vm._v(_vm._s(week))])
 	    }))]), _vm._v(" "), _vm._l((amonth), function(day, k1) {
-	      return _c('tr', _vm._l((day), function(child, k2) {
+	      return _c('tr', {
+	        key: k1
+	      }, _vm._l((day), function(child, k2) {
 	        return _c('td', {
+	          key: k2,
 	          class: {
 	            'selected': child.selected, 'disabled': child.disabled
 	          },
@@ -1996,9 +2015,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	              _vm.select(index, k1, k2, $event)
 	            }
 	          }
-	        }, [_vm._v("\r\n                            " + _vm._s(child.day) + "\r\n                            "), (_vm.lunar) ? _c('div', {
+	        }, [_c('div', {
+	          staticClass: "day-area"
+	        }, [_c('div', [_vm._v(_vm._s(child.day))]), _vm._v(" "), (child.addon) ? _c('div', {
+	          staticClass: "day-addon"
+	        }, [_vm._v(_vm._s(child.addon))]) : _vm._e(), _vm._v(" "), (_vm.lunar) ? _c('div', {
 	          staticClass: "lunar"
-	        }, [_vm._v("\r\n                                " + _vm._s(child.outadd) + "\r\n                            ")]) : _vm._e()])
+	        }, [_vm._v("\r\n                                " + _vm._s(child.outadd) + "\r\n                            ")]) : _vm._e()])])
 	      }))
 	    })], 2)])
 	  }), _vm._v(" "), _c('div', {
@@ -2039,7 +2062,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.$forceUpdate()
 	      }
 	    }
-	  }), _vm._v("时\r\n                    "), _c('input', {
+	  }), _vm._v("时\r\n                "), _c('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model.number",
@@ -2067,7 +2090,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.$forceUpdate()
 	      }
 	    }
-	  }), _vm._v("分\r\n                    "), _c('input', {
+	  }), _vm._v("分\r\n                "), _c('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model.number",
@@ -2095,12 +2118,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.$forceUpdate()
 	      }
 	    }
-	  }), _vm._v("秒\r\n                ")])]), _vm._v(" "), _c('div', {
+	  }), _vm._v("秒\r\n            ")])]), _vm._v(" "), _c('div', {
 	    directives: [{
 	      name: "show",
 	      rawName: "v-show",
-	      value: (_vm.type == 'datetime' || _vm.type == 'time' || _vm.range),
-	      expression: "type=='datetime'||type=='time'||range"
+	      value: (_vm.type == 'datetime' || _vm.type == 'time'),
+	      expression: "type=='datetime'||type=='time'"
 	    }],
 	    staticClass: "calendar-button"
 	  }, [_c('button', {
@@ -2251,7 +2274,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	//
 	
 	exports.default = {
-	
 	    props: {
 	        show: {
 	            default: false,
@@ -2285,15 +2307,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	            hour: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
 	            minute: ['00', 10, 20, 30, 40, 50],
 	            step: 33 * dpr,
-	            toastShow: false
+	            toastShow: false,
+	            innerShow: this.show
 	        };
 	    },
-	    mounted: function mounted() {},
 	
 	    watch: {
-	        'show': function show(nv, ov) {
+	        innerShow: function innerShow(val) {
+	            this.$emit('update:show', val);
+	        },
+	        show: function show(nv, ov) {
+	            this.innerShow = nv;
 	            this.days = (0, _date.dateDiff)(this.max);
-	            // console.log(this.days, 'days');
 	            if (this.days > 100) {
 	                console.warn('这种场景可能不适用这个组件了');
 	                return;
@@ -2348,7 +2373,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        checkRange: function checkRange() {
 	            this.setVal();
 	            var maxDate = new Date(this.max);
-	            console.log(+this.dateObj, this.dateObj, this.max, 'compare MAX');
 	            var pass = +this.dateObj > this.max;
 	            if (pass) {
 	                this.dateSelected(maxDate);
@@ -18515,6 +18539,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	            default: function _default() {},
 	            type: Function
 	        }
+	    },
+	    data: function data() {
+	        return {
+	            innerShow: this.show
+	        };
+	    },
+	
+	    watch: {
+	        innerShow: function innerShow(val) {
+	            this.$emit('update:show', val);
+	        },
+	        show: function show(val) {
+	            this.innerShow = val;
+	        }
 	    }
 	}; //
 	//
@@ -18605,7 +18643,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "/*\r\n\r\n$font-family-sans-serif: \"Segoe UI\", \"Lucida Grande\", Helvetica, Arial, \"Microsoft YaHei\", FreeSans, Arimo, \"Droid Sans\",\"wenquanyi micro hei\",\"Hiragino Sans GB\", \"Hiragino Sans GB W3\", sans-serif;\r\n$font-family-serif: Georgia, \"Times New Roman\", Times, SimSun, serif;\r\n$font-family-monospace: Monaco, Menlo, Consolas, \"Courier New\", \"FontAwesome\", monospace;\r\n$font-family-kai: Georgia, \"Times New Roman\", Times, Kai, \"Kaiti SC\", KaiTi, BiauKai, serif;\r\n\r\n html, body{\r\n  min-width: 320px;\r\n  font-size: 12px;\r\n}\r\nhtml,\r\nbutton,\r\ninput,\r\nselect,\r\ntextarea{\r\n  font-family: $font-family-sans-serif;\r\n}\r\n\r\n@mixin html {\r\n  font-size: $baseFontSize/($baseWidth/$currentminWidth);\r\n  // max-width: $currentWidth !important;\r\n}\r\n\r\n//attention comments can't be chinese charset? sass compile will be wrong\r\n//mobile width range 320px->100%\r\n$queryWidthList: (320px, 400px), (400px, 500px), (500px, 600px), (600px, 720px);\r\n@each $minWidth, $maxWidth in $queryWidthList {\r\n  @if $maxWidth == 720px {\r\n    @include min-screen($minWidth) {\r\n      $currentWidth: 100%!global;\r\n      $currentminWidth: 720px!global;\r\n      html {\r\n        @include html\r\n      }\r\n    }\r\n  }\r\n  @else {\r\n    @include screen($minWidth, $maxWidth) {\r\n      $currentWidth: $maxWidth!global;\r\n      $currentminWidth: $minWidth!global;\r\n      html {\r\n        @include html\r\n      }\r\n    }\r\n  }\r\n}\r\n */\n/*\r\n\r\n$font-family-sans-serif: \"Segoe UI\", \"Lucida Grande\", Helvetica, Arial, \"Microsoft YaHei\", FreeSans, Arimo, \"Droid Sans\",\"wenquanyi micro hei\",\"Hiragino Sans GB\", \"Hiragino Sans GB W3\", sans-serif;\r\n$font-family-serif: Georgia, \"Times New Roman\", Times, SimSun, serif;\r\n$font-family-monospace: Monaco, Menlo, Consolas, \"Courier New\", \"FontAwesome\", monospace;\r\n$font-family-kai: Georgia, \"Times New Roman\", Times, Kai, \"Kaiti SC\", KaiTi, BiauKai, serif;\r\n\r\n html, body{\r\n  min-width: 320px;\r\n  font-size: 12px;\r\n}\r\nhtml,\r\nbutton,\r\ninput,\r\nselect,\r\ntextarea{\r\n  font-family: $font-family-sans-serif;\r\n}\r\n\r\n@mixin html {\r\n  font-size: $baseFontSize/($baseWidth/$currentminWidth);\r\n  // max-width: $currentWidth !important;\r\n}\r\n\r\n//attention comments can't be chinese charset? sass compile will be wrong\r\n//mobile width range 320px->100%\r\n$queryWidthList: (320px, 400px), (400px, 500px), (500px, 600px), (600px, 720px);\r\n@each $minWidth, $maxWidth in $queryWidthList {\r\n  @if $maxWidth == 720px {\r\n    @include min-screen($minWidth) {\r\n      $currentWidth: 100%!global;\r\n      $currentminWidth: 720px!global;\r\n      html {\r\n        @include html\r\n      }\r\n    }\r\n  }\r\n  @else {\r\n    @include screen($minWidth, $maxWidth) {\r\n      $currentWidth: $maxWidth!global;\r\n      $currentminWidth: $minWidth!global;\r\n      html {\r\n        @include html\r\n      }\r\n    }\r\n  }\r\n}\r\n */\n/* === Modals === */\n.modal {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  outline: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  -webkit-overflow-scrolling: touch;\n  -webkit-backface-visibility: hidden;\n  -moz-backface-visibility: hidden;\n  backface-visibility: hidden;\n  -webkit-perspective: 1000px;\n  perspective: 1000px;\n  z-index: 13500;\n}\n.modal.modal-nomask {\n    background-color: transparent;\n}\n.modal-inner {\n  border-radius: 0.25rem 0.25rem 0 0;\n  position: relative;\n  background: rgba(255, 255, 255, 0.95);\n}\n.modal-title {\n  line-height: 1.8rem;\n  text-align: center;\n  background-color: #08A9E5;\n  font-size: 0.7rem;\n  font-weight: 300;\n  color: #fff;\n}\nhtml.ios-gt-8 .modal-title {\n    font-weight: 600;\n}\n.modal-title + .modal-text {\n    position: relative;\n    background-color: #fff;\n    padding: 0.41667rem;\n}\n.modal-buttons {\n  display: flex;\n  line-height: 2.25rem;\n  background-color: #fafafa;\n}\n.modal-buttons.modal-buttons-vertical {\n    display: block;\n    height: auto;\n}\n.modal-button {\n  width: 100%;\n  text-align: center;\n  border-right: 1px solid #DFDFDF;\n  display: block;\n  width: 49%;\n  font-size: 0.75rem;\n  font-weight: 300;\n}\n.modal-button:last-child {\n    border-right: none;\n}\n.modal-button-emphasize {\n    color: #009EE1;\n}\n.modal-button-disabled {\n    color: #ccc;\n}\n.modal-button:first-child {\n    border-radius: 0 0 0 0.54167rem;\n}\n.modal-button:last-child {\n    border-radius: 0 0 0.54167rem 0;\n}\n.modal-button:first-child:last-child {\n    border-radius: 0 0 0.54167rem 0.54167rem;\n}\n.modal-button.modal-button-bold {\n    font-weight: 500;\n}\nhtml.ios-gt-8 .modal-button.modal-button-bold {\n      font-weight: 600;\n}\nhtml:not(.watch-active-state) .modal-button:active, .modal-button.active-state {\n    background: rgba(230, 230, 230, 0.95);\n}\n.modal-buttons-vertical .modal-button {\n    border-radius: 0;\n}\n.modal-buttons-vertical .modal-button:last-child {\n      border-radius: 0 0 0.54167rem 0.54167rem;\n}\n.modal-button:after {\n    content: '';\n    position: absolute;\n    right: 0;\n    top: 0;\n    left: auto;\n    bottom: auto;\n    width: 1px;\n    height: 100%;\n    background-color: #b5b5b5;\n    display: block;\n    z-index: 15;\n    -webkit-transform-origin: 100% 50%;\n    transform-origin: 100% 50%;\n}\n.modal-no-buttons .modal-inner {\n  border-radius: 0.54167rem;\n}\n.modal-no-buttons .modal-buttons {\n  display: none;\n}\n.modal-tips {\n  background-color: transparent;\n}\n.modal-confirm .modal-buttons .modal-button {\n  flex: 2;\n}\n.modal-alert .modal-buttons .modal-button {\n  flex: 1;\n}\n.modal-top .modal-layout,\n.modal-bottom .modal-layout,\n.modal-popup .modal-layout {\n  width: 100%;\n  border-radius: 0;\n}\n.modal-top .modal-layout .modal-inner,\n  .modal-top .modal-layout .modal-button,\n  .modal-bottom .modal-layout .modal-inner,\n  .modal-bottom .modal-layout .modal-button,\n  .modal-popup .modal-layout .modal-inner,\n  .modal-popup .modal-layout .modal-button {\n    border-radius: 0;\n}\n.modal-top .modal-layout .modal-button:first-child, .modal-top .modal-layout .modal-button:last-child,\n  .modal-bottom .modal-layout .modal-button:first-child,\n  .modal-bottom .modal-layout .modal-button:last-child,\n  .modal-popup .modal-layout .modal-button:first-child,\n  .modal-popup .modal-layout .modal-button:last-child {\n    border-radius: 0;\n}\n.modal-top .modal-layout {\n  align-self: flex-start;\n}\n.modal-top .modal-title,\n.modal-top .modal-title + .modal-text {\n  text-align: left;\n  background-color: transparent;\n}\n.modal-top .modal-inner {\n  background-color: rgba(0, 0, 0, 0.8);\n  color: #d2d2d2;\n  font-size: 0.58333rem;\n}\n.modal-top .icon-close {\n  position: absolute;\n  right: 0.41667rem;\n  color: #fff;\n  z-index: 1;\n}\n.modal-bottom .modal-layout,\n.modal-popup .modal-layout {\n  align-self: flex-end;\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  max-height: 10.41667rem;\n}\n.modal-bottom .modal-layout .table-view,\n  .modal-popup .modal-layout .table-view {\n    margin-bottom: 0;\n}\n.modal-bottom .modal-layout .modal-title,\n  .modal-popup .modal-layout .modal-title {\n    line-height: 1.45833rem;\n    font-size: 0.66667rem;\n    border-bottom: 1px solid #ddd;\n}\n.modal-bottom .modal-layout .modal-title .btn-link,\n    .modal-popup .modal-layout .modal-title .btn-link {\n      font-size: 0.625rem;\n      padding: 0.41667rem;\n}\n.modal-bottom .modal-layout .modal-title .modal-btn-no,\n    .modal-popup .modal-layout .modal-title .modal-btn-no {\n      float: left;\n}\n.modal-bottom .modal-layout .modal-title .modal-btn-yes,\n    .modal-popup .modal-layout .modal-title .modal-btn-yes {\n      float: right;\n}\n.modal-bottom .modal-layout .modal-title + .modal-text,\n  .modal-popup .modal-layout .modal-title + .modal-text {\n    height: 7.08333rem;\n    padding: 0;\n}\n.modal-popup .modal-layout {\n  height: 100%;\n  max-height: 100%;\n  background-color: #fff;\n}\n.modal-popup .modal-layout .modal-title + .modal-text {\n    height: auto;\n}\n.modal-popup .modal-text {\n  text-align: left;\n}\n\n/* Animate For Vue Modal */\n.modal {\n  transition: all .3s ease;\n}\n.preload-enter-active,\n.preload-leave-active {\n  margin: 0 auto;\n}\n.loading-enter-active .modal-layout,\n.loading-leave-active .modal-layout,\n.alert-enter-active .modal-layout,\n.alert-leave-active .modal-layout,\n.confirm-enter-active .modal-layout,\n.confirm-leave-active .modal-layout,\n.center-enter-active .modal-layout,\n.center-leave-active .modal-layout,\n.toast-enter-active .modal-layout,\n.toast-leave-active .modal-layout {\n  position: relative;\n  border-radius: 0.25rem;\n  width: 12.5rem;\n  margin: 0 auto;\n  transform: scale(1);\n  opacity: 1;\n  overflow: hidden;\n}\n.top-enter-active,\n.top-leave-active,\n.bottom-enter-active,\n.bottom-leave-active,\n.popup-enter-active,\n.popup-leave-active,\n.popover-enter-active,\n.popover-leave-active,\n.toast-enter-active,\n.toast-leave-active {\n  transform: translate3d(0, 0, 0);\n  opacity: 1;\n}\n.tips-enter-active,\n.tips-leave-active {\n  opacity: 1;\n}\n.loading-enter,\n.preload-enter,\n.alert-enter,\n.confirm-enter,\n.center-enter,\n.toast-enter {\n  transform: scale(1.5);\n  opacity: 0.5;\n}\n.alert-leave-active,\n.confirm-leave-active,\n.center-leave-active,\n.loading-leave-active,\n.preload-leave-active,\n.toast-leave-active {\n  transform: scale(0.8);\n  opacity: 0;\n}\n.popover-enter,\n.popover-leave-active {\n  top: 0 !important;\n  opacity: 0.5;\n}\n.top-enter,\n.top-leave-active {\n  transform: translate3d(0, -100%, 0);\n}\n.bottom-enter,\n.bottom-leave-active,\n.popup-enter,\n.popup-leave-active {\n  transform: translate3d(0, 100%, 0);\n}\n.tips-enter,\n.tips-leave-active {\n  opacity: 0;\n}\n", "", {"version":3,"sources":["/./src/modal.vue"],"names":[],"mappings":"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","file":"modal.vue","sourcesContent":["/*\r\n\r\n$font-family-sans-serif: \"Segoe UI\", \"Lucida Grande\", Helvetica, Arial, \"Microsoft YaHei\", FreeSans, Arimo, \"Droid Sans\",\"wenquanyi micro hei\",\"Hiragino Sans GB\", \"Hiragino Sans GB W3\", sans-serif;\r\n$font-family-serif: Georgia, \"Times New Roman\", Times, SimSun, serif;\r\n$font-family-monospace: Monaco, Menlo, Consolas, \"Courier New\", \"FontAwesome\", monospace;\r\n$font-family-kai: Georgia, \"Times New Roman\", Times, Kai, \"Kaiti SC\", KaiTi, BiauKai, serif;\r\n\r\n html, body{\r\n  min-width: 320px;\r\n  font-size: 12px;\r\n}\r\nhtml,\r\nbutton,\r\ninput,\r\nselect,\r\ntextarea{\r\n  font-family: $font-family-sans-serif;\r\n}\r\n\r\n@mixin html {\r\n  font-size: $baseFontSize/($baseWidth/$currentminWidth);\r\n  // max-width: $currentWidth !important;\r\n}\r\n\r\n//attention comments can't be chinese charset? sass compile will be wrong\r\n//mobile width range 320px->100%\r\n$queryWidthList: (320px, 400px), (400px, 500px), (500px, 600px), (600px, 720px);\r\n@each $minWidth, $maxWidth in $queryWidthList {\r\n  @if $maxWidth == 720px {\r\n    @include min-screen($minWidth) {\r\n      $currentWidth: 100%!global;\r\n      $currentminWidth: 720px!global;\r\n      html {\r\n        @include html\r\n      }\r\n    }\r\n  }\r\n  @else {\r\n    @include screen($minWidth, $maxWidth) {\r\n      $currentWidth: $maxWidth!global;\r\n      $currentminWidth: $minWidth!global;\r\n      html {\r\n        @include html\r\n      }\r\n    }\r\n  }\r\n}\r\n */\n/*\r\n\r\n$font-family-sans-serif: \"Segoe UI\", \"Lucida Grande\", Helvetica, Arial, \"Microsoft YaHei\", FreeSans, Arimo, \"Droid Sans\",\"wenquanyi micro hei\",\"Hiragino Sans GB\", \"Hiragino Sans GB W3\", sans-serif;\r\n$font-family-serif: Georgia, \"Times New Roman\", Times, SimSun, serif;\r\n$font-family-monospace: Monaco, Menlo, Consolas, \"Courier New\", \"FontAwesome\", monospace;\r\n$font-family-kai: Georgia, \"Times New Roman\", Times, Kai, \"Kaiti SC\", KaiTi, BiauKai, serif;\r\n\r\n html, body{\r\n  min-width: 320px;\r\n  font-size: 12px;\r\n}\r\nhtml,\r\nbutton,\r\ninput,\r\nselect,\r\ntextarea{\r\n  font-family: $font-family-sans-serif;\r\n}\r\n\r\n@mixin html {\r\n  font-size: $baseFontSize/($baseWidth/$currentminWidth);\r\n  // max-width: $currentWidth !important;\r\n}\r\n\r\n//attention comments can't be chinese charset? sass compile will be wrong\r\n//mobile width range 320px->100%\r\n$queryWidthList: (320px, 400px), (400px, 500px), (500px, 600px), (600px, 720px);\r\n@each $minWidth, $maxWidth in $queryWidthList {\r\n  @if $maxWidth == 720px {\r\n    @include min-screen($minWidth) {\r\n      $currentWidth: 100%!global;\r\n      $currentminWidth: 720px!global;\r\n      html {\r\n        @include html\r\n      }\r\n    }\r\n  }\r\n  @else {\r\n    @include screen($minWidth, $maxWidth) {\r\n      $currentWidth: $maxWidth!global;\r\n      $currentminWidth: $minWidth!global;\r\n      html {\r\n        @include html\r\n      }\r\n    }\r\n  }\r\n}\r\n */\n/* === Modals === */\n.modal {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  outline: 0;\n  background-color: rgba(0, 0, 0, 0.5);\n  -webkit-overflow-scrolling: touch;\n  -webkit-backface-visibility: hidden;\n  -moz-backface-visibility: hidden;\n  backface-visibility: hidden;\n  -webkit-perspective: 1000px;\n  perspective: 1000px;\n  z-index: 13500; }\n  .modal.modal-nomask {\n    background-color: transparent; }\n\n.modal-inner {\n  border-radius: 0.25rem 0.25rem 0 0;\n  position: relative;\n  background: rgba(255, 255, 255, 0.95); }\n\n.modal-title {\n  line-height: 1.8rem;\n  text-align: center;\n  background-color: #08A9E5;\n  font-size: 0.7rem;\n  font-weight: 300;\n  color: #fff; }\n  html.ios-gt-8 .modal-title {\n    font-weight: 600; }\n  .modal-title + .modal-text {\n    position: relative;\n    background-color: #fff;\n    padding: 0.41667rem; }\n\n.modal-buttons {\n  display: flex;\n  line-height: 2.25rem;\n  background-color: #fafafa; }\n  .modal-buttons.modal-buttons-vertical {\n    display: block;\n    height: auto; }\n\n.modal-button {\n  width: 100%;\n  text-align: center;\n  border-right: 1px solid #DFDFDF;\n  display: block;\n  width: 49%;\n  font-size: 0.75rem;\n  font-weight: 300; }\n  .modal-button:last-child {\n    border-right: none; }\n  .modal-button-emphasize {\n    color: #009EE1; }\n  .modal-button-disabled {\n    color: #ccc; }\n  .modal-button:first-child {\n    border-radius: 0 0 0 0.54167rem; }\n  .modal-button:last-child {\n    border-radius: 0 0 0.54167rem 0; }\n  .modal-button:first-child:last-child {\n    border-radius: 0 0 0.54167rem 0.54167rem; }\n  .modal-button.modal-button-bold {\n    font-weight: 500; }\n    html.ios-gt-8 .modal-button.modal-button-bold {\n      font-weight: 600; }\n  html:not(.watch-active-state) .modal-button:active, .modal-button.active-state {\n    background: rgba(230, 230, 230, 0.95); }\n  .modal-buttons-vertical .modal-button {\n    border-radius: 0; }\n    .modal-buttons-vertical .modal-button:last-child {\n      border-radius: 0 0 0.54167rem 0.54167rem; }\n  .modal-button:after {\n    content: '';\n    position: absolute;\n    right: 0;\n    top: 0;\n    left: auto;\n    bottom: auto;\n    width: 1px;\n    height: 100%;\n    background-color: #b5b5b5;\n    display: block;\n    z-index: 15;\n    -webkit-transform-origin: 100% 50%;\n    transform-origin: 100% 50%; }\n\n.modal-no-buttons .modal-inner {\n  border-radius: 0.54167rem; }\n\n.modal-no-buttons .modal-buttons {\n  display: none; }\n\n.modal-tips {\n  background-color: transparent; }\n\n.modal-confirm .modal-buttons .modal-button {\n  flex: 2; }\n\n.modal-alert .modal-buttons .modal-button {\n  flex: 1; }\n\n.modal-top .modal-layout,\n.modal-bottom .modal-layout,\n.modal-popup .modal-layout {\n  width: 100%;\n  border-radius: 0; }\n  .modal-top .modal-layout .modal-inner,\n  .modal-top .modal-layout .modal-button,\n  .modal-bottom .modal-layout .modal-inner,\n  .modal-bottom .modal-layout .modal-button,\n  .modal-popup .modal-layout .modal-inner,\n  .modal-popup .modal-layout .modal-button {\n    border-radius: 0; }\n  .modal-top .modal-layout .modal-button:first-child, .modal-top .modal-layout .modal-button:last-child,\n  .modal-bottom .modal-layout .modal-button:first-child,\n  .modal-bottom .modal-layout .modal-button:last-child,\n  .modal-popup .modal-layout .modal-button:first-child,\n  .modal-popup .modal-layout .modal-button:last-child {\n    border-radius: 0; }\n\n.modal-top .modal-layout {\n  align-self: flex-start; }\n\n.modal-top .modal-title,\n.modal-top .modal-title + .modal-text {\n  text-align: left;\n  background-color: transparent; }\n\n.modal-top .modal-inner {\n  background-color: rgba(0, 0, 0, 0.8);\n  color: #d2d2d2;\n  font-size: 0.58333rem; }\n\n.modal-top .icon-close {\n  position: absolute;\n  right: 0.41667rem;\n  color: #fff;\n  z-index: 1; }\n\n.modal-bottom .modal-layout,\n.modal-popup .modal-layout {\n  align-self: flex-end;\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  max-height: 10.41667rem; }\n  .modal-bottom .modal-layout .table-view,\n  .modal-popup .modal-layout .table-view {\n    margin-bottom: 0; }\n  .modal-bottom .modal-layout .modal-title,\n  .modal-popup .modal-layout .modal-title {\n    line-height: 1.45833rem;\n    font-size: 0.66667rem;\n    border-bottom: 1px solid #ddd; }\n    .modal-bottom .modal-layout .modal-title .btn-link,\n    .modal-popup .modal-layout .modal-title .btn-link {\n      font-size: 0.625rem;\n      padding: 0.41667rem; }\n    .modal-bottom .modal-layout .modal-title .modal-btn-no,\n    .modal-popup .modal-layout .modal-title .modal-btn-no {\n      float: left; }\n    .modal-bottom .modal-layout .modal-title .modal-btn-yes,\n    .modal-popup .modal-layout .modal-title .modal-btn-yes {\n      float: right; }\n  .modal-bottom .modal-layout .modal-title + .modal-text,\n  .modal-popup .modal-layout .modal-title + .modal-text {\n    height: 7.08333rem;\n    padding: 0; }\n\n.modal-popup .modal-layout {\n  height: 100%;\n  max-height: 100%;\n  background-color: #fff; }\n  .modal-popup .modal-layout .modal-title + .modal-text {\n    height: auto; }\n\n.modal-popup .modal-text {\n  text-align: left; }\n\n/* Animate For Vue Modal */\n.modal {\n  transition: all .3s ease; }\n\n.preload-enter-active,\n.preload-leave-active {\n  margin: 0 auto; }\n\n.loading-enter-active .modal-layout,\n.loading-leave-active .modal-layout,\n.alert-enter-active .modal-layout,\n.alert-leave-active .modal-layout,\n.confirm-enter-active .modal-layout,\n.confirm-leave-active .modal-layout,\n.center-enter-active .modal-layout,\n.center-leave-active .modal-layout,\n.toast-enter-active .modal-layout,\n.toast-leave-active .modal-layout {\n  position: relative;\n  border-radius: 0.25rem;\n  width: 12.5rem;\n  margin: 0 auto;\n  transform: scale(1);\n  opacity: 1;\n  overflow: hidden; }\n\n.top-enter-active,\n.top-leave-active,\n.bottom-enter-active,\n.bottom-leave-active,\n.popup-enter-active,\n.popup-leave-active,\n.popover-enter-active,\n.popover-leave-active,\n.toast-enter-active,\n.toast-leave-active {\n  transform: translate3d(0, 0, 0);\n  opacity: 1; }\n\n.tips-enter-active,\n.tips-leave-active {\n  opacity: 1; }\n\n.loading-enter,\n.preload-enter,\n.alert-enter,\n.confirm-enter,\n.center-enter,\n.toast-enter {\n  transform: scale(1.5);\n  opacity: 0.5; }\n\n.alert-leave-active,\n.confirm-leave-active,\n.center-leave-active,\n.loading-leave-active,\n.preload-leave-active,\n.toast-leave-active {\n  transform: scale(0.8);\n  opacity: 0; }\n\n.popover-enter,\n.popover-leave-active {\n  top: 0 !important;\n  opacity: 0.5; }\n\n.top-enter,\n.top-leave-active {\n  transform: translate3d(0, -100%, 0); }\n\n.bottom-enter,\n.bottom-leave-active,\n.popup-enter,\n.popup-leave-active {\n  transform: translate3d(0, 100%, 0); }\n\n.tips-enter,\n.tips-leave-active {\n  opacity: 0; }\n"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "/*\r\n\r\n$font-family-sans-serif: \"Segoe UI\", \"Lucida Grande\", Helvetica, Arial, \"Microsoft YaHei\", FreeSans, Arimo, \"Droid Sans\",\"wenquanyi micro hei\",\"Hiragino Sans GB\", \"Hiragino Sans GB W3\", sans-serif;\r\n$font-family-serif: Georgia, \"Times New Roman\", Times, SimSun, serif;\r\n$font-family-monospace: Monaco, Menlo, Consolas, \"Courier New\", \"FontAwesome\", monospace;\r\n$font-family-kai: Georgia, \"Times New Roman\", Times, Kai, \"Kaiti SC\", KaiTi, BiauKai, serif;\r\n\r\n html, body{\r\n  min-width: 320px;\r\n  font-size: 12px;\r\n}\r\nhtml,\r\nbutton,\r\ninput,\r\nselect,\r\ntextarea{\r\n  font-family: $font-family-sans-serif;\r\n}\r\n\r\n@mixin html {\r\n  font-size: $baseFontSize/($baseWidth/$currentminWidth);\r\n  // max-width: $currentWidth !important;\r\n}\r\n\r\n//attention comments can't be chinese charset? sass compile will be wrong\r\n//mobile width range 320px->100%\r\n$queryWidthList: (320px, 400px), (400px, 500px), (500px, 600px), (600px, 720px);\r\n@each $minWidth, $maxWidth in $queryWidthList {\r\n  @if $maxWidth == 720px {\r\n    @include min-screen($minWidth) {\r\n      $currentWidth: 100%!global;\r\n      $currentminWidth: 720px!global;\r\n      html {\r\n        @include html\r\n      }\r\n    }\r\n  }\r\n  @else {\r\n    @include screen($minWidth, $maxWidth) {\r\n      $currentWidth: $maxWidth!global;\r\n      $currentminWidth: $minWidth!global;\r\n      html {\r\n        @include html\r\n      }\r\n    }\r\n  }\r\n}\r\n */\n/*\r\n\r\n$font-family-sans-serif: \"Segoe UI\", \"Lucida Grande\", Helvetica, Arial, \"Microsoft YaHei\", FreeSans, Arimo, \"Droid Sans\",\"wenquanyi micro hei\",\"Hiragino Sans GB\", \"Hiragino Sans GB W3\", sans-serif;\r\n$font-family-serif: Georgia, \"Times New Roman\", Times, SimSun, serif;\r\n$font-family-monospace: Monaco, Menlo, Consolas, \"Courier New\", \"FontAwesome\", monospace;\r\n$font-family-kai: Georgia, \"Times New Roman\", Times, Kai, \"Kaiti SC\", KaiTi, BiauKai, serif;\r\n\r\n html, body{\r\n  min-width: 320px;\r\n  font-size: 12px;\r\n}\r\nhtml,\r\nbutton,\r\ninput,\r\nselect,\r\ntextarea{\r\n  font-family: $font-family-sans-serif;\r\n}\r\n\r\n@mixin html {\r\n  font-size: $baseFontSize/($baseWidth/$currentminWidth);\r\n  // max-width: $currentWidth !important;\r\n}\r\n\r\n//attention comments can't be chinese charset? sass compile will be wrong\r\n//mobile width range 320px->100%\r\n$queryWidthList: (320px, 400px), (400px, 500px), (500px, 600px), (600px, 720px);\r\n@each $minWidth, $maxWidth in $queryWidthList {\r\n  @if $maxWidth == 720px {\r\n    @include min-screen($minWidth) {\r\n      $currentWidth: 100%!global;\r\n      $currentminWidth: 720px!global;\r\n      html {\r\n        @include html\r\n      }\r\n    }\r\n  }\r\n  @else {\r\n    @include screen($minWidth, $maxWidth) {\r\n      $currentWidth: $maxWidth!global;\r\n      $currentminWidth: $minWidth!global;\r\n      html {\r\n        @include html\r\n      }\r\n    }\r\n  }\r\n}\r\n */\n/* === Modals === */\n.modal-mask,\n.modal-wrapper {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  height: 100%;\n  z-index: 1000;\n}\n.modal-mask {\n  background-color: rgba(55, 55, 55, 0.6);\n}\n.modal-wrapper {\n  transition: all .3s ease;\n  z-index: 1001;\n}\n.modal-nomask {\n  background-color: transparent;\n}\n.modal-layout {\n  margin: 35% auto 0;\n  border-radius: 0.25rem;\n  width: 12.5rem;\n  z-index: 1001;\n}\n.modal-inner {\n  border-radius: 0.25rem 0.25rem 0 0;\n  position: relative;\n  background: rgba(255, 255, 255, 0.95);\n}\n.modal-title {\n  line-height: 1.8rem;\n  text-align: center;\n  background-color: #08A9E5;\n  font-size: 0.7rem;\n  font-weight: 300;\n  color: #fff;\n}\nhtml.ios-gt-8 .modal-title {\n    font-weight: 600;\n}\n.modal-title + .modal-text {\n    position: relative;\n    background-color: #fff;\n    padding: 0.41667rem;\n}\n.modal-buttons {\n  display: flex;\n  line-height: 2.25rem;\n  background-color: #fafafa;\n}\n.modal-buttons.modal-buttons-vertical {\n    display: block;\n    height: auto;\n}\n.modal-button {\n  width: 100%;\n  text-align: center;\n  border-right: 1px solid #DFDFDF;\n  display: block;\n  width: 49%;\n  font-size: 0.75rem;\n  font-weight: 300;\n}\n.modal-button:last-child {\n    border-right: none;\n}\n.modal-button-emphasize {\n    color: #009EE1;\n}\n.modal-button-disabled {\n    color: #ccc;\n}\n.modal-button:first-child {\n    border-radius: 0 0 0 0.54167rem;\n}\n.modal-button:last-child {\n    border-radius: 0 0 0.54167rem 0;\n}\n.modal-button:first-child:last-child {\n    border-radius: 0 0 0.54167rem 0.54167rem;\n}\n.modal-button.modal-button-bold {\n    font-weight: 500;\n}\nhtml.ios-gt-8 .modal-button.modal-button-bold {\n      font-weight: 600;\n}\nhtml:not(.watch-active-state) .modal-button:active, .modal-button.active-state {\n    background: rgba(230, 230, 230, 0.95);\n}\n.modal-buttons-vertical .modal-button {\n    border-radius: 0;\n}\n.modal-buttons-vertical .modal-button:last-child {\n      border-radius: 0 0 0.54167rem 0.54167rem;\n}\n.modal-button:after {\n    content: '';\n    position: absolute;\n    right: 0;\n    top: 0;\n    left: auto;\n    bottom: auto;\n    width: 1px;\n    height: 100%;\n    background-color: #b5b5b5;\n    display: block;\n    z-index: 15;\n    -webkit-transform-origin: 100% 50%;\n    transform-origin: 100% 50%;\n}\n.modal-no-buttons .modal-inner {\n  border-radius: 0.54167rem;\n}\n.modal-no-buttons .modal-buttons {\n  display: none;\n}\n.modal-preload .modal-layout,\n.modal-top .modal-layout {\n  margin-top: 0;\n}\n.modal-tips {\n  background-color: transparent;\n}\n.modal-confirm .modal-buttons .modal-button {\n  flex: 2;\n}\n.modal-alert .modal-buttons .modal-button {\n  flex: 1;\n}\n.modal-top .modal-layout,\n.modal-bottom .modal-layout,\n.modal-popup .modal-layout {\n  width: 100%;\n  border-radius: 0;\n}\n.modal-top .modal-layout .modal-inner,\n  .modal-top .modal-layout .modal-button,\n  .modal-bottom .modal-layout .modal-inner,\n  .modal-bottom .modal-layout .modal-button,\n  .modal-popup .modal-layout .modal-inner,\n  .modal-popup .modal-layout .modal-button {\n    border-radius: 0;\n}\n.modal-top .modal-layout .modal-button:first-child, .modal-top .modal-layout .modal-button:last-child,\n  .modal-bottom .modal-layout .modal-button:first-child,\n  .modal-bottom .modal-layout .modal-button:last-child,\n  .modal-popup .modal-layout .modal-button:first-child,\n  .modal-popup .modal-layout .modal-button:last-child {\n    border-radius: 0;\n}\n.modal-top .modal-layout {\n  align-self: flex-start;\n}\n.modal-top .modal-title,\n.modal-top .modal-title + .modal-text {\n  text-align: left;\n  background-color: transparent;\n}\n.modal-top .modal-inner {\n  background-color: rgba(0, 0, 0, 0.8);\n  color: #d2d2d2;\n  font-size: 0.58333rem;\n}\n.modal-top .icon-close {\n  position: absolute;\n  right: 0.41667rem;\n  color: #fff;\n  z-index: 1;\n}\n.modal-bottom .modal-layout,\n.modal-popup .modal-layout {\n  align-self: flex-end;\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  max-height: 10.41667rem;\n}\n.modal-bottom .modal-layout .table-view,\n  .modal-popup .modal-layout .table-view {\n    margin-bottom: 0;\n}\n.modal-bottom .modal-layout .modal-title,\n  .modal-popup .modal-layout .modal-title {\n    line-height: 1.45833rem;\n    font-size: 0.66667rem;\n    border-bottom: 1px solid #ddd;\n}\n.modal-bottom .modal-layout .modal-title .btn-link,\n    .modal-popup .modal-layout .modal-title .btn-link {\n      font-size: 0.625rem;\n      padding: 0.41667rem;\n}\n.modal-bottom .modal-layout .modal-title .modal-btn-no,\n    .modal-popup .modal-layout .modal-title .modal-btn-no {\n      float: left;\n}\n.modal-bottom .modal-layout .modal-title .modal-btn-yes,\n    .modal-popup .modal-layout .modal-title .modal-btn-yes {\n      float: right;\n}\n.modal-bottom .modal-layout .modal-title + .modal-text,\n  .modal-popup .modal-layout .modal-title + .modal-text {\n    height: 7.08333rem;\n    padding: 0;\n}\n.modal-popup .modal-layout {\n  height: 100%;\n  max-height: 100%;\n  background-color: #fff;\n}\n.modal-popup .modal-layout .modal-title + .modal-text {\n    height: auto;\n}\n.modal-popup .modal-text {\n  text-align: left;\n}\n\n/* Animate For Vue Modal */\n.fade-enter-active,\n.fade-leave-active {\n  transition: opacity .5s;\n}\n.fade-enter,\n.fade-leave-to {\n  opacity: 0;\n}\n.preload-enter-active,\n.preload-leave-active {\n  margin: 0 auto;\n}\n.loading-enter-active,\n.loading-leave-active,\n.alert-enter-active,\n.alert-leave-active,\n.confirm-enter-active,\n.confirm-leave-active,\n.center-enter-active,\n.center-leave-active,\n.toast-enter-active,\n.toast-leave-active {\n  transform: scale(1);\n  opacity: 1;\n  overflow: hidden;\n}\n.top-enter-active,\n.top-leave-active,\n.bottom-enter-active,\n.bottom-leave-active,\n.popup-enter-active,\n.popup-leave-active,\n.popover-enter-active,\n.popover-leave-active,\n.toast-enter-active,\n.toast-leave-active {\n  opacity: 1;\n  transform: translate3d(0, 0, 0);\n}\n.tips-enter-active,\n.tips-leave-active {\n  opacity: 1;\n}\n.loading-enter,\n.preload-enter,\n.alert-enter,\n.confirm-enter,\n.center-enter,\n.toast-enter {\n  transform: scale(1.5);\n  opacity: 0.5;\n}\n.alert-leave-active,\n.confirm-leave-active,\n.center-leave-active,\n.loading-leave-active,\n.preload-leave-active,\n.toast-leave-active {\n  transform: scale(0.8);\n  opacity: 0;\n}\n.popover-enter,\n.popover-leave-active {\n  top: 0 !important;\n  opacity: 0.5;\n}\n.top-enter,\n.top-leave-active {\n  transform: translate3d(0, -100%, 0);\n}\n.bottom-enter,\n.bottom-leave-active,\n.popup-enter,\n.popup-leave-active {\n  transform: translate3d(0, 100%, 0);\n}\n.tips-enter,\n.tips-leave-active {\n  opacity: 0;\n}\n", "", {"version":3,"sources":["/./src/modal.vue"],"names":[],"mappings":"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","file":"modal.vue","sourcesContent":["/*\r\n\r\n$font-family-sans-serif: \"Segoe UI\", \"Lucida Grande\", Helvetica, Arial, \"Microsoft YaHei\", FreeSans, Arimo, \"Droid Sans\",\"wenquanyi micro hei\",\"Hiragino Sans GB\", \"Hiragino Sans GB W3\", sans-serif;\r\n$font-family-serif: Georgia, \"Times New Roman\", Times, SimSun, serif;\r\n$font-family-monospace: Monaco, Menlo, Consolas, \"Courier New\", \"FontAwesome\", monospace;\r\n$font-family-kai: Georgia, \"Times New Roman\", Times, Kai, \"Kaiti SC\", KaiTi, BiauKai, serif;\r\n\r\n html, body{\r\n  min-width: 320px;\r\n  font-size: 12px;\r\n}\r\nhtml,\r\nbutton,\r\ninput,\r\nselect,\r\ntextarea{\r\n  font-family: $font-family-sans-serif;\r\n}\r\n\r\n@mixin html {\r\n  font-size: $baseFontSize/($baseWidth/$currentminWidth);\r\n  // max-width: $currentWidth !important;\r\n}\r\n\r\n//attention comments can't be chinese charset? sass compile will be wrong\r\n//mobile width range 320px->100%\r\n$queryWidthList: (320px, 400px), (400px, 500px), (500px, 600px), (600px, 720px);\r\n@each $minWidth, $maxWidth in $queryWidthList {\r\n  @if $maxWidth == 720px {\r\n    @include min-screen($minWidth) {\r\n      $currentWidth: 100%!global;\r\n      $currentminWidth: 720px!global;\r\n      html {\r\n        @include html\r\n      }\r\n    }\r\n  }\r\n  @else {\r\n    @include screen($minWidth, $maxWidth) {\r\n      $currentWidth: $maxWidth!global;\r\n      $currentminWidth: $minWidth!global;\r\n      html {\r\n        @include html\r\n      }\r\n    }\r\n  }\r\n}\r\n */\n/*\r\n\r\n$font-family-sans-serif: \"Segoe UI\", \"Lucida Grande\", Helvetica, Arial, \"Microsoft YaHei\", FreeSans, Arimo, \"Droid Sans\",\"wenquanyi micro hei\",\"Hiragino Sans GB\", \"Hiragino Sans GB W3\", sans-serif;\r\n$font-family-serif: Georgia, \"Times New Roman\", Times, SimSun, serif;\r\n$font-family-monospace: Monaco, Menlo, Consolas, \"Courier New\", \"FontAwesome\", monospace;\r\n$font-family-kai: Georgia, \"Times New Roman\", Times, Kai, \"Kaiti SC\", KaiTi, BiauKai, serif;\r\n\r\n html, body{\r\n  min-width: 320px;\r\n  font-size: 12px;\r\n}\r\nhtml,\r\nbutton,\r\ninput,\r\nselect,\r\ntextarea{\r\n  font-family: $font-family-sans-serif;\r\n}\r\n\r\n@mixin html {\r\n  font-size: $baseFontSize/($baseWidth/$currentminWidth);\r\n  // max-width: $currentWidth !important;\r\n}\r\n\r\n//attention comments can't be chinese charset? sass compile will be wrong\r\n//mobile width range 320px->100%\r\n$queryWidthList: (320px, 400px), (400px, 500px), (500px, 600px), (600px, 720px);\r\n@each $minWidth, $maxWidth in $queryWidthList {\r\n  @if $maxWidth == 720px {\r\n    @include min-screen($minWidth) {\r\n      $currentWidth: 100%!global;\r\n      $currentminWidth: 720px!global;\r\n      html {\r\n        @include html\r\n      }\r\n    }\r\n  }\r\n  @else {\r\n    @include screen($minWidth, $maxWidth) {\r\n      $currentWidth: $maxWidth!global;\r\n      $currentminWidth: $minWidth!global;\r\n      html {\r\n        @include html\r\n      }\r\n    }\r\n  }\r\n}\r\n */\n/* === Modals === */\n.modal-mask,\n.modal-wrapper {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  height: 100%;\n  z-index: 1000; }\n\n.modal-mask {\n  background-color: rgba(55, 55, 55, 0.6); }\n\n.modal-wrapper {\n  transition: all .3s ease;\n  z-index: 1001; }\n\n.modal-nomask {\n  background-color: transparent; }\n\n.modal-layout {\n  margin: 35% auto 0;\n  border-radius: 0.25rem;\n  width: 12.5rem;\n  z-index: 1001; }\n\n.modal-inner {\n  border-radius: 0.25rem 0.25rem 0 0;\n  position: relative;\n  background: rgba(255, 255, 255, 0.95); }\n\n.modal-title {\n  line-height: 1.8rem;\n  text-align: center;\n  background-color: #08A9E5;\n  font-size: 0.7rem;\n  font-weight: 300;\n  color: #fff; }\n  html.ios-gt-8 .modal-title {\n    font-weight: 600; }\n  .modal-title + .modal-text {\n    position: relative;\n    background-color: #fff;\n    padding: 0.41667rem; }\n\n.modal-buttons {\n  display: flex;\n  line-height: 2.25rem;\n  background-color: #fafafa; }\n  .modal-buttons.modal-buttons-vertical {\n    display: block;\n    height: auto; }\n\n.modal-button {\n  width: 100%;\n  text-align: center;\n  border-right: 1px solid #DFDFDF;\n  display: block;\n  width: 49%;\n  font-size: 0.75rem;\n  font-weight: 300; }\n  .modal-button:last-child {\n    border-right: none; }\n  .modal-button-emphasize {\n    color: #009EE1; }\n  .modal-button-disabled {\n    color: #ccc; }\n  .modal-button:first-child {\n    border-radius: 0 0 0 0.54167rem; }\n  .modal-button:last-child {\n    border-radius: 0 0 0.54167rem 0; }\n  .modal-button:first-child:last-child {\n    border-radius: 0 0 0.54167rem 0.54167rem; }\n  .modal-button.modal-button-bold {\n    font-weight: 500; }\n    html.ios-gt-8 .modal-button.modal-button-bold {\n      font-weight: 600; }\n  html:not(.watch-active-state) .modal-button:active, .modal-button.active-state {\n    background: rgba(230, 230, 230, 0.95); }\n  .modal-buttons-vertical .modal-button {\n    border-radius: 0; }\n    .modal-buttons-vertical .modal-button:last-child {\n      border-radius: 0 0 0.54167rem 0.54167rem; }\n  .modal-button:after {\n    content: '';\n    position: absolute;\n    right: 0;\n    top: 0;\n    left: auto;\n    bottom: auto;\n    width: 1px;\n    height: 100%;\n    background-color: #b5b5b5;\n    display: block;\n    z-index: 15;\n    -webkit-transform-origin: 100% 50%;\n    transform-origin: 100% 50%; }\n\n.modal-no-buttons .modal-inner {\n  border-radius: 0.54167rem; }\n\n.modal-no-buttons .modal-buttons {\n  display: none; }\n\n.modal-preload .modal-layout,\n.modal-top .modal-layout {\n  margin-top: 0; }\n\n.modal-tips {\n  background-color: transparent; }\n\n.modal-confirm .modal-buttons .modal-button {\n  flex: 2; }\n\n.modal-alert .modal-buttons .modal-button {\n  flex: 1; }\n\n.modal-top .modal-layout,\n.modal-bottom .modal-layout,\n.modal-popup .modal-layout {\n  width: 100%;\n  border-radius: 0; }\n  .modal-top .modal-layout .modal-inner,\n  .modal-top .modal-layout .modal-button,\n  .modal-bottom .modal-layout .modal-inner,\n  .modal-bottom .modal-layout .modal-button,\n  .modal-popup .modal-layout .modal-inner,\n  .modal-popup .modal-layout .modal-button {\n    border-radius: 0; }\n  .modal-top .modal-layout .modal-button:first-child, .modal-top .modal-layout .modal-button:last-child,\n  .modal-bottom .modal-layout .modal-button:first-child,\n  .modal-bottom .modal-layout .modal-button:last-child,\n  .modal-popup .modal-layout .modal-button:first-child,\n  .modal-popup .modal-layout .modal-button:last-child {\n    border-radius: 0; }\n\n.modal-top .modal-layout {\n  align-self: flex-start; }\n\n.modal-top .modal-title,\n.modal-top .modal-title + .modal-text {\n  text-align: left;\n  background-color: transparent; }\n\n.modal-top .modal-inner {\n  background-color: rgba(0, 0, 0, 0.8);\n  color: #d2d2d2;\n  font-size: 0.58333rem; }\n\n.modal-top .icon-close {\n  position: absolute;\n  right: 0.41667rem;\n  color: #fff;\n  z-index: 1; }\n\n.modal-bottom .modal-layout,\n.modal-popup .modal-layout {\n  align-self: flex-end;\n  bottom: 0;\n  left: 0;\n  position: absolute;\n  max-height: 10.41667rem; }\n  .modal-bottom .modal-layout .table-view,\n  .modal-popup .modal-layout .table-view {\n    margin-bottom: 0; }\n  .modal-bottom .modal-layout .modal-title,\n  .modal-popup .modal-layout .modal-title {\n    line-height: 1.45833rem;\n    font-size: 0.66667rem;\n    border-bottom: 1px solid #ddd; }\n    .modal-bottom .modal-layout .modal-title .btn-link,\n    .modal-popup .modal-layout .modal-title .btn-link {\n      font-size: 0.625rem;\n      padding: 0.41667rem; }\n    .modal-bottom .modal-layout .modal-title .modal-btn-no,\n    .modal-popup .modal-layout .modal-title .modal-btn-no {\n      float: left; }\n    .modal-bottom .modal-layout .modal-title .modal-btn-yes,\n    .modal-popup .modal-layout .modal-title .modal-btn-yes {\n      float: right; }\n  .modal-bottom .modal-layout .modal-title + .modal-text,\n  .modal-popup .modal-layout .modal-title + .modal-text {\n    height: 7.08333rem;\n    padding: 0; }\n\n.modal-popup .modal-layout {\n  height: 100%;\n  max-height: 100%;\n  background-color: #fff; }\n  .modal-popup .modal-layout .modal-title + .modal-text {\n    height: auto; }\n\n.modal-popup .modal-text {\n  text-align: left; }\n\n/* Animate For Vue Modal */\n.fade-enter-active,\n.fade-leave-active {\n  transition: opacity .5s; }\n\n.fade-enter,\n.fade-leave-to {\n  opacity: 0; }\n\n.preload-enter-active,\n.preload-leave-active {\n  margin: 0 auto; }\n\n.loading-enter-active,\n.loading-leave-active,\n.alert-enter-active,\n.alert-leave-active,\n.confirm-enter-active,\n.confirm-leave-active,\n.center-enter-active,\n.center-leave-active,\n.toast-enter-active,\n.toast-leave-active {\n  transform: scale(1);\n  opacity: 1;\n  overflow: hidden; }\n\n.top-enter-active,\n.top-leave-active,\n.bottom-enter-active,\n.bottom-leave-active,\n.popup-enter-active,\n.popup-leave-active,\n.popover-enter-active,\n.popover-leave-active,\n.toast-enter-active,\n.toast-leave-active {\n  opacity: 1;\n  transform: translate3d(0, 0, 0); }\n\n.tips-enter-active,\n.tips-leave-active {\n  opacity: 1; }\n\n.loading-enter,\n.preload-enter,\n.alert-enter,\n.confirm-enter,\n.center-enter,\n.toast-enter {\n  transform: scale(1.5);\n  opacity: 0.5; }\n\n.alert-leave-active,\n.confirm-leave-active,\n.center-leave-active,\n.loading-leave-active,\n.preload-leave-active,\n.toast-leave-active {\n  transform: scale(0.8);\n  opacity: 0; }\n\n.popover-enter,\n.popover-leave-active {\n  top: 0 !important;\n  opacity: 0.5; }\n\n.top-enter,\n.top-leave-active {\n  transform: translate3d(0, -100%, 0); }\n\n.bottom-enter,\n.bottom-leave-active,\n.popup-enter,\n.popup-leave-active {\n  transform: translate3d(0, 100%, 0); }\n\n.tips-enter,\n.tips-leave-active {\n  opacity: 0; }\n"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -18645,6 +18683,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 	
 	exports.default = {
 	    props: {
@@ -18653,6 +18698,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            type: Boolean,
 	            default: false
 	        },
+	        showChange: function showChange() {},
 	        show: {
 	            type: Boolean,
 	            default: false
@@ -18691,10 +18737,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    data: function data() {
 	        return {
+	            innerShow: this.show,
 	            tripos: 'tri-bottom'
 	        };
 	    },
 	
+	    watch: {
+	        innerShow: function innerShow(val) {
+	            // this.show = val
+	            this.$emit('update:show', val);
+	        },
+	        show: function show(val) {
+	            this.innerShow = val;
+	        }
+	    },
 	    methods: {
 	        onYes: function onYes(e) {
 	            if (this.disabled) return;
@@ -18706,10 +18762,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	            this.hide();
 	        },
 	        hide: function hide() {
-	            this.show = false;
+	            this.innerShow = false;
 	        }
-	    },
-	    transition: {}
+	    }
 	};
 
 /***/ },
@@ -18718,16 +18773,33 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
+	    staticClass: "modal"
+	  }, [_c('transition', {
+	    attrs: {
+	      "name": "fade",
+	      "mode": "out-in"
+	    }
+	  }, [_c('div', {
 	    directives: [{
 	      name: "show",
 	      rawName: "v-show",
-	      value: (_vm.show),
-	      expression: "show"
+	      value: (_vm.innerShow),
+	      expression: "innerShow"
 	    }],
-	    class: ("modal modal-" + _vm.type + " " + (_vm.mask?'':'modal-nomask')),
+	    class: _vm.mask ? 'modal-mask' : 'modal-nomask'
+	  })]), _vm._v(" "), _c('transition', {
 	    attrs: {
-	      "transition": _vm.type
-	    },
+	      "name": _vm.type,
+	      "mode": "out-in"
+	    }
+	  }, [_c('div', {
+	    directives: [{
+	      name: "show",
+	      rawName: "v-show",
+	      value: (_vm.innerShow),
+	      expression: "innerShow"
+	    }],
+	    class: ("modal-wrapper modal-" + _vm.type),
 	    on: {
 	      "click": function($event) {
 	        if ($event.target !== $event.currentTarget) { return null; }
@@ -18735,7 +18807,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    }
 	  }, [_c('div', {
-	    class: ("modal-layout " + ((_vm.type==='popover' || _vm.type==='tips') && _vm.tripos ? _vm.tripos : ''))
+	    class: ("modal-layout  " + ((_vm.type==='popover' || _vm.type==='tips') && _vm.tripos ? _vm.tripos : ''))
 	  }, [(_vm.close === true) ? _c('span', {
 	    staticClass: "icon icon-close",
 	    on: {
@@ -18750,7 +18822,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    on: {
 	      "click": _vm.onCancel
 	    }
-	  }, [_vm._v("取消")]) : _vm._e(), _vm._v(" " + _vm._s(_vm.title) + "\r\n                    "), (_vm.type === 'bottom' || _vm.type === 'popup') ? _c('span', {
+	  }, [_vm._v("取消")]) : _vm._e(), _vm._v(" " + _vm._s(_vm.title) + "\r\n                            "), (_vm.type === 'bottom' || _vm.type === 'popup') ? _c('span', {
 	    staticClass: "btn modal-btn btn-link modal-btn-yes",
 	    on: {
 	      "click": _vm.onYes
@@ -18769,7 +18841,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    on: {
 	      "click": _vm.onYes
 	    }
-	  }, [_vm._v("确定")])])], 2) : _vm._e()])])
+	  }, [_vm._v("确定")])])], 2) : _vm._e()])])])], 1)
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
@@ -18786,11 +18858,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return _c('modal', {
 	    staticClass: "ui-select",
 	    attrs: {
-	      "show": _vm.show,
+	      "show": _vm.innerShow,
 	      "type": "bottom",
 	      "title": _vm.title,
 	      "onyes": _vm.onyes,
 	      "oncancel": _vm.oncancel
+	    },
+	    on: {
+	      "update:show": function($event) {
+	        _vm.innerShow = $event
+	      }
 	    }
 	  }, [_vm._t("default")], 2)
 	},staticRenderFns: []}
@@ -18842,8 +18919,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return _c('div', [_c('vselect', {
 	    attrs: {
 	      "title": "选择交车时间",
-	      "show": _vm.show,
+	      "show": _vm.innerShow,
 	      "onyes": _vm.onyes
+	    },
+	    on: {
+	      "update:show": function($event) {
+	        _vm.innerShow = $event
+	      }
 	    }
 	  }, [_c('voption', {
 	    ref: "date",
@@ -18892,6 +18974,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      "type": "toast",
 	      "time": 1500,
 	      "mask": false
+	    },
+	    on: {
+	      "update:show": function($event) {
+	        _vm.toastShow = $event
+	      }
 	    }
 	  }, [_vm._v(_vm._s(_vm.toastContent))])], 1)
 	},staticRenderFns: []}
@@ -19530,6 +19617,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = {
+	    components: {
+	        modal: _modal2.default
+	    },
 	    props: {
 	        show: {
 	            type: Boolean,
@@ -19554,8 +19644,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	            default: "游游努力加载中"
 	        }
 	    },
-	    components: {
-	        modal: _modal2.default
+	    data: function data() {
+	        return {
+	            innerShow: this.show
+	        };
+	    },
+	
+	    watch: {
+	        innerShow: function innerShow(val) {
+	            // this.show = val
+	            this.$emit('update:show', val);
+	        },
+	        show: function show(val) {
+	            this.innerShow = val;
+	        }
 	    }
 	}; //
 	//
@@ -19581,12 +19683,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('modal', {
 	    attrs: {
-	      "show": _vm.show,
+	      "show": _vm.innerShow,
 	      "type": _vm.type,
 	      "maskclose": _vm.maskclose,
 	      "mask": _vm.mask,
 	      "title": _vm.title,
 	      "hastitle": false
+	    },
+	    on: {
+	      "update:show": function($event) {
+	        _vm.innerShow = $event
+	      }
 	    }
 	  }, [_vm._t("default", [(_vm.type === 'loading' || _vm.type === 'preload') ? _c('div', {
 	    staticClass: "spinner"
@@ -19745,10 +19852,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	    components: {
 	        modal: _modal2.default
 	    },
+	    data: function data() {
+	        return {
+	            innerShow: this.show
+	        };
+	    },
+	
 	    watch: {
-	        'show': function show(val, oldVal) {
+	        innerShow: function innerShow(val) {
+	            this.$emit('update:show', val);
+	        },
+	        show: function show(val, oldVal) {
+	            this.innerShow = val;
 	            if (val && (this.type === 'popover' || this.type === 'tips')) {
-	                console.log(this, 'this');
 	                var $pos = document.querySelectorAll(this.role)[0],
 	                    $modal = this.$el.querySelectorAll('.modal-layout')[0];
 	
@@ -19793,13 +19909,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('modal', {
 	    attrs: {
-	      "show": _vm.show,
+	      "show": _vm.innerShow,
 	      "type": _vm.type,
 	      "maskclose": _vm.maskclose,
 	      "mask": _vm.mask,
 	      "hastitle": _vm.hastitle,
 	      "role": _vm.role,
 	      "title": _vm.title
+	    },
+	    on: {
+	      "update:show": function($event) {
+	        _vm.innerShow = $event
+	      }
 	    }
 	  }, [_vm._t("default")], 2)
 	},staticRenderFns: []}
@@ -20553,8 +20674,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	    components: {
 	        modal: _modal2.default
 	    },
+	    data: function data() {
+	        return {
+	            innerShow: this.show
+	        };
+	    },
+	
 	    watch: {
-	        'show': function show(val, oldVal) {
+	        innerShow: function innerShow(val) {
+	            this.$emit('update:show', val);
+	        },
+	        show: function show(val, oldVal) {
+	            this.innerShow = val;
 	            if (val) {
 	                this.t = setTimeout(function () {
 	                    this.show = false;
@@ -20578,12 +20709,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('modal', {
 	    attrs: {
-	      "show": _vm.show,
+	      "show": _vm.innerShow,
 	      "type": "toast",
 	      "maskclose": _vm.maskclose,
 	      "mask": _vm.mask,
 	      "time": _vm.time,
 	      "hastitle": false
+	    },
+	    on: {
+	      "update:show": function($event) {
+	        _vm.innerShow = $event
+	      }
 	    }
 	  }, [_vm._t("default")], 2)
 	},staticRenderFns: []}
