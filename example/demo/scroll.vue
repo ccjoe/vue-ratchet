@@ -3,8 +3,8 @@
     <h5>垂直滚动(带front fresh ui)</h5>
     <scroll :isx="false" :front="true" width="100%">
         <div class="classForCollape">
-        Senior Discount <br> 
-        Ali Liebegott <br> 
+        Senior Discount <br>
+        Ali Liebegott <br>
 
         I want to grow old with you. <br>
         Old, old.
@@ -43,11 +43,11 @@
     <h5>水平滚动</h5>
     <scroll :isx="true" :front="false" width="50%" :range="0">
         <div class="classForCollape" style="width:600px">
-            somethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomething 
+            somethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomething
             somethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomethingsomething
         </div>
     </scroll>
-    
+
     <h5>垂直滚动(step为 1*item)</h5>
     <scroll :isx="false" :height="300" :width='300' :range="50" :step="300">
         <ul class="xstep3 clearfix">
@@ -110,41 +110,42 @@
   }
 </script>
 
-<style lang="sass" scoped>
-.ui-scroll{
-    // margin: 20px;
-    font-size: 13px;
+<style lang="scss" scoped>
+.ui-scroll {
+  // margin: 20px;
+  font-size: 13px;
 }
-ul, li{
-    list-style: none outside none;
-    padding: 0;
-    margin: 0;
+ul,
+li {
+  list-style: none outside none;
+  padding: 0;
+  margin: 0;
 }
-.xstep{
-    width: 5000px;
-    li{ 
-        width: 100px;
-        height: 200px;
-        border: 1px solid #000;
-        float: left;
-   } 
+.xstep {
+  width: 5000px;
+  li {
+    width: 100px;
+    height: 200px;
+    border: 1px solid #000;
+    float: left;
+  }
 }
 
-.xstep2{
-    width: 3000px;
-    li{ 
-        width: 300px;
-        height: 200px;
-        border: 1px solid #000;
-        float: left;
-   } 
+.xstep2 {
+  width: 3000px;
+  li {
+    width: 300px;
+    height: 200px;
+    border: 1px solid #000;
+    float: left;
+  }
 }
-.xstep3{
-    width: 3000px;
-    li{ 
-        width: 300px;
-        height: 300px;
-        border: 1px solid #000;
-   } 
+.xstep3 {
+  width: 3000px;
+  li {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
+  }
 }
 </style>

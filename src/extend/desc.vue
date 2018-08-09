@@ -30,7 +30,7 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="scss">
 .desc .modal-layout {
     background-color: rgba(255, 255, 255, 0.9);
     .modal-inner {

@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
 @import './scss/variables';
 @import './scss/mixins';
 $positive-color: #099fde;

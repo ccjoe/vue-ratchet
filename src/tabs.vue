@@ -1,6 +1,6 @@
 <template>
 <div>
-    <ul class="segmented-control" role="tablist">
+    <ul :class="`segmented-control ${color?'segmented-control-'+color:''}`" role="tablist">
         <a class="control-item" v-for="(r,index) in renderData" v-bind:class="{
             'active': (index === active),
             'disabled': r.disabled
@@ -16,6 +16,14 @@
 <script>
 export default {
     props: {
+        color: {
+            type: String,
+            default: 'primary' // positive negative
+        },
+        change: {
+            type: Function,
+            default: function () {}
+        },
         effect: {
             type: String,
             default: 'fadein'
@@ -29,15 +37,17 @@ export default {
     },
     methods: {
         handleTabListClick(index, el) {
+            this.change(index, el)
             if (!el.disabled) this.active = index
         }
     }
 }
 </script>
 
-<style lang="sass">
+<style lang="scss">
 @import './scss/variables';
 @import './scss/mixins';
+
 .segmented-control {
     position: relative;
     display: table;

@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
 .modal-toast {
     position: fixed;
     width: 60%;

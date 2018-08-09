@@ -3,6 +3,7 @@ import app from './app.vue'
 import Router from 'vue-router'
 
 import hdExample from './demo/header.vue'
+import ListDataExample from './demo/listdata.vue'
 import ListExample from './demo/list.vue'
 import badgeExample from './demo/badge.vue'
 import btnExample from './demo/btn.vue'
@@ -37,7 +38,10 @@ var router = new Router({
       path: '/header',
       component: hdExample
     },
-
+    {
+      path: '/listdata',
+      component: ListDataExample
+    },
     {
       path: '/list',
       component: ListExample

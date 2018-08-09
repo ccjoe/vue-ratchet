@@ -85,35 +85,36 @@
     }
 	}
 </script>
-<style lang="sass">
-  .text-warning{
-    color: red;
-  }
+<style lang="scss">
+.text-warning {
+  color: red;
+}
 
-  .voucher-choose{
-    .choose-unit {
-        margin: 0 0.6rem;
-        font-size: 0.7rem;
-        color: #cacaca;
-        display: inline-block;
+.voucher-choose {
+  .choose-unit {
+    margin: 0 0.6rem;
+    font-size: 0.7rem;
+    color: #cacaca;
+    display: inline-block;
+  }
+  .choose-item {
+    display: inline-block;
+    width: 6rem;
+    line-height: 1.6rem;
+    border: 1px solid #888;
+    border-radius: 0.2rem;
+    font-size: 0.7rem;
+    text-align: center;
+    color: #333;
+    padding: 5px 8px;
+    label:before,
+    label:after {
+      content: none;
     }
-    .choose-item {
-        display: inline-block;
-        width: 6rem;
-        line-height: 1.6rem;
-        border: 1px solid #888;
-        border-radius: 0.2rem;
-        font-size: 0.7rem;
-        text-align: center;
-        color: #333;
-        padding: 5px 8px;
-        label:before, label:after{
-          content: none;
-        }
-        &.active {
-            border-color: #08b0ef;
-            color: #08b0ef;
-        }
+    &.active {
+      border-color: #08b0ef;
+      color: #08b0ef;
     }
-   }
+  }
+}
 </style>

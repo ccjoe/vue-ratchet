@@ -40,7 +40,7 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="scss">
 .svc-block {
     text-align: center;
     .table-view {

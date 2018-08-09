@@ -51,7 +51,7 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="scss">
 @import './scss/phone';
 .modal-toast {
     z-index: 100000; // pointer-events: none;

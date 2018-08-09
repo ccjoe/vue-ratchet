@@ -84,7 +84,7 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="scss">
 @import './scss/phone';
 $popoverBg: rgba(255, 255, 255, 0.95);
 $triSize: r(20px);

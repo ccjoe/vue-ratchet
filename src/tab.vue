@@ -1,5 +1,5 @@
 <template>
-<div class="control-content" v-bind:class="{hide: !show}" v-show="show" :transition="transition">
+<div class="control-content" v-bind:class="{hide: !show}" v-show="show">
     <slot></slot>
 </div>
 </template>

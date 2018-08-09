@@ -51,20 +51,20 @@
 	}
 </script>
 
-<style lang="sass" scoped>
-  .card{
-    border: 0;
-    padding: 10px;
+<style lang="scss" scoped>
+.card {
+  border: 0;
+  padding: 10px;
+}
+span.icon {
+  padding: 10px;
+  margin: 10px 5px;
+  background-color: #fefefe;
+  border-radius: 6px;
+  border: 1px solid #f1f1f1;
+  &:hover {
+    background-color: #000;
+    color: #fff;
   }
-  span.icon{
-    padding: 10px;
-    margin: 10px 5px;
-    background-color: #fefefe;
-    border-radius: 6px;
-    border: 1px solid #f1f1f1;
-    &:hover{
-      background-color: #000;
-      color: #fff;
-    }
-  }
+}
 </style>

@@ -9,24 +9,25 @@
 <script>
 //slot 为需要显示的值，一般用于特殊需求, 即显示的值不是val而是val对应的某值（如数据index为val）
 export default {
-  props: {
-    val: {
-      type: Number,
-      default: 3
-    },
-    min: {
-      type: Number,
-      default: 1
-    },
-    max: {
-      type: Number,
-      default: 10
+    props: {
+        val: {
+            type: Number,
+            default: 3,
+
+        },
+        min: {
+            type: Number,
+            default: 1
+        },
+        max: {
+            type: Number,
+            default: 10
+        }
     }
-  }
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
 .day-choose {
     .minus,
     .plus {

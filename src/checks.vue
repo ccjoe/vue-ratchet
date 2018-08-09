@@ -6,23 +6,23 @@
 
 <script>
 export default {
-  props: {
-    type: {
-      type: String,
-      default: 'checkbox' //radio options
-    },
-    model: {
-      required: true
-    },
-    position: {
-      type: String,
-      default: 'right'
+    props: {
+        type: {
+            type: String,
+            default: 'checkbox' //radio options
+        },
+        model: {
+            required: true
+        },
+        position: {
+            type: String,
+            default: 'right'
+        }
     }
-  }
 }
 </script>
 
-<style lang="sass" scope>
+<style lang="scss">
 @import './scss/variables';
 @import './scss/mixins';
 .input-row {

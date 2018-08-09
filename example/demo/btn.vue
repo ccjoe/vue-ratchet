@@ -48,16 +48,16 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
 .btn-primary .badge {
-    // color: #fff!important;
+  // color: #fff!important;
 }
 
 .card {
-    border: 0;
+  border: 0;
 }
 
 button:not(.btn-block) {
-    margin: 5px;
+  margin: 5px;
 }
 </style>

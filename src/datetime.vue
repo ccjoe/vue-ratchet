@@ -127,7 +127,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
 .v-options {
     float: left;
 }

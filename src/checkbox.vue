@@ -10,6 +10,7 @@ export default {
     props: {
         model: {
             type: Array,
+
             required: true
         },
         position: {
@@ -20,7 +21,7 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="scss">
 @import './scss/variables';
 @import './scss/mixins';
 .input-row {

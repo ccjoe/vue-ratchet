@@ -82,7 +82,7 @@ export default {
 }
 </script>
 
-<style lang="sass">
+<style lang="scss">
 $selectItemHeight: 33px;
 .ui-options {
     position: relative;
