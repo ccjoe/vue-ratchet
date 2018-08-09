@@ -11,7 +11,8 @@
                     <slot name="loading"></slot>
                     <div v-if="hastitle" class="modal-title">
                         <slot name="title">
-                            <span v-if="type==='bottom' || type==='popup'" @click="onCancel" class='btn modal-btn btn-link modal-btn-no'>取消</span> {{title}}
+                            <span v-if="type==='bottom' || type==='popup'" @click="onCancel" class='btn modal-btn btn-link modal-btn-no'>取消</span>
+                            <span>{{title}}</span>
                             <span v-if="type==='bottom' || type==='popup'" @click="onYes" class='btn modal-btn btn-link modal-btn-yes'>确定</span>
                         </slot>
                     </div>

@@ -9,7 +9,6 @@ import hd from './hd.vue'
 import icon from './icon.vue'
 import item from './item.vue'
 import list from './list.vue'
-import listdata from './listdata.vue'
 import modal from './modal.vue'
 import loading from './loading.vue'
 import popover from './popover.vue'
@@ -36,7 +35,6 @@ const VueRatchet = {
 	icon,
 	item,
 	list,
-	listdata,
 	modal,
 	loading,
 	popover,

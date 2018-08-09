@@ -11,25 +11,23 @@
 
 <script>
 import hd from '../src/hd.vue'
-import listdata from '../src/listdata.vue'
 export default {
-    name: 'app',
-    components: {
-        hd,
-        listdata
-    },
-    data() {
-        return {
-            title: 'VueRatchet App',
-            subtitle: 'VueRatchet App Demo',
-        }
-    },
-    methods: {
-        onleft: function () {
-            history.go(-1);
-            console.log('onleft from appvue');
-        }
+  name: 'app',
+  components: {
+    hd
+  },
+  data() {
+    return {
+      title: 'VueRatchet App',
+      subtitle: 'VueRatchet App Demo'
     }
+  },
+  methods: {
+    onleft: function() {
+      history.go(-1)
+      console.log('onleft from appvue')
+    }
+  }
 }
 </script>
 

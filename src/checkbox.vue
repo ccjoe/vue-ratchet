@@ -10,7 +10,6 @@ export default {
     props: {
         model: {
             type: Array,
-
             required: true
         },
         position: {
