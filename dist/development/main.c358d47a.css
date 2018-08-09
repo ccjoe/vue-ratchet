@@ -2853,10 +2853,10 @@ body[data-v-2f7353] {
   z-index: 100;
 }
 .calendar.calendar-popup[data-v-466781] {
-  position: absolute;
+    position: absolute;
 }
 .calendar.calendar-static[data-v-466781] {
-  width: 100%;
+    width: 100%;
 }
 .calendar-enter[data-v-466781],
 .calendar-leave-active[data-v-466781] {
@@ -2887,19 +2887,19 @@ body[data-v-2f7353] {
   text-align: center;
 }
 .calendar-tools input[data-v-466781] {
-  color: #ff6c1a;
-  width: 60px;
-  text-align: center;
-  border: none;
-  background-color: transparent;
+    color: #ff6c1a;
+    width: 60px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
 }
 .calendar-tools > i[data-v-466781] {
-  margin: 0 16px;
-  cursor: pointer;
-  color: #707070;
+    margin: 0 16px;
+    cursor: pointer;
+    color: #707070;
 }
 .calendar-tools > i[data-v-466781]:hover {
-  color: #ff6c1a;
+    color: #ff6c1a;
 }
 .calendar table[data-v-466781] {
   clear: both;
@@ -2917,25 +2917,25 @@ body[data-v-2f7353] {
   width: 14.28%;
 }
 .calendar td[data-v-466781]:hover {
-  background: #f3f8fa;
+    background: #f3f8fa;
 }
 .calendar td.week[data-v-466781] {
-  pointer-events: none !important;
-  cursor: default !important;
+    pointer-events: none !important;
+    cursor: default !important;
 }
 .calendar td.disabled[data-v-466781] {
-  color: #c0c0c0;
-  pointer-events: none !important;
-  cursor: default !important;
+    color: #c0c0c0;
+    pointer-events: none !important;
+    cursor: default !important;
 }
 .calendar td.selected[data-v-466781] {
-  color: #fff;
+    color: #fff;
 }
 .calendar td.selected .day-addon[data-v-466781] {
-  color: #fff;
+      color: #fff;
 }
 .calendar td.selected .day-area[data-v-466781] {
-  background-color: #ff6c1a;
+      background-color: #ff6c1a;
 }
 .calendar thead td[data-v-466781] {
   padding: 0;
@@ -2950,17 +2950,17 @@ body[data-v-2f7353] {
   text-align: center;
 }
 .calendar .timer input[data-v-466781] {
-  border-radius: 2px;
-  padding: 5px;
-  font-size: 14px;
-  line-height: 18px;
-  color: #ff6c1a;
-  width: 50px;
-  text-align: center;
-  border: 1px solid #efefef;
+    border-radius: 2px;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ff6c1a;
+    width: 50px;
+    text-align: center;
+    border: 1px solid #efefef;
 }
 .calendar .timer input[data-v-466781]:focus {
-  border: 1px solid #ff6c1a;
+    border: 1px solid #ff6c1a;
 }
 .calendar-button[data-v-466781] {
   text-align: center;
@@ -3028,7 +3028,7 @@ body[data-v-2f7353] {
   color: #a1a1a1;
 }
 .input-row label {
-    font-size: 12px;
+  font-size: 12px;
 }/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;

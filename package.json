@@ -6,14 +6,14 @@
   "author": "sfliu <icareu.joe@gmail.com>",
   "scripts": {
     "start": "cross-env NODE_ENV=development cross-env-shell parcel index.html --open -d dist/$NODE_ENV/",
-    "example": "cross-env NODE_ENV=production  cross-env-shell parcel build index.html --public-url ./dist/example -d dist/example/ --no-source-maps  --no-cache --detailed-report",
-    "build": "cross-env NODE_ENV=production  cross-env-shell parcel build src/index --public-url ./dist/$NODE_ENV -d dist/$NODE_ENV/ --no-source-maps  --no-cache --detailed-report"
+    "example": "cross-env NODE_ENV=production  cross-env-shell parcel build index.html --public-url /dist/example -d dist/example/ --no-source-maps  --no-cache --detailed-report",
+    "build": "cross-env NODE_ENV=production  cross-env-shell parcel build src/index.js  -d dist/build --no-source-maps  --no-cache --detailed-report"
   },
   "license": "MIT",
   "devDependencies": {
     "@vue/component-compiler-utils": "^2.1.1",
     "cross-env": "^5.2.0",
-    "less": "^3.8.1",
+    "cssnano": "^4.0.5",
     "node-sass": "^4.9.2",
     "vue-template-compiler": "^2.5.17"
   },

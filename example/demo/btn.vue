@@ -49,10 +49,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.btn-primary .badge {
-  // color: #fff!important;
-}
-
 .card {
   border: 0;
 }

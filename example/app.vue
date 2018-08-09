@@ -11,12 +11,10 @@
 
 <script>
 import hd from '../src/hd.vue'
-import listdata from '../src/listdata.vue'
 export default {
     name: 'app',
     components: {
-        hd,
-        listdata
+        hd
     },
     data() {
         return {

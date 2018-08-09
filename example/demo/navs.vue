@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import listdata from '../../src/listdata.vue'
+  import listdata from '../listdata.vue'
   export default {
     components: {
        listdata
@@ -20,10 +20,6 @@
               icon: 'home',
               title: 'list',
               link: '/list'
-          },{
-              icon: 'gear',
-              title: 'listdata',
-              link: '/listdata'
           },{
               icon: 'star-filled',
               title: 'btn',

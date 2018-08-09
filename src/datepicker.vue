@@ -855,14 +855,14 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-@dateColor: #ff6c1a;
-.triangle(@num, @size: 6px, @bold: 1px, @color: #000) {
-  border-right: @bold solid @color;
-  border-bottom: @bold solid @color;
-  height: @size;
-  width: @size;
-  transform: rotate(-@num);
+<style lang="scss" scoped>
+$dateColor: #ff6c1a;
+@mixin triangle($num, $size: 6px, $bold: 1px, $color: #000) {
+  border-right: $bold solid $color;
+  border-bottom: $bold solid $color;
+  height: $size;
+  width: $size;
+  transform: rotate(-$num);
 }
 
 .calendar {
@@ -910,10 +910,10 @@ export default {
 }
 
 .calendar-tools {
-  color: @dateColor;
+  color: $dateColor;
   text-align: center;
   input {
-    color: @dateColor;
+    color: $dateColor;
     width: 60px;
     text-align: center;
     border: none;
@@ -925,7 +925,7 @@ export default {
     color: #707070;
   }
   & > i:hover {
-    color: @dateColor;
+    color: $dateColor;
   }
 }
 
@@ -962,7 +962,7 @@ export default {
       color: #fff;
     }
     .day-area {
-      background-color: @dateColor;
+      background-color: $dateColor;
     }
   }
 }
@@ -986,13 +986,13 @@ export default {
     padding: 5px;
     font-size: 14px;
     line-height: 18px;
-    color: @dateColor;
+    color: $dateColor;
     width: 50px;
     text-align: center;
     border: 1px solid #efefef;
   }
   input:focus {
-    border: 1px solid @dateColor;
+    border: 1px solid $dateColor;
   }
 }
 
@@ -1007,7 +1007,7 @@ export default {
   min-height: 1em;
   min-width: 8em;
   vertical-align: baseline;
-  background: @dateColor;
+  background: $dateColor;
   color: #fff;
   margin: 0 0.25em 0 0;
   padding: 0.8em 2.5em;
@@ -1041,12 +1041,12 @@ export default {
 }
 
 .icon-left {
-  .triangle(-135deg, 10px, 2px, #333);
+  @include triangle(-135deg, 10px, 2px, #333);
   left: 25px;
 }
 
 .icon-right {
-  .triangle(45deg, 10px, 2px, #333);
+  @include triangle(45deg, 10px, 2px, #333);
   right: 25px;
 }
 

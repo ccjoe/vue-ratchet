@@ -7384,7 +7384,7 @@ if (inBrowser) {
 /*  */
 
 exports.default = Vue;
-},{}],"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\bundle-url.js":[function(require,module,exports) {
+},{}],"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -7414,7 +7414,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js":[function(require,module,exports) {
+},{}],"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -7445,7 +7445,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\bundle-url.js"}],"node_modules\\vue-hot-reload-api\\dist\\index.js":[function(require,module,exports) {
+},{"./bundle-url":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\bundle-url.js"}],"node_modules\\vue-hot-reload-api\\dist\\index.js":[function(require,module,exports) {
 var Vue // late bind
 var version
 var map = (window.__VUE_HOT_MAP__ = Object.create(null))
@@ -7811,492 +7811,7 @@ render._withStripped = true
       
       }
     })();
-},{"./fonts\\ratchicons.eot":[["ratchicons.bc8bb57a.eot","src\\fonts\\ratchicons.eot"],"src\\fonts\\ratchicons.eot"],"./fonts\\ratchicons.woff":[["ratchicons.ac02f239.woff","src\\fonts\\ratchicons.woff"],"src\\fonts\\ratchicons.woff"],"./fonts\\ratchicons.ttf":[["ratchicons.afd3b057.ttf","src\\fonts\\ratchicons.ttf"],"src\\fonts\\ratchicons.ttf"],"./fonts\\ratchicons.svg":[["ratchicons.827ee48f.svg","src\\fonts\\ratchicons.svg"],"src\\fonts\\ratchicons.svg"],"_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\badge.vue":[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-//
-//
-//
-//
-
-exports.default = {
-    name: 'badge',
-    props: {
-        color: {
-            type: String,
-            default: 'primary'
-        },
-        inverted: void 0
-    },
-    methods: {
-        //传入的值为inverted为否时
-        isInverted: function isInverted() {
-            var inverted = this.inverted;
-            return !(inverted === void 0 || inverted === false);
-        }
-    }
-
-};
-        var $bd2d32 = exports.default || module.exports;
-      
-      if (typeof $bd2d32 === 'function') {
-        $bd2d32 = $bd2d32.options;
-      }
-    
-        /* template */
-        Object.assign($bd2d32, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "span",
-    {
-      staticClass: "badge",
-      class: [
-        _vm.color ? "badge-" + _vm.color : "",
-        _vm.isInverted() ? "badge-inverted" : ""
-      ]
-    },
-    [_vm._t("default")],
-    2
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$bd2d32', $bd2d32);
-          } else {
-            api.reload('$bd2d32', $bd2d32);
-          }
-        }
-
-        
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
-      }
-    })();
-},{"_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\icon.vue":[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-//
-//
-//
-//
-
-exports.default = {
-    name: 'icon',
-    props: {
-        icon: {
-            type: String,
-            required: true
-        }
-    },
-    data: function data() {
-        return {
-            classData: 'icon-' + this.icon
-        };
-    }
-};
-        var $139cb0 = exports.default || module.exports;
-      
-      if (typeof $139cb0 === 'function') {
-        $139cb0 = $139cb0.options;
-      }
-    
-        /* template */
-        Object.assign($139cb0, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("span", { class: "icon " + _vm.classData })
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$139cb0', $139cb0);
-          } else {
-            api.reload('$139cb0', $139cb0);
-          }
-        }
-
-        
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
-      }
-    })();
-},{"./fonts\\ratchicons.eot":[["ratchicons.bc8bb57a.eot","src\\fonts\\ratchicons.eot"],"src\\fonts\\ratchicons.eot"],"./fonts\\ratchicons.woff":[["ratchicons.ac02f239.woff","src\\fonts\\ratchicons.woff"],"src\\fonts\\ratchicons.woff"],"./fonts\\ratchicons.ttf":[["ratchicons.afd3b057.ttf","src\\fonts\\ratchicons.ttf"],"src\\fonts\\ratchicons.ttf"],"./fonts\\ratchicons.svg":[["ratchicons.827ee48f.svg","src\\fonts\\ratchicons.svg"],"src\\fonts\\ratchicons.svg"],"_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\btn.vue":[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _badge = require('./badge.vue');
-
-var _badge2 = _interopRequireDefault(_badge);
-
-var _icon = require('./icon.vue');
-
-var _icon2 = _interopRequireDefault(_icon);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-exports.default = {
-    name: 'btn',
-    components: {
-        icon: _icon2.default,
-        badge: _badge2.default
-    },
-    props: {
-        text: String,
-        classes: String,
-        color: {
-            type: String,
-            default: '' //primary, positive, negative, link
-        },
-        outlined: String, //undefined| or not
-        block: String, //undefined| or not
-        icon: false,
-        badge: void 0
-    }
-};
-        var $89fb86 = exports.default || module.exports;
-      
-      if (typeof $89fb86 === 'function') {
-        $89fb86 = $89fb86.options;
-      }
-    
-        /* template */
-        Object.assign($89fb86, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "button",
-    {
-      staticClass: "btn",
-      class: [
-        _vm.color ? "btn-" + _vm.color : "",
-        _vm.outlined !== void 0 ? "btn-outlined" : "",
-        _vm.block !== void 0 ? "btn-block" : "",
-        _vm.classes ? _vm.classes : ""
-      ]
-    },
-    [
-      _vm.icon ? _c("icon", { attrs: { icon: _vm.icon } }) : _vm._e(),
-      _vm._v(" "),
-      _vm._t("default", [_vm._v(_vm._s(_vm.text))]),
-      _vm._v(" "),
-      _vm._t("content"),
-      _vm._v(" "),
-      _vm.badge !== void 0
-        ? _c(
-            "badge",
-            { attrs: { inverted: _vm.outlined !== void 0, color: _vm.color } },
-            [_vm._v(_vm._s(_vm.badge))]
-          )
-        : _vm._e()
-    ],
-    2
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$89fb86', $89fb86);
-          } else {
-            api.reload('$89fb86', $89fb86);
-          }
-        }
-
-        
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
-      }
-    })();
-},{"./badge.vue":"src\\badge.vue","./icon.vue":"src\\icon.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\listdata.vue":[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _badge = require('./badge.vue');
-
-var _badge2 = _interopRequireDefault(_badge);
-
-var _icon = require('./icon.vue');
-
-var _icon2 = _interopRequireDefault(_icon);
-
-var _btn = require('./btn.vue');
-
-var _btn2 = _interopRequireDefault(_btn);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = {
-    components: { icon: _icon2.default, badge: _badge2.default, btn: _btn2.default },
-    props: {
-        list: {
-            type: Array,
-            default: []
-        },
-        media: {
-            type: String,
-            default: '' //or img
-        },
-        card: {
-            type: Boolean,
-            default: false
-        },
-        arrow: {
-            type: Boolean,
-            default: true
-        }
-    },
-    data: function data() {
-        return {
-            collapseState: false
-        };
-    },
-
-    watch: {
-        'collapseState': function collapseState() {}
-    },
-    methods: {
-        collapseListGroup: function collapseListGroup(event) {
-            var elem = event.currentTarget,
-                classes = elem.className;
-            if (!~classes.indexOf('table-view-divider') || !~classes.indexOf('table-view-collapse')) {
-                return;
-            }
-
-            var compon = this;
-            next(elem);
-            //获取相连的满足相同条件的元素
-            function next(element) {
-                var nextElem = element.nextSibling;
-                if (nextElem.tagName === 'LI' && !!~nextElem.className.indexOf('table-view-cell')) {
-                    if (!compon.collapseState) {
-                        nextElem.style.display = 'none';
-                        compon.collapseState = true;
-                    } else {
-                        nextElem.style.display = 'block';
-                        compon.collapseState = false;
-                    }
-                } else {
-                    return;
-                }
-                next(nextElem);
-            }
-        }
-    }
-}; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-//@todo list change to <list><item></item></list>
-        var $1ee81d = exports.default || module.exports;
-      
-      if (typeof $1ee81d === 'function') {
-        $1ee81d = $1ee81d.options;
-      }
-    
-        /* template */
-        Object.assign($1ee81d, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "ul",
-    {
-      staticClass: "table-view",
-      class: { card: _vm.card, "table-noarrow": !_vm.arrow }
-    },
-    _vm._l(_vm.list, function(it) {
-      return _c(
-        "li",
-        {
-          key: it.id,
-          class: {
-            "table-view-cell": !it.isDivider,
-            "table-view-divider": it.isDivider,
-            "table-view-collapse": it.collapse,
-            "table-view-full": it.badge === void 0
-          },
-          on: { click: _vm.collapseListGroup }
-        },
-        [
-          it.isDivider ? _c("span", [_vm._v(_vm._s(it.title))]) : _vm._e(),
-          _vm._v(" "),
-          !it.isDivider
-            ? _c(
-                "router-link",
-                {
-                  staticClass: "navigate-right",
-                  attrs: { to: it.link ? it.link : "" }
-                },
-                [
-                  it.badge ? _c("badge", [_vm._v(_vm._s(it.badge))]) : _vm._e(),
-                  _vm._v(" "),
-                  _vm.media === "img" && it.img
-                    ? _c("img", {
-                        staticClass: "media-object pull-left",
-                        attrs: { src: it.img }
-                      })
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm.media === "icon"
-                    ? _c("icon", {
-                        staticClass: "media-object  pull-left",
-                        attrs: { icon: it.icon }
-                      })
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm.media === "btn"
-                    ? _c("btn", [_vm._v(_vm._s(it.btn))])
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "media-body" }, [
-                    _c("span", [_vm._v(_vm._s(it.title))]),
-                    _vm._v(" "),
-                    it.content
-                      ? _c("p", [_vm._v(_vm._s(it.content))])
-                      : _vm._e()
-                  ])
-                ],
-                1
-              )
-            : _vm._e()
-        ],
-        1
-      )
-    })
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$1ee81d', $1ee81d);
-          } else {
-            api.reload('$1ee81d', $1ee81d);
-          }
-        }
-
-        
-      }
-    })();
-},{"./badge.vue":"src\\badge.vue","./icon.vue":"src\\icon.vue","./btn.vue":"src\\btn.vue","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\app.vue":[function(require,module,exports) {
+},{"./fonts\\ratchicons.eot":[["ratchicons.bc8bb57a.eot","src\\fonts\\ratchicons.eot"],"src\\fonts\\ratchicons.eot"],"./fonts\\ratchicons.woff":[["ratchicons.ac02f239.woff","src\\fonts\\ratchicons.woff"],"src\\fonts\\ratchicons.woff"],"./fonts\\ratchicons.ttf":[["ratchicons.afd3b057.ttf","src\\fonts\\ratchicons.ttf"],"src\\fonts\\ratchicons.ttf"],"./fonts\\ratchicons.svg":[["ratchicons.827ee48f.svg","src\\fonts\\ratchicons.svg"],"src\\fonts\\ratchicons.svg"],"_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\app.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -8307,29 +7822,12 @@ var _hd = require('../src/hd.vue');
 
 var _hd2 = _interopRequireDefault(_hd);
 
-var _listdata = require('../src/listdata.vue');
-
-var _listdata2 = _interopRequireDefault(_listdata);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 exports.default = {
     name: 'app',
     components: {
-        hd: _hd2.default,
-        listdata: _listdata2.default
+        hd: _hd2.default
     },
     data: function data() {
         return {
@@ -8344,7 +7842,17 @@ exports.default = {
             console.log('onleft from appvue');
         }
     }
-};
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
         var $dcc1ca = exports.default || module.exports;
       
       if (typeof $dcc1ca === 'function') {
@@ -8404,7 +7912,7 @@ render._withStripped = true
       
       }
     })();
-},{"../src/hd.vue":"src\\hd.vue","../src/listdata.vue":"src\\listdata.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"node_modules\\vue-router\\dist\\vue-router.esm.js":[function(require,module,exports) {
+},{"../src/hd.vue":"src\\hd.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"node_modules\\vue-router\\dist\\vue-router.esm.js":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10857,7 +10365,286 @@ if (inBrowser && window.Vue) {
 }
 
 exports.default = VueRouter;
-},{}],"example\\demo\\header.vue":[function(require,module,exports) {
+},{}],"src\\badge.vue":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//
+//
+//
+//
+
+exports.default = {
+    name: 'badge',
+    props: {
+        color: {
+            type: String,
+            default: 'primary'
+        },
+        inverted: void 0
+    },
+    methods: {
+        //传入的值为inverted为否时
+        isInverted: function isInverted() {
+            var inverted = this.inverted;
+            return !(inverted === void 0 || inverted === false);
+        }
+    }
+
+};
+        var $bd2d32 = exports.default || module.exports;
+      
+      if (typeof $bd2d32 === 'function') {
+        $bd2d32 = $bd2d32.options;
+      }
+    
+        /* template */
+        Object.assign($bd2d32, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "span",
+    {
+      staticClass: "badge",
+      class: [
+        _vm.color ? "badge-" + _vm.color : "",
+        _vm.isInverted() ? "badge-inverted" : ""
+      ]
+    },
+    [_vm._t("default")],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$bd2d32', $bd2d32);
+          } else {
+            api.reload('$bd2d32', $bd2d32);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\icon.vue":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//
+//
+//
+//
+
+exports.default = {
+    name: 'icon',
+    props: {
+        icon: {
+            type: String,
+            required: true
+        }
+    },
+    data: function data() {
+        return {
+            classData: 'icon-' + this.icon
+        };
+    }
+};
+        var $139cb0 = exports.default || module.exports;
+      
+      if (typeof $139cb0 === 'function') {
+        $139cb0 = $139cb0.options;
+      }
+    
+        /* template */
+        Object.assign($139cb0, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("span", { class: "icon " + _vm.classData })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$139cb0', $139cb0);
+          } else {
+            api.reload('$139cb0', $139cb0);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"./fonts\\ratchicons.eot":[["ratchicons.bc8bb57a.eot","src\\fonts\\ratchicons.eot"],"src\\fonts\\ratchicons.eot"],"./fonts\\ratchicons.woff":[["ratchicons.ac02f239.woff","src\\fonts\\ratchicons.woff"],"src\\fonts\\ratchicons.woff"],"./fonts\\ratchicons.ttf":[["ratchicons.afd3b057.ttf","src\\fonts\\ratchicons.ttf"],"src\\fonts\\ratchicons.ttf"],"./fonts\\ratchicons.svg":[["ratchicons.827ee48f.svg","src\\fonts\\ratchicons.svg"],"src\\fonts\\ratchicons.svg"],"_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\btn.vue":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _badge = require('./badge.vue');
+
+var _badge2 = _interopRequireDefault(_badge);
+
+var _icon = require('./icon.vue');
+
+var _icon2 = _interopRequireDefault(_icon);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+    name: 'btn',
+    components: {
+        icon: _icon2.default,
+        badge: _badge2.default
+    },
+    props: {
+        text: String,
+        classes: String,
+        color: {
+            type: String,
+            default: '' //primary, positive, negative, link
+        },
+        outlined: String, //undefined| or not
+        block: String, //undefined| or not
+        icon: false,
+        badge: void 0
+    }
+};
+        var $89fb86 = exports.default || module.exports;
+      
+      if (typeof $89fb86 === 'function') {
+        $89fb86 = $89fb86.options;
+      }
+    
+        /* template */
+        Object.assign($89fb86, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "button",
+    {
+      staticClass: "btn",
+      class: [
+        _vm.color ? "btn-" + _vm.color : "",
+        _vm.outlined !== void 0 ? "btn-outlined" : "",
+        _vm.block !== void 0 ? "btn-block" : "",
+        _vm.classes ? _vm.classes : ""
+      ]
+    },
+    [
+      _vm.icon ? _c("icon", { attrs: { icon: _vm.icon } }) : _vm._e(),
+      _vm._v(" "),
+      _vm._t("default", [_vm._v(_vm._s(_vm.text))]),
+      _vm._v(" "),
+      _vm._t("content"),
+      _vm._v(" "),
+      _vm.badge !== void 0
+        ? _c(
+            "badge",
+            { attrs: { inverted: _vm.outlined !== void 0, color: _vm.color } },
+            [_vm._v(_vm._s(_vm.badge))]
+          )
+        : _vm._e()
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$89fb86', $89fb86);
+          } else {
+            api.reload('$89fb86', $89fb86);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"./badge.vue":"src\\badge.vue","./icon.vue":"src\\icon.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\demo\\header.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11059,183 +10846,11 @@ render._withStripped = true
       
       }
     })();
-},{"../../src/hd.vue":"src\\hd.vue","../../src/btn.vue":"src\\btn.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\demo\\listdata.vue":[function(require,module,exports) {
+},{"../../src/hd.vue":"src\\hd.vue","../../src/btn.vue":"src\\btn.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\item.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _listdata = require('../../src/listdata.vue');
-
-var _listdata2 = _interopRequireDefault(_listdata);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = {
-	components: { listdata: _listdata2.default },
-	data: function data() {
-		return {
-			text: '放一点小测试好么2？',
-			listdata: [{
-				icon: 'trash',
-				title: '列表示例'
-			}, {
-				icon: 'gear',
-				title: '列表示例'
-			}, {
-				icon: 'pages',
-				title: '列表示例'
-			}],
-			listdata1: [{
-				icon: 'search',
-				title: '列表示例',
-				content: '列表通过data传入属性实现不同的配置,  通过 data.media可以为img, icon; 这个列表data.media为img; data.card为true时显示为创建列表的显示的卡片式'
-			}, {
-				icon: 'plus',
-				title: '可收缩的item',
-				content: 'data.list的item单项上通过collapse为true可点击收缩'
-			}],
-			listdata2: [{
-				img: 'http://placehold.it/42x42',
-				title: '列表示例',
-				content: '列表通过data传入属性实现不同的配置,  通过 data.media可以为img, icon; 这个列表data.media为img; data.card为true时显示为创建列表的显示的卡片式',
-				badge: '12'
-			}, {
-				img: 'http://placehold.it/42x42',
-				content: '列表通过data传入属性实现不同的配置,  通过 data.media可以为img, icon; 这个列表data.media为img; data.card为true时显示为创建列表的显示的卡片式',
-				title: '列表示例'
-			}],
-			listdata3: [{
-				btn: '按钮',
-				title: '列表示例',
-				badge: '12'
-			}, {
-				btn: '按钮',
-				title: '列表示例'
-			}],
-			listdata4: [{
-				icon: 'search',
-				title: '列表示例'
-			}, {
-				title: '可点击收缩的标题',
-				isDivider: true,
-				collapse: true
-			}, {
-				icon: 'plus',
-				title: '可收缩的item'
-			}]
-		};
-	}
-}; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-        var $5e581e = exports.default || module.exports;
-      
-      if (typeof $5e581e === 'function') {
-        $5e581e = $5e581e.options;
-      }
-    
-        /* template */
-        Object.assign($5e581e, (function () {
-          var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("h5", [
-        _vm._v(
-          "建议使用list和item组件实现 Deprecated[Use list Instead], but is another method define list, pls see the page source code"
-        )
-      ]),
-      _vm._v(" "),
-      _c("h5", [_vm._v("最简单的列表")]),
-      _vm._v(" "),
-      _c("listdata", { attrs: { list: _vm.listdata } }),
-      _vm._v(" "),
-      _c("h5", [_vm._v("带图标的列表")]),
-      _vm._v(" "),
-      _c("listdata", { attrs: { media: "icon", list: _vm.listdata } }),
-      _vm._v(" "),
-      _c("h5", [_vm._v("定义带标题与详情的列表")]),
-      _vm._v(" "),
-      _c("listdata", { attrs: { media: "icon", list: _vm.listdata1 } }),
-      _vm._v(" "),
-      _c("h5", [_vm._v("定义有图片有bdage的列表")]),
-      _vm._v(" "),
-      _c("listdata", {
-        attrs: { media: "img", arrow: false, list: _vm.listdata2 }
-      }),
-      _vm._v(" "),
-      _c("h5", [_vm._v("定义有button列表")]),
-      _vm._v(" "),
-      _c("listdata", {
-        attrs: { media: "btn", arrow: false, list: _vm.listdata3 }
-      }),
-      _vm._v(" "),
-      _c("h5", [_vm._v("定义列表分隔栏且配置是否可折叠")]),
-      _vm._v(" "),
-      _c("listdata", { attrs: { media: "icon", list: _vm.listdata4 } })
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-          return {
-            render: render,
-            staticRenderFns: staticRenderFns,
-            _compiled: true,
-            _scopeId: null,
-            functional: undefined
-          };
-        })());
-      
-    /* hot reload */
-    (function () {
-      if (module.hot) {
-        var api = require('vue-hot-reload-api');
-        api.install(require('vue'));
-        if (api.compatible) {
-          module.hot.accept();
-          if (!module.hot.data) {
-            api.createRecord('$5e581e', $5e581e);
-          } else {
-            api.reload('$5e581e', $5e581e);
-          }
-        }
-
-        
-      }
-    })();
-},{"../../src/listdata.vue":"src\\listdata.vue","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\item.vue":[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _badge = require('./badge.vue');
@@ -11253,74 +10868,85 @@ var _btn2 = _interopRequireDefault(_btn);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-    name: 'item',
-    components: { icon: _icon2.default, badge: _badge2.default, btn: _btn2.default },
-    props: {
-        title: {
-            type: String,
-            default: ''
-        },
-        btn: {
-            type: String,
-            default: ''
-        },
-        icon: {
-            type: String,
-            default: ''
-        },
-        img: {
-            type: String,
-            default: ''
-        },
-        badge: {
-            type: String,
-            default: void 0
-        },
-        content: {
-            type: String,
-            default: ''
-        },
-        link: { //vue path route link
-            type: String
-        },
-        href: { //a html link
-            type: String,
-            default: ''
-        },
-        divider: {
-            type: Boolean,
-            default: false
-        },
-        collapse: {
-            type: Boolean,
-            default: false
-        },
-        active: {
-            type: Boolean,
-            default: false
-        },
-        height: {
-            type: Number,
-            default: 0
-        }
+  name: 'item',
+  components: { icon: _icon2.default, badge: _badge2.default, btn: _btn2.default },
+  props: {
+    btn: {
+      type: String,
+      default: ''
     },
-    data: function data() {
-        return {
-            collapseState: false,
-            styleobject: this.height ? {
-                height: this.height + 'px',
-                lineHeight: this.height + 'px'
-            } : {} //列表单项行内样式
-        };
+    icon: {
+      type: String,
+      default: ''
     },
+    img: {
+      type: String,
+      default: ''
+    },
+    badge: {
+      type: String,
+      default: void 0
+    },
+    content: {
+      type: String,
+      default: ''
+    },
+    link: {
+      //vue path route link
+      type: String
+    },
+    href: {
+      //a html link
+      type: String,
+      default: ''
+    },
+    divider: {
+      type: Boolean,
+      default: false
+    },
+    collapse: {
+      type: Boolean,
+      default: false
+    },
+    active: {
+      type: Boolean,
+      default: false
+    },
+    height: {
+      type: Number,
+      default: 0
+    }
+  },
+  data: function data() {
+    return {
+      collapseState: false,
+      styleobject: this.height ? {
+        height: this.height + 'px',
+        lineHeight: this.height + 'px'
+      } : {} //列表单项行内样式
+    };
+  },
 
 
-    methods: {
-        collapseListGroup: function collapseListGroup(event) {
-            if (this.divider !== 'true') return;
+  methods: {
+    collapseListGroup: function collapseListGroup(event) {
+      if (this.collapse !== true) return;
+      var elem = event.currentTarget;
+      var classes = elem.className;
+      next.bind(this)(elem);
+      //获取相连的满足相同条件的元素
+      function next(element) {
+        var nextElem = element.nextElementSibling;
+        if (nextElem && nextElem.tagName === 'LI' && ~nextElem.className.indexOf('table-view-cell')) {
+          nextElem.style.display = this.collapseState ? 'block' : 'none';
+        } else {
+          this.collapseState = !this.collapseState;
+          return;
         }
-    },
-    beforeDestroy: function beforeDestroy() {}
+        next.bind(this)(nextElem);
+      }
+    }
+  }
 }; //
 //
 //
@@ -11384,7 +11010,7 @@ exports.default = {
               _vm._v(" "),
               _vm.icon
                 ? _c("icon", {
-                    staticClass: "media-object pull-left",
+                    staticClass: "media-object  pull-left",
                     attrs: { icon: _vm.icon }
                   })
                 : _vm._e(),
@@ -11402,9 +11028,9 @@ exports.default = {
                 2
               ),
               _vm._v(" "),
-              _vm.badge ? _c("badge", [_vm._v(_vm._s(_vm.badge))]) : _vm._e(),
+              _vm.btn ? _c("btn", [_vm._v(_vm._s(_vm.btn))]) : _vm._e(),
               _vm._v(" "),
-              _vm.btn ? _c("btn", [_vm._v(_vm._s(_vm.btn))]) : _vm._e()
+              _vm.badge ? _c("badge", [_vm._v(_vm._s(_vm.badge))]) : _vm._e()
             ],
             1
           )
@@ -11445,7 +11071,7 @@ render._withStripped = true
       
       }
     })();
-},{"./badge.vue":"src\\badge.vue","./icon.vue":"src\\icon.vue","./btn.vue":"src\\btn.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\list.vue":[function(require,module,exports) {
+},{"./badge.vue":"src\\badge.vue","./icon.vue":"src\\icon.vue","./btn.vue":"src\\btn.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\list.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -11537,7 +11163,7 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\demo\\list.vue":[function(require,module,exports) {
+},{"_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\demo\\list.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12198,7 +11824,7 @@ render._withStripped = true
       
       }
     })();
-},{"../../src/btn.vue":"src\\btn.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\demo\\icon.vue":[function(require,module,exports) {
+},{"../../src/btn.vue":"src\\btn.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\demo\\icon.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12391,7 +12017,7 @@ render._withStripped = true
       
       }
     })();
-},{"../../src/icon.vue":"src\\icon.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\tabs.vue":[function(require,module,exports) {
+},{"../../src/icon.vue":"src\\icon.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\tabs.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12465,6 +12091,7 @@ exports.default = {
       },
       _vm._l(_vm.renderData, function(r, index) {
         return _c("a", {
+          key: index,
           staticClass: "control-item",
           class: {
             active: index === _vm.active,
@@ -12518,7 +12145,7 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\tab.vue":[function(require,module,exports) {
+},{"_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\tab.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12830,7 +12457,7 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\checks.vue":[function(require,module,exports) {
+},{"_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\checks.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -12910,7 +12537,7 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\check.vue":[function(require,module,exports) {
+},{"_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\check.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13375,7 +13002,7 @@ render._withStripped = true
       
       }
     })();
-},{"../../src/toggle.vue":"src\\toggle.vue","../../src/checks.vue":"src\\checks.vue","../../src/check.vue":"src\\check.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\modal.vue":[function(require,module,exports) {
+},{"../../src/toggle.vue":"src\\toggle.vue","../../src/checks.vue":"src\\checks.vue","../../src/check.vue":"src\\check.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\modal.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13685,7 +13312,7 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\toast.vue":[function(require,module,exports) {
+},{"_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\toast.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13813,7 +13440,7 @@ render._withStripped = true
       
       }
     })();
-},{"./modal.vue":"src\\modal.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\loading.vue":[function(require,module,exports) {
+},{"./modal.vue":"src\\modal.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\loading.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13969,7 +13596,7 @@ render._withStripped = true
       
       }
     })();
-},{"./modal.vue":"src\\modal.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\popover.vue":[function(require,module,exports) {
+},{"./modal.vue":"src\\modal.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\popover.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -14130,7 +13757,7 @@ render._withStripped = true
       
       }
     })();
-},{"./modal.vue":"src\\modal.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\utils\\date.js":[function(require,module,exports) {
+},{"./modal.vue":"src\\modal.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\utils\\date.js":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17501,7 +17128,7 @@ render._withStripped = true
       
       }
     })();
-},{"vue":"node_modules\\vue\\dist\\vue.runtime.esm.js","vue-touch":"node_modules\\vue-touch\\dist\\vue-touch.js","_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js"}],"src\\option.vue":[function(require,module,exports) {
+},{"vue":"node_modules\\vue\\dist\\vue.runtime.esm.js","vue-touch":"node_modules\\vue-touch\\dist\\vue-touch.js","_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js"}],"src\\option.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17571,18 +17198,7 @@ exports.default = {
         list: _list2.default,
         item: _item2.default
     },
-    /*mounted(){
-        	let uicell = this.$el.querySelectorAll('.ui-cell')[0]
-        	let uiyard = this.$el.querySelectorAll('.ui-cell-yard')[0]		        	uicell.style.paddingTop = this.step*2 + 'px'		        	uicell.style.paddingBottom = this.step*2+ 'px'
-        	let items = this.$el.querySelectorAll('.ui-cell .table-view-cell')
-        	console.log(items, 'items');
-        	for(var i=0; i<items.length; i++){
-        		items[i].style.height = this.step+'px'
-        		items[i].style.lineHeight = this.step+'px'
-        	}
-        	uiyard.style.top = this.step*2+'px'
-        	uiyard.style.height = this.step+'px'
-        },*/
+
     methods: {
         panend: function panend($event, that) {
             this.activeindex = that.steps;
@@ -17693,7 +17309,7 @@ render._withStripped = true
       
       }
     })();
-},{"./scroll.vue":"src\\scroll.vue","./list.vue":"src\\list.vue","./item.vue":"src\\item.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\select.vue":[function(require,module,exports) {
+},{"./scroll.vue":"src\\scroll.vue","./list.vue":"src\\list.vue","./item.vue":"src\\item.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\select.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17815,7 +17431,7 @@ render._withStripped = true
       
       }
     })();
-},{"./modal.vue":"src\\modal.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\filter\\filter.js":[function(require,module,exports) {
+},{"./modal.vue":"src\\modal.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\filter\\filter.js":[function(require,module,exports) {
 'use strict';
 
 var _vue = require('vue');
@@ -18126,7 +17742,7 @@ render._withStripped = true
       
       }
     })();
-},{"./utils/date.js":"src\\utils\\date.js","./option.vue":"src\\option.vue","./select.vue":"src\\select.vue","./modal.vue":"src\\modal.vue","./filter/filter":"src\\filter\\filter.js","_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\demo\\modal.vue":[function(require,module,exports) {
+},{"./utils/date.js":"src\\utils\\date.js","./option.vue":"src\\option.vue","./select.vue":"src\\select.vue","./modal.vue":"src\\modal.vue","./filter/filter":"src\\filter\\filter.js","_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\demo\\modal.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19148,7 +18764,7 @@ render._withStripped = true
       
       }
     })();
-},{"../../src/scroll.vue":"src\\scroll.vue","../../src/hd.vue":"src\\hd.vue","../../src/modal.vue":"src\\modal.vue","../../src/btn.vue":"src\\btn.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\demo\\voption.vue":[function(require,module,exports) {
+},{"../../src/scroll.vue":"src\\scroll.vue","../../src/hd.vue":"src\\hd.vue","../../src/modal.vue":"src\\modal.vue","../../src/btn.vue":"src\\btn.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\demo\\voption.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19290,7 +18906,7 @@ render._withStripped = true
       
       }
     })();
-},{"../../src/option.vue":"src\\option.vue","../../src/select.vue":"src\\select.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\datepicker.vue":[function(require,module,exports) {
+},{"../../src/option.vue":"src\\option.vue","../../src/select.vue":"src\\select.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"src\\datepicker.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20280,7 +19896,7 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\demo\\datepicker.vue":[function(require,module,exports) {
+},{"_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\demo\\datepicker.vue":[function(require,module,exports) {
 "use strict";
 
 var _datepicker = require("../../src/datepicker.vue");
@@ -20661,14 +20277,218 @@ render._withStripped = true
       
       }
     })();
-},{"../../src/datepicker.vue":"src\\datepicker.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\demo\\navs.vue":[function(require,module,exports) {
+},{"../../src/datepicker.vue":"src\\datepicker.vue","_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\listdata.vue":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _badge = require('../src/badge.vue');
+
+var _badge2 = _interopRequireDefault(_badge);
+
+var _icon = require('../src/icon.vue');
+
+var _icon2 = _interopRequireDefault(_icon);
+
+var _btn = require('../src/btn.vue');
+
+var _btn2 = _interopRequireDefault(_btn);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+  components: { icon: _icon2.default, badge: _badge2.default, btn: _btn2.default },
+  props: {
+    list: {
+      type: Array,
+      default: []
+    },
+    media: {
+      type: String,
+      default: '' //or img
+    },
+    card: {
+      type: Boolean,
+      default: false
+    },
+    arrow: {
+      type: Boolean,
+      default: true
+    }
+  },
+  data: function data() {
+    return {
+      collapseState: false
+    };
+  },
+
+  watch: {
+    collapseState: function collapseState() {}
+  },
+  methods: {
+    collapseListGroup: function collapseListGroup(event) {
+      var elem = event.currentTarget,
+          classes = elem.className;
+      if (!~classes.indexOf('table-view-divider') || !~classes.indexOf('table-view-collapse')) {
+        return;
+      }
+
+      var compon = this;
+      next(elem);
+      //获取相连的满足相同条件的元素
+      function next(element) {
+        var nextElem = element.nextSibling;
+        if (nextElem.tagName === 'LI' && !!~nextElem.className.indexOf('table-view-cell')) {
+          if (!compon.collapseState) {
+            nextElem.style.display = 'none';
+            compon.collapseState = true;
+          } else {
+            nextElem.style.display = 'block';
+            compon.collapseState = false;
+          }
+        } else {
+          return;
+        }
+        next(nextElem);
+      }
+    }
+  }
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+        var $9d62d2 = exports.default || module.exports;
+      
+      if (typeof $9d62d2 === 'function') {
+        $9d62d2 = $9d62d2.options;
+      }
+    
+        /* template */
+        Object.assign($9d62d2, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "ul",
+    {
+      staticClass: "table-view",
+      class: { card: _vm.card, "table-noarrow": !_vm.arrow }
+    },
+    _vm._l(_vm.list, function(it) {
+      return _c(
+        "li",
+        {
+          key: it.id,
+          class: {
+            "table-view-cell": !it.isDivider,
+            "table-view-divider": it.isDivider,
+            "table-view-collapse": it.collapse,
+            "table-view-full": it.badge === void 0
+          },
+          on: { click: _vm.collapseListGroup }
+        },
+        [
+          it.isDivider ? _c("span", [_vm._v(_vm._s(it.title))]) : _vm._e(),
+          _vm._v(" "),
+          !it.isDivider
+            ? _c(
+                "router-link",
+                {
+                  staticClass: "navigate-right",
+                  attrs: { to: it.link ? it.link : "" }
+                },
+                [
+                  it.badge ? _c("badge", [_vm._v(_vm._s(it.badge))]) : _vm._e(),
+                  _vm._v(" "),
+                  _vm.media === "img" && it.img
+                    ? _c("img", {
+                        staticClass: "media-object pull-left",
+                        attrs: { src: it.img }
+                      })
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.media === "icon"
+                    ? _c("icon", {
+                        staticClass: "media-object  pull-left",
+                        attrs: { icon: it.icon }
+                      })
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.media === "btn"
+                    ? _c("btn", [_vm._v(_vm._s(it.btn))])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "media-body" }, [
+                    _c("span", [_vm._v(_vm._s(it.title))]),
+                    _vm._v(" "),
+                    it.content
+                      ? _c("p", [_vm._v(_vm._s(it.content))])
+                      : _vm._e()
+                  ])
+                ],
+                1
+              )
+            : _vm._e()
+        ],
+        1
+      )
+    })
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$9d62d2', $9d62d2);
+          } else {
+            api.reload('$9d62d2', $9d62d2);
+          }
+        }
+
+        
+      }
+    })();
+},{"../src/badge.vue":"src\\badge.vue","../src/icon.vue":"src\\icon.vue","../src/btn.vue":"src\\btn.vue","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\demo\\navs.vue":[function(require,module,exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _listdata = require('../../src/listdata.vue');
+var _listdata = require('../listdata.vue');
 
 var _listdata2 = _interopRequireDefault(_listdata);
 
@@ -20688,10 +20508,6 @@ exports.default = {
                 icon: 'home',
                 title: 'list',
                 link: '/list'
-            }, {
-                icon: 'gear',
-                title: 'listdata',
-                link: '/listdata'
             }, {
                 icon: 'star-filled',
                 title: 'btn',
@@ -20799,12 +20615,12 @@ render._withStripped = true
         
       }
     })();
-},{"../../src/listdata.vue":"src\\listdata.vue","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\styles.scss":[function(require,module,exports) {
+},{"../listdata.vue":"example\\listdata.vue","vue-hot-reload-api":"node_modules\\vue-hot-reload-api\\dist\\index.js","vue":"node_modules\\vue\\dist\\vue.runtime.esm.js"}],"example\\styles.scss":[function(require,module,exports) {
 
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js"}],"example\\main.js":[function(require,module,exports) {
+},{"_css_loader":"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\css-loader.js"}],"example\\main.js":[function(require,module,exports) {
 'use strict';
 
 var _vue = require('vue');
@@ -20822,10 +20638,6 @@ var _vueRouter2 = _interopRequireDefault(_vueRouter);
 var _header = require('./demo/header.vue');
 
 var _header2 = _interopRequireDefault(_header);
-
-var _listdata = require('./demo/listdata.vue');
-
-var _listdata2 = _interopRequireDefault(_listdata);
 
 var _list = require('./demo/list.vue');
 
@@ -20894,9 +20706,6 @@ var router = new _vueRouter2.default({
     path: '/header',
     component: _header2.default
   }, {
-    path: '/listdata',
-    component: _listdata2.default
-  }, {
     path: '/list',
     component: _list2.default
   }, {
@@ -20941,7 +20750,7 @@ new _vue2.default({
     return h(App);
   }
 });
-},{"vue":"node_modules\\vue\\dist\\vue.runtime.esm.js","./app.vue":"example\\app.vue","vue-router":"node_modules\\vue-router\\dist\\vue-router.esm.js","./demo/header.vue":"example\\demo\\header.vue","./demo/listdata.vue":"example\\demo\\listdata.vue","./demo/list.vue":"example\\demo\\list.vue","./demo/badge.vue":"example\\demo\\badge.vue","./demo/btn.vue":"example\\demo\\btn.vue","./demo/icon.vue":"example\\demo\\icon.vue","./demo/tabs.vue":"example\\demo\\tabs.vue","./demo/forms.vue":"example\\demo\\forms.vue","./demo/modal.vue":"example\\demo\\modal.vue","./demo/scroll.vue":"example\\demo\\scroll.vue","./demo/voption.vue":"example\\demo\\voption.vue","./demo/datepicker.vue":"example\\demo\\datepicker.vue","./demo/navs.vue":"example\\demo\\navs.vue","./styles.scss":"example\\styles.scss"}],"D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
+},{"vue":"node_modules\\vue\\dist\\vue.runtime.esm.js","./app.vue":"example\\app.vue","vue-router":"node_modules\\vue-router\\dist\\vue-router.esm.js","./demo/header.vue":"example\\demo\\header.vue","./demo/list.vue":"example\\demo\\list.vue","./demo/badge.vue":"example\\demo\\badge.vue","./demo/btn.vue":"example\\demo\\btn.vue","./demo/icon.vue":"example\\demo\\icon.vue","./demo/tabs.vue":"example\\demo\\tabs.vue","./demo/forms.vue":"example\\demo\\forms.vue","./demo/modal.vue":"example\\demo\\modal.vue","./demo/scroll.vue":"example\\demo\\scroll.vue","./demo/voption.vue":"example\\demo\\voption.vue","./demo/datepicker.vue":"example\\demo\\datepicker.vue","./demo/navs.vue":"example\\demo\\navs.vue","./styles.scss":"example\\styles.scss"}],"D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -20970,7 +20779,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '52424' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '53011' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -21111,5 +20920,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},["D:\\Users\\sfliu\\AppData\\Roaming\\npm\\node_modules\\parcel-bundler\\src\\builtins\\hmr-runtime.js","example\\main.js"], null)
+},{}]},{},["D:\\Users\\sfliu\\AppData\\Local\\Yarn\\Data\\global\\node_modules\\parcel-bundler\\src\\builtins\\hmr-runtime.js","example\\main.js"], null)
 //# sourceMappingURL=/main.c358d47a.map

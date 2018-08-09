@@ -61,18 +61,7 @@ export default {
         list,
         item
     },
-    /*mounted(){
-        	let uicell = this.$el.querySelectorAll('.ui-cell')[0]
-        	let uiyard = this.$el.querySelectorAll('.ui-cell-yard')[0]		        	uicell.style.paddingTop = this.step*2 + 'px'		        	uicell.style.paddingBottom = this.step*2+ 'px'
-        	let items = this.$el.querySelectorAll('.ui-cell .table-view-cell')
-        	console.log(items, 'items');
-        	for(var i=0; i<items.length; i++){
-        		items[i].style.height = this.step+'px'
-        		items[i].style.lineHeight = this.step+'px'
-        	}
-        	uiyard.style.top = this.step*2+'px'
-        	uiyard.style.height = this.step+'px'
-        },*/
+
     methods: {
         panend: function ($event, that) {
             this.activeindex = that.steps
@@ -85,50 +74,58 @@ export default {
 <style lang="scss">
 $selectItemHeight: 33px;
 .ui-options {
-    position: relative;
-    background-color: #efefef;
-    -webkit-mask-box-image: linear-gradient(to top, transparent, transparent 5%, white 20%, white 80%, transparent 95%, transparent);
-    .ui-cell {
-        flex: 1;
-        padding: $selectItemHeight*2 0;
-        .table-view-cell {
-            border: 0 none;
-            padding: 0;
-            height: $selectItemHeight;
-            line-height: $selectItemHeight;
-            text-align: center;
-            background-image: none !important;
-            a.navigate-right {
-                color: #999;
-                text-decoration: none;
-            }
-            &.active a.navigate-right {
-                font-weight: bold;
-                color: #007aff;
-            }
-            &>a:not(.btn) {
-                padding: 0;
-                margin: 0;
-            }
-            .navigate-right:after,
-            .push-right:after {
-                display: none;
-            }
-        }
+  position: relative;
+  background-color: #efefef;
+  -webkit-mask-box-image: linear-gradient(
+    to top,
+    transparent,
+    transparent 5%,
+    white 20%,
+    white 80%,
+    transparent 95%,
+    transparent
+  );
+  .ui-cell {
+    flex: 1;
+    padding: $selectItemHeight * 2 0;
+    .table-view-cell {
+      border: 0 none;
+      padding: 0;
+      height: $selectItemHeight;
+      line-height: $selectItemHeight;
+      text-align: center;
+      background-image: none !important;
+      a.navigate-right {
+        color: #999;
+        text-decoration: none;
+      }
+      &.active a.navigate-right {
+        font-weight: bold;
+        color: #007aff;
+      }
+      & > a:not(.btn) {
+        padding: 0;
+        margin: 0;
+      }
+      .navigate-right:after,
+      .push-right:after {
+        display: none;
+      }
     }
-    .ui-cell-yard {
-        top: $selectItemHeight*2;
-        position: absolute;
-        height: $selectItemHeight;
-        width: 100%;
-        border-top: 1px solid #ccc;
-        border-bottom: 1px solid #ccc;
-        background-color: #fff;
-    }
-    .table-view,
-    .ui-scroll-content .ui-scroll-core {
-        background: none !important;
-        border: 0 none !important;
-    }
+  }
+  .ui-cell-yard {
+    top: $selectItemHeight * 2;
+    position: absolute;
+    height: $selectItemHeight;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+  }
+  .table-view,
+  .ui-scroll-content .ui-scroll-core {
+    background: none !important;
+    border: 0 none !important;
+  }
 }
 </style>
